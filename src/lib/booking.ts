@@ -22,17 +22,17 @@ export function restaurantToday(now = new Date()) {
   return `${part("year")}-${part("month")}-${part("day")}`;
 }
 export function dateError(date: string, today = restaurantToday()) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return "Choose a date. 请选择日期。";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return "Choose a date.";
   const parsed = new Date(`${date}T12:00:00Z`);
   if (
     Number.isNaN(parsed.getTime()) ||
     parsed.toISOString().slice(0, 10) !== date
   )
-    return "Choose a valid date. 请选择有效日期。";
+    return "Choose a valid date.";
   if (date < today)
-    return "Choose today or a future date. 请选择今天或之后的日期。";
+    return "Choose today or a future date.";
   if (parsed.getUTCDay() === 1)
-    return "Closed Mondays. Choose Tuesday–Sunday. 周一休息，请选择周二至周日。";
+    return "Closed Mondays. Choose Tuesday–Sunday.";
   return "";
 }
 export function nextOpenDate(today = restaurantToday()) {
@@ -47,8 +47,8 @@ export function bookingUrl(date: string, time: string, party: string) {
   url.searchParams.set("partySize", party);
   return url.href;
 }
-export function menuUrl(href: string, menu: string) {
+export function menuUrl(href: string, menu: string, queryKey = "menu") {
   const url = new URL(href);
-  url.searchParams.set("menu", menu);
+  url.searchParams.set(queryKey, menu);
   return url;
 }

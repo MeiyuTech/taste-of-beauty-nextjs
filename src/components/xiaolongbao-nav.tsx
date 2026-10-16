@@ -36,7 +36,7 @@ export default function XiaolongbaoNav() {
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
-        Menu · 导航 {open ? "−" : "＋"}
+        Menu{open ? "−" : "＋"}
       </button>
       <nav
         id="navigation"
@@ -44,23 +44,23 @@ export default function XiaolongbaoNav() {
         onClick={() => setOpen(false)}
       >
         <InternalLink href="/menus">
-          Menus<small>菜单</small>
+          Menus
         </InternalLink>
         <InternalLink href="/xiaolongbao" aria-current="page">
-          Xiaolongbao<small>小笼包</small>
+          Xiaolongbao
         </InternalLink>
-        <InternalLink href="/our-story">
-          Our story<small>品牌故事</small>
+        <InternalLink href="/#our-story">
+          Our story
         </InternalLink>
         <InternalLink href="/gatherings">
-          Gatherings<small>聚会包场</small>
+          Gatherings
         </InternalLink>
-        <InternalLink href="/visit">
-          Visit<small>到店</small>
+        <InternalLink href="/#visit">
+          Visit
         </InternalLink>
       </nav>
-      <InternalLink className="button reserve" href="/reservations?menu=xlb">
-        Reserve a table<small>立即订位 ↗</small>
+      <InternalLink className="button reserve" href="/?booking=xlb#booking">
+        Reserve a table
       </InternalLink>
     </header>
   );

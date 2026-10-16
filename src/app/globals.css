@@ -46,13 +46,6 @@ body {
   box-shadow: 0 1px currentColor;
   padding-bottom: 4px;
 }
-.theme-b .site-main {
-  min-height: calc(100svh - 300px);
-}
-.theme-b .page-content > section,
-.theme-b .page-content .booking-section {
-  min-height: calc(100svh - 300px);
-}
 .theme-b .home-intro {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

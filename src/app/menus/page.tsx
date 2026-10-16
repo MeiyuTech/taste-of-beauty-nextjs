@@ -15,19 +15,17 @@ export default function Page() {
         <section className="menus-section" id="menus">
           <div className="section-heading">
             <div>
-              <div className="eyebrow">THE MENUS · 一眼找到想吃的</div>
+              <div className="eyebrow">THE MENUS</div>
               <h1>
                 Your menu.{" "}
                 <br />
                 <em>Your kind of evening.</em>
               </h1>
-              <p className="zh">先看吃什么，再决定何时来。</p>
             </div>
             <p>
               Choose a menu. See every course.
               <br />
               Then find your table.
-              <small>选择菜单，直接看菜品，再查看可订时间。</small>
             </p>
           </div>
           <MenuPanel />

@@ -26,15 +26,21 @@ const DiningContext = createContext<{
   active: MenuKey;
   select: (menu: MenuKey, jump?: boolean) => void;
 }>({ active: "59", select: () => {} });
-export function DiningProvider({ children }: { children: ReactNode }) {
+export function DiningProvider({
+  children,
+  queryKey = "menu",
+}: {
+  children: ReactNode;
+  queryKey?: "menu" | "booking";
+}) {
   const [active, setActive] = useState<MenuKey>("59");
   useEffect(() => {
     function restore() {
-      const menu = new URLSearchParams(window.location.search).get("menu");
+      const menu = new URLSearchParams(window.location.search).get(queryKey);
       setActive(isMenuKey(menu) ? menu : "59");
     }
     restore();
-    const initialMenu = new URLSearchParams(window.location.search).get("menu");
+    const initialMenu = new URLSearchParams(window.location.search).get(queryKey);
     if (isMenuKey(initialMenu) && !window.location.hash)
       requestAnimationFrame(() =>
         document
@@ -43,10 +49,10 @@ export function DiningProvider({ children }: { children: ReactNode }) {
       );
     window.addEventListener("popstate", restore);
     return () => window.removeEventListener("popstate", restore);
-  }, []);
+  }, [queryKey]);
   function select(menu: MenuKey, jump = false) {
     setActive(menu);
-    window.history.replaceState(null, "", menuUrl(window.location.href, menu));
+    window.history.replaceState(null, "", menuUrl(window.location.href, menu, queryKey));
     if (jump)
       document.getElementById("menus")?.scrollIntoView({
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -61,10 +67,10 @@ export function DiningProvider({ children }: { children: ReactNode }) {
   );
 }
 const tabLabels = {
-  "59": ["$59 Dinner", "五道纯素晚餐"],
-  "99": ["$99 Tasting", "八道式品鉴"],
-  lunch: ["Lunch", "自在午餐"],
-  xlb: ["Xiaolongbao", "手工小笼包"],
+  "59": "$59 Dinner",
+  "99": "$99 Tasting",
+  lunch: "Lunch",
+  xlb: "Xiaolongbao",
 };
 export function MenuPanel() {
   const { active, select } = useContext(DiningContext);
@@ -107,8 +113,7 @@ export function MenuPanel() {
             onClick={() => choose(key)}
             onKeyDown={(e) => keyboard(e, index)}
           >
-            {tabLabels[key][0]}
-            <small>{tabLabels[key][1]}</small>
+            {tabLabels[key]}
           </button>
         ))}
       </div>
@@ -120,14 +125,13 @@ export function MenuPanel() {
       >
         <div className="detail-visual">
           <img src={`/assets/${menu.image}`} alt={menu.alt} loading="lazy" />
-          <div className="photo-label">TASTE OF BEAUTY · {menu.zh}</div>
+          <div className="photo-label">TASTE OF BEAUTY · {menu.title}</div>
         </div>
         <div className="detail-copy">
           <div className="eyebrow">{menu.eyebrow}</div>
           <div className="detail-heading">
             <h3>
               {menu.title}
-              <small>{menu.zh}</small>
             </h3>
             <div className="price">
               {menu.price}
@@ -136,7 +140,6 @@ export function MenuPanel() {
           </div>
           <p className="menu-intro">
             {menu.intro}
-            <span>{menu.introZh}</span>
           </p>
           {active === "99" && (
             <div className="diet-switch" role="group" aria-label="Dietary menu">
@@ -145,14 +148,14 @@ export function MenuPanel() {
                 aria-pressed={diet === "vegan"}
                 onClick={() => setDiet("vegan")}
               >
-                Vegan · 纯素
+                Vegan
               </button>
               <button
                 type="button"
                 aria-pressed={diet === "vegetarian"}
                 onClick={() => setDiet("vegetarian")}
               >
-                Vegetarian · 蛋奶素
+                Vegetarian
               </button>
             </div>
           )}
@@ -165,11 +168,9 @@ export function MenuPanel() {
                 <div>
                   <h4>
                     {course[0]}
-                    <span>{course[1]}</span>
                   </h4>
                   <p>
-                    {course[2]}
-                    <span>{course[3]}</span>
+                    {course[1]}
                   </p>
                 </div>
               </li>
@@ -177,13 +178,12 @@ export function MenuPanel() {
           </ol>
           {active === "lunch" && (
             <p className="fine">
-              Selected lunch dishes shown. · 此处展示午餐部分菜品。
+              Selected lunch dishes shown.
             </p>
           )}
           <div className="menu-actions">
-            <InternalLink className="cta" href={`/reservations?menu=${active}`}>
+            <InternalLink className="cta" href={`/?booking=${active}#booking`}>
               {menu.cta}
-              <small>{menu.ctaZh} ↗</small>
             </InternalLink>
             {active === "xlb" && (
               <>
@@ -193,10 +193,10 @@ export function MenuPanel() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Order online<small>查看口味与下单 ↗</small>
+                  Order online
                 </a>
                 <InternalLink className="inline-link" href="/xiaolongbao">
-                  Discover more · 小笼包详情 ↗
+                  Discover more
                 </InternalLink>
               </>
             )}
@@ -205,11 +205,10 @@ export function MenuPanel() {
             {menu.dinner && (
               <>
                 Prices per guest; tax, gratuity and beverages additional.
-                菜单按每位计算，税、小费及饮品另计。
                 <br />
               </>
             )}
-            Tell us about allergies before ordering. · 点餐前请告知过敏情况。
+            Tell us about allergies before ordering.
           </p>
         </div>
       </div>
@@ -251,24 +250,24 @@ export function BookingForm() {
   return (
     <div className="booking-box">
       <p className="selection-label">
-        EXPLORING · 当前浏览 <b>{menu.zh}</b>
+        EXPLORING<b>{menu.title}</b>
       </p>
       <label className="booking-menu">
-        Dining menu · 用餐选择
+        Dining menu
         <select
           value={active}
           onChange={(event) => select(event.target.value as MenuKey)}
         >
           {menuKeys.map((key) => (
             <option key={key} value={key}>
-              {tabLabels[key][0]} · {tabLabels[key][1]}
+              {tabLabels[key]}
             </option>
           ))}
         </select>
       </label>
       <form id="booking-form" onSubmit={submit}>
         <label>
-          Date<small>日期 · 周一休息</small>
+          Date
           <input
             type="date"
             name="date"
@@ -284,17 +283,17 @@ export function BookingForm() {
           />
         </label>
         <label>
-          Guests<small>用餐人数</small>
+          Guests
           <select name="party" defaultValue="2">
             {[2, 1, 3, 4, 5, 6].map((n) => (
               <option key={n} value={n}>
-                {n} {n === 1 ? "guest" : "guests"} · {n}位
+                {n} {n === 1 ? "guest" : "guests"}
               </option>
             ))}
           </select>
         </label>
         <label>
-          Preferred time<small>期望时间</small>
+          Preferred time
           <select
             name="time"
             key={menu.dinner ? "dinner" : "lunch"}
@@ -308,7 +307,7 @@ export function BookingForm() {
           </select>
         </label>
         <button className="cta" type="submit">
-          Check availability<small>查看可订时间 ↗</small>
+          Check availability
         </button>
       </form>
       {error && (
@@ -317,12 +316,9 @@ export function BookingForm() {
         </p>
       )}
       <p className="fine">
-        Opens OpenTable to check actual availability and complete your
+        Closed Mondays. Opens OpenTable to check actual availability and complete your
         reservation. Your menu preference is for browsing; confirm dining
         details when booking.
-        <br />
-        进入 OpenTable
-        查看实际可订时段并完成预订。此处菜单选择用于浏览，用餐安排请在预订时确认。
       </p>
       <a
         className="inline-link"
@@ -330,7 +326,7 @@ export function BookingForm() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Prefer to book directly? · 直接打开订位页面 ↗
+        Prefer to book directly?
       </a>
     </div>
   );

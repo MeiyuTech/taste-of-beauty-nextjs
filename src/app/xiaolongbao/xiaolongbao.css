@@ -397,7 +397,7 @@
 .xlb-page .large-cn {
   font-size: 15px;
 }
-.xlb-page .story-copy > p:not(.cn) {
+.xlb-page .story-copy > p {
   max-width: 390px;
   font-size: 14px;
   line-height: 1.9;
@@ -1142,4 +1142,88 @@
   .xlb-page .xlb-faq summary {
     font-size: 11px;
   }
+}
+
+/* English edition: larger reading text with less vertical padding. */
+.xlb-page { font: 18px/1.65 Arial, sans-serif; }
+.xlb-page header { height: 88px; gap: 24px; }
+.xlb-page .brand { width: 190px; flex-shrink: 0; }
+.xlb-page nav { gap: 24px; }
+.xlb-page nav a { font-size: 16px; }
+.xlb-page .button, .xlb-page .text-link { font-size: 16px; }
+.xlb-page .button { padding: 14px 20px; min-height: 48px; }
+.xlb-page .eyebrow, .xlb-page .hero-note, .xlb-page .xlb-strip { font-size: 12px; }
+.xlb-page .hero { min-height: 520px; }
+.xlb-page .hero-copy { padding: 48px 9%; align-self: center; }
+.xlb-page .hero-copy .intro { font-size: 21px; line-height: 1.6; margin: 22px 0; }
+.xlb-page .actions { flex-wrap: wrap; gap: 20px; }
+.xlb-page .hero-note { margin-top: 24px; }
+.xlb-page .photo-caption { font-size: 12px; gap: 20px; }
+.xlb-page .photo-caption span { font-size: 12px; }
+.xlb-page .section { padding: 48px 6%; }
+.xlb-page .section-top { margin-bottom: 28px; }
+.xlb-page .section-top > p { font-size: 18px; line-height: 1.65; }
+.xlb-page .xlb-story { gap: 6%; }
+.xlb-page .xlb-story .story-photo img { height: 420px; }
+.xlb-page .story-photo > span { font-size: 12px; }
+.xlb-page .story-copy > p { font-size: 19px; line-height: 1.7; max-width: 60ch; }
+.xlb-page .xlb-selection-grid { gap: 5%; }
+.xlb-page .xlb-selection-grid > img { height: 440px; }
+.xlb-page .xlb-selection-copy > p, .xlb-page .diet-note p { font-size: 18px; line-height: 1.65; }
+.xlb-page .diet-note b { font-size: 17px; font-weight: 600; }
+.xlb-page .diet-note { padding: 16px 0; margin-top: 20px; }
+.xlb-page .xlb-ways { gap: 32px; }
+.xlb-page .xlb-ways article > span { font-size: 12px; }
+.xlb-page .xlb-ways h3 { font-size: 32px; margin-top: 20px; }
+.xlb-page .xlb-ways p { font-size: 18px; line-height: 1.65; flex: 1; }
+.xlb-page .xlb-ways .button { margin-top: 12px; }
+.xlb-page .xlb-faq { max-width: 1200px; }
+.xlb-page .xlb-faq summary { font-size: 19px; gap: 24px; }
+.xlb-page .xlb-faq details p { font-size: 18px; line-height: 1.65; }
+.xlb-page .xlb-end { font-size: 16px; margin-top: 28px; }
+.xlb-page footer { padding: 32px 6%; }
+.xlb-page footer a { font-size: 16px; }
+.xlb-page .footer-brand small, .xlb-page .footer-bottom { font-size: 13px; }
+@media (max-width: 1100px) and (min-width: 701px) {
+  .xlb-page header { gap: 16px; padding-inline: 4%; }
+  .xlb-page .brand { width: 150px; }
+  .xlb-page nav { gap: 14px; }
+  .xlb-page nav a { font-size: 14px; }
+  .xlb-page .reserve { font-size: 14px; padding: 12px; }
+  .xlb-page .hero-copy { padding: 36px 7%; }
+  .xlb-page .xlb-hero h1 { font-size: 52px; }
+  .xlb-page .xlb-ways { gap: 22px; }
+  .xlb-page .xlb-ways h3 { font-size: 27px; }
+  .xlb-page .xlb-ways p { font-size: 16px; }
+}
+@media (max-width: 700px) {
+  .xlb-page { font-size: 17px; }
+  .xlb-page header { height: 78px; gap: 14px; }
+  .xlb-page .brand { width: 140px; }
+  .xlb-page .nav-toggle { font-size: 15px; padding: 10px; }
+  .xlb-page nav { top: 78px; gap: 18px; }
+  .xlb-page nav a { font-size: 17px; }
+  .xlb-page .hero { min-height: 0; }
+  .xlb-page .hero-copy { padding: 32px 6%; }
+  .xlb-page .xlb-hero h1 { font-size: clamp(45px,12vw,60px); }
+  .xlb-page .hero-copy .intro { font-size: 19px; margin: 18px 0; }
+  .xlb-page .hero-photo { height: 300px; }
+  .xlb-page .photo-caption { flex-wrap: wrap; padding: 45px 20px 18px; gap: 8px; }
+  .xlb-page .photo-caption span { font-size: 11px; }
+  .xlb-page .eyebrow { font-size: 11px; }
+  .xlb-page .xlb-strip { font-size: 11px; padding: 18px 5%; gap: 12px; }
+  .xlb-page .section { padding: 32px 6%; }
+  .xlb-page .xlb-story { gap: 24px; }
+  .xlb-page .xlb-story .story-photo img { height: 300px; }
+  .xlb-page .story-copy h2 { font-size: 49px; }
+  .xlb-page .story-copy > p, .xlb-page .section-top > p,
+  .xlb-page .xlb-selection-copy > p, .xlb-page .diet-note p,
+  .xlb-page .xlb-ways p, .xlb-page .xlb-faq details p { font-size: 17px; }
+  .xlb-page .xlb-selection-grid > img { height: 300px; }
+  .xlb-page .xlb-selection-copy h3 { font-size: 34px; margin-bottom: 18px; }
+  .xlb-page .xlb-ways { gap: 26px; }
+  .xlb-page .xlb-faq summary { font-size: 17px; }
+  .xlb-page .xlb-faq details:first-of-type { margin-top: 24px; }
+  .xlb-page footer { padding: 28px 6% 90px; }
+  .xlb-page .mobile-cta a { font-size: 16px; }
 }
