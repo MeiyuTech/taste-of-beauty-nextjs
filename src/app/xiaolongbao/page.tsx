@@ -1,5 +1,6 @@
+import InternalLink from "@/components/internal-link";
 import type { Metadata } from "next";
-import { BOOKING_URL, ORDER_URL } from "@/lib/booking";
+import { ORDER_URL } from "@/lib/booking";
 import XiaolongbaoNav from "@/components/xiaolongbao-nav";
 import "./xiaolongbao.css";
 import { siteUrl } from "@/lib/site";
@@ -195,14 +196,12 @@ export default function XiaolongbaoPage() {
                 周二至周日，12:30–3:30 pm
                 午餐时段，欢迎到店。小笼包当日供应请向服务人员确认。
               </p>
-              <a
+              <InternalLink
                 className="button light"
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/reservations?menu=xlb"
               >
                 Reserve for lunch <small>预订午餐 ↗</small>
-              </a>
+              </InternalLink>
             </article>
             <article>
               <span>02 / PICKUP · 自取</span>
@@ -300,9 +299,9 @@ export default function XiaolongbaoPage() {
           </details>
           <div className="xlb-end">
             <p>616 N Robertson Blvd · West Hollywood, CA 90069</p>
-            <a className="text-link" href="/#visit">
+            <InternalLink className="text-link" href="/visit">
               Plan your visit · 查看地址与营业时间 ↗
-            </a>
+            </InternalLink>
           </div>
         </section>
       </main>
@@ -316,11 +315,11 @@ export default function XiaolongbaoPage() {
           </small>
         </div>
         <div>
-          <a href="/#menus">Menus · 菜单</a>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          <InternalLink href="/menus">Menus · 菜单</InternalLink>
+          <InternalLink href="/reservations?menu=xlb">
             Reservations · 订位 ↗
-          </a>
-          <a href="/xiaolongbao">Xiaolongbao · 小笼包</a>
+          </InternalLink>
+          <InternalLink href="/xiaolongbao">Xiaolongbao · 小笼包</InternalLink>
           <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">
             Takeaway · 外带 ↗
           </a>
@@ -331,10 +330,10 @@ export default function XiaolongbaoPage() {
         </div>
       </footer>
       <div className="mobile-cta">
-        <a href="/#menus">Menus · 查看菜单</a>
-        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+        <InternalLink href="/menus">Menus · 查看菜单</InternalLink>
+        <InternalLink href="/reservations?menu=xlb">
           Reserve · 立即订位 ↗
-        </a>
+        </InternalLink>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { BOOKING_URL } from "@/lib/booking";
+import InternalLink from "./internal-link";
 export default function XiaolongbaoNav() {
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -16,14 +16,18 @@ export default function XiaolongbaoNav() {
   }, [open]);
   return (
     <header>
-      <a className="brand" href="/" aria-label="Taste of Beauty home">
+      <InternalLink
+        className="brand"
+        href="/"
+        aria-label="Taste of Beauty home"
+      >
         <img
           src="/assets/tob_logo_stamp-1024x346.png"
           alt="Taste of Beauty"
           width="1024"
           height="346"
         />
-      </a>
+      </InternalLink>
       <button
         ref={toggle}
         type="button"
@@ -39,30 +43,25 @@ export default function XiaolongbaoNav() {
         className={open ? "open" : ""}
         onClick={() => setOpen(false)}
       >
-        <a href="/#menus">
+        <InternalLink href="/menus">
           Menus<small>菜单</small>
-        </a>
-        <a href="/xiaolongbao" aria-current="page">
+        </InternalLink>
+        <InternalLink href="/xiaolongbao" aria-current="page">
           Xiaolongbao<small>小笼包</small>
-        </a>
-        <a href="/#our-story">
+        </InternalLink>
+        <InternalLink href="/our-story">
           Our story<small>品牌故事</small>
-        </a>
-        <a href="/#gatherings">
+        </InternalLink>
+        <InternalLink href="/gatherings">
           Gatherings<small>聚会包场</small>
-        </a>
-        <a href="/#visit">
+        </InternalLink>
+        <InternalLink href="/visit">
           Visit<small>到店</small>
-        </a>
+        </InternalLink>
       </nav>
-      <a
-        className="button reserve"
-        href={BOOKING_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <InternalLink className="button reserve" href="/reservations?menu=xlb">
         Reserve a table<small>立即订位 ↗</small>
-      </a>
+      </InternalLink>
     </header>
   );
 }

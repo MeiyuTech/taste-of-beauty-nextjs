@@ -1,6 +1,6 @@
 # Taste of Beauty
 
-A Next.js App Router website based on the approved `TOB_B_Designer_Package` (October 15, 2026). The implementation preserves the B design, its bilingual content, warm stone palette, four menu entry points, section order, and the separate Xiaolongbao page.
+A Next.js App Router website based on the approved `TOB_B_Designer_Package` (October 15, 2026). The implementation preserves the B design, its bilingual content, warm stone palette, four menu entry points, bilingual source material and separate Xiaolongbao page. Following the owner's clarification, the homepage now introduces the restaurant and links to dedicated content pages. The designer package supplies the visual and content reference; the multi-page architecture is an explicitly requested adaptation.
 
 ## Run locally
 
@@ -27,9 +27,14 @@ Official setup reference: https://vercel.com/docs/frameworks/full-stack/nextjs
 
 ## Routes and content
 
-- `/`: approved B homepage, menus, brand story, booking handoff, gatherings and visit information.
+- `/`: B-style hero, four menu entry links and concise story, gathering and visit introductions.
+- `/menus`: full menus and dietary selection.
+- `/our-story`: the complete brand story.
+- `/gatherings`: private dining and gathering enquiries.
+- `/visit`: address, hours, directions and contact details.
+- `/reservations`: menu preference and booking handoff.
 - `/xiaolongbao`: handmade Xiaolongbao page, mobile navigation and FAQ.
-- `/?menu=59`, `/?menu=99`, `/?menu=lunch`, `/?menu=xlb`: direct menu entry points. Switching menus preserves existing query parameters such as UTM tags.
+- `/menus?menu=59`, `/menus?menu=99`, `/menus?menu=lunch`, `/menus?menu=xlb`: direct menu entry points. Switching menus preserves existing query parameters such as UTM tags. Internal navigation carries UTM and advertising click IDs; menu-to-booking links carry the menu preference. Old homepage menu queries redirect to `/menus`; old section bookmarks forward to their dedicated pages.
 - `/index.html`, `/version-b.html` and `/xiaolongbao.html`: permanent redirects from the handoff's legacy URLs; query parameters are retained.
 - `/robots.txt` and `/sitemap.xml`: generated metadata routes.
 
@@ -48,11 +53,11 @@ npm test
 
 Completed on October 15, 2026:
 
-- TypeScript validation and four booking/query-parameter tests.
-- Codex in-app browser checks of both pages at desktop and 390 × 844 mobile size.
+- TypeScript validation and seven booking/query-parameter and multi-page navigation tests.
+- Codex in-app browser checks of the homepage, menus, story, gatherings, visit, reservations and Xiaolongbao at desktop and 390 × 844 mobile size.
 - Menu selection, eight-course dietary switch, keyboard navigation, lunch time options, Monday rejection, menu deep links and campaign-parameter preservation.
 - Xiaolongbao mobile navigation, Escape dismissal and FAQ expansion.
-- HTTP route, local image and legacy redirect checks.
+- HTTP route, local image and legacy redirect checks, including old homepage menu queries and section bookmarks.
 
 Screenshots are stored in `output/playwright/` and are excluded from Git. No production build or Vercel deployment was performed. Availability, checkout and final reservation completion on third-party platforms were not tested.
 

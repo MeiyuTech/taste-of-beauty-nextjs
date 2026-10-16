@@ -21,6 +21,7 @@ import {
   nextOpenDate,
   dateError,
 } from "@/lib/booking";
+import InternalLink from "./internal-link";
 const DiningContext = createContext<{
   active: MenuKey;
   select: (menu: MenuKey, jump?: boolean) => void;
@@ -47,37 +48,16 @@ export function DiningProvider({ children }: { children: ReactNode }) {
     setActive(menu);
     window.history.replaceState(null, "", menuUrl(window.location.href, menu));
     if (jump)
-      document
-        .getElementById("menus")
-        ?.scrollIntoView({
-          behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
-            .matches
-            ? "instant"
-            : "smooth",
-        });
+      document.getElementById("menus")?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
+      });
   }
   return (
     <DiningContext.Provider value={{ active, select }}>
       {children}
     </DiningContext.Provider>
-  );
-}
-export function MenuChoice({
-  menu,
-  children,
-}: {
-  menu: MenuKey;
-  children: ReactNode;
-}) {
-  const { active, select } = useContext(DiningContext);
-  return (
-    <button
-      type="button"
-      className={active === menu ? "selected" : ""}
-      onClick={() => select(menu, true)}
-    >
-      {children}
-    </button>
   );
 }
 const tabLabels = {
@@ -201,10 +181,10 @@ export function MenuPanel() {
             </p>
           )}
           <div className="menu-actions">
-            <a className="cta" href="#booking">
+            <InternalLink className="cta" href={`/reservations?menu=${active}`}>
               {menu.cta}
-              <small>{menu.ctaZh} ↓</small>
-            </a>
+              <small>{menu.ctaZh} ↗</small>
+            </InternalLink>
             {active === "xlb" && (
               <>
                 <a
@@ -215,9 +195,9 @@ export function MenuPanel() {
                 >
                   Order online<small>查看口味与下单 ↗</small>
                 </a>
-                <a className="inline-link" href="/xiaolongbao">
+                <InternalLink className="inline-link" href="/xiaolongbao">
                   Discover more · 小笼包详情 ↗
-                </a>
+                </InternalLink>
               </>
             )}
           </div>
@@ -237,7 +217,7 @@ export function MenuPanel() {
   );
 }
 export function BookingForm() {
-  const { active } = useContext(DiningContext);
+  const { active, select } = useContext(DiningContext);
   const menu = menus[active];
   const times = menu.dinner ? DINNER_TIMES : LUNCH_TIMES;
   const [today, setToday] = useState("");
@@ -273,6 +253,19 @@ export function BookingForm() {
       <p className="selection-label">
         EXPLORING · 当前浏览 <b>{menu.zh}</b>
       </p>
+      <label className="booking-menu">
+        Dining menu · 用餐选择
+        <select
+          value={active}
+          onChange={(event) => select(event.target.value as MenuKey)}
+        >
+          {menuKeys.map((key) => (
+            <option key={key} value={key}>
+              {tabLabels[key][0]} · {tabLabels[key][1]}
+            </option>
+          ))}
+        </select>
+      </label>
       <form id="booking-form" onSubmit={submit}>
         <label>
           Date<small>日期 · 周一休息</small>

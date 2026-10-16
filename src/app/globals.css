@@ -40,3 +40,55 @@ body {
     transition: none !important;
   }
 }
+
+.theme-b .site-nav nav a[aria-current="page"] {
+  color: #90452f;
+  box-shadow: 0 1px currentColor;
+  padding-bottom: 4px;
+}
+.theme-b .site-main {
+  min-height: calc(100svh - 300px);
+}
+.theme-b .page-content > section,
+.theme-b .page-content .booking-section {
+  min-height: calc(100svh - 300px);
+}
+.theme-b .home-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  padding: 55px 5%;
+  border-top: 1px solid var(--line);
+}
+.theme-b .home-intro h2 {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+.theme-b .home-intro p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.theme-b .booking-menu {
+  display: block;
+  font-size: 12px;
+  margin: 0 0 24px;
+}
+.theme-b .booking-menu select {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+}
+@media (max-width: 700px) {
+  .theme-b .home-intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 35px 5%;
+  }
+  .theme-b .home-intro > div + div {
+    border-top: 1px solid var(--line);
+    padding-top: 30px;
+  }
+}

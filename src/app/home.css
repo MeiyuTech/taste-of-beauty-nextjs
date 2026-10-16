@@ -228,7 +228,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.theme-b .choice-grid button {
+.theme-b .choice-grid > a {
   padding: 0;
   border: 1px solid var(--line);
   background: var(--bg);
@@ -238,8 +238,8 @@
   overflow: hidden;
   transition: border 0.15s;
 }
-.theme-b .choice-grid button:hover,
-.theme-b .choice-grid button.selected {
+.theme-b .choice-grid > a:hover,
+.theme-b .choice-grid > a.selected {
   border-color: var(--accent);
 }
 .theme-b .choice-grid img {
@@ -247,10 +247,10 @@
   object-position: center 62%;
   transition: transform 0.3s;
 }
-.theme-b .choice-grid button:hover img {
+.theme-b .choice-grid > a:hover img {
   transform: scale(1.025);
 }
-.theme-b .choice-grid button > div {
+.theme-b .choice-grid > a > div {
   padding: 13px 16px 16px;
 }
 .theme-b .choice-grid strong {
@@ -284,12 +284,12 @@
   gap: 40px;
   margin-bottom: 28px;
 }
-.theme-b .section-heading h2 {
+.theme-b .section-heading :is(h1, h2) {
   font-size: 43px;
   line-height: 1.1;
   margin-bottom: 10px;
 }
-.theme-b .section-heading h2 br {
+.theme-b .section-heading :is(h1, h2) br {
   display: none;
 }
 .theme-b .section-heading .zh {
@@ -472,6 +472,9 @@
   background: var(--soft);
   color: var(--ink);
 }
+.theme-b .booking-title h1 {
+  font-size: clamp(35px, 3.8vw, 55px);
+}
 .theme-b .booking-section {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
@@ -545,7 +548,7 @@
 .theme-b .visit-photo img {
   height: 425px;
 }
-.theme-b .visit-info h2 {
+.theme-b .visit-info :is(h1, h2) {
   font-size: 39px;
 }
 .theme-b .visit-pairs {
@@ -766,7 +769,7 @@
 .theme-b .theme-c .booking-box {
   background: #1b211b;
 }
-.theme-b .theme-c .booking-title h2 {
+.theme-b .theme-c .booking-title :is(h1, h2) {
   color: var(--accent);
 }
 @media (min-width: 1700px) {
@@ -843,7 +846,7 @@
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  .theme-b .visit-info h2 {
+  .theme-b .visit-info :is(h1, h2) {
     font-size: 34px;
   }
   .theme-b .dark-hero {
@@ -949,7 +952,7 @@
   .theme-b .choice-grid img {
     height: 125px;
   }
-  .theme-b .choice-grid button > div {
+  .theme-b .choice-grid > a > div {
     padding: 10px 12px 13px;
   }
   .theme-b .choice-grid strong {
@@ -973,11 +976,11 @@
     display: block;
     margin-bottom: 25px;
   }
-  .theme-b .section-heading h2 {
+  .theme-b .section-heading :is(h1, h2) {
     font-size: 34px;
     letter-spacing: -1px;
   }
-  .theme-b .section-heading h2 br {
+  .theme-b .section-heading :is(h1, h2) br {
     display: block;
   }
   .theme-b .section-heading > p {
@@ -1082,10 +1085,10 @@
     gap: 20px;
     scroll-margin-top: 0;
   }
-  .theme-b .booking-title h2 {
+  .theme-b .booking-title :is(h1, h2) {
     font-size: 40px;
   }
-  .theme-b .booking-title h2 br {
+  .theme-b .booking-title :is(h1, h2) br {
     display: none;
   }
   .theme-b .booking-title .zh {
@@ -1114,7 +1117,7 @@
   .theme-b .theme-c .visit-photo img {
     height: 310px;
   }
-  .theme-b .visit-info h2 {
+  .theme-b .visit-info :is(h1, h2) {
     font-size: 36px;
   }
   .theme-b .visit-pairs {
@@ -1265,13 +1268,13 @@
 .theme-b .inline-link {
   color: #90452f;
 }
-.theme-b .choice-grid button {
+.theme-b .choice-grid > a {
   background: #f7f4ed;
   border-color: #d3cbbb;
   color: #302e29;
 }
-.theme-b .choice-grid button:hover,
-.theme-b .choice-grid button.selected {
+.theme-b .choice-grid > a:hover,
+.theme-b .choice-grid > a.selected {
   border-color: #8a7353;
 }
 .theme-b .choice-grid b {
@@ -1412,7 +1415,7 @@
   letter-spacing: 1px;
   margin-top: 14px;
 }
-.theme-b .brand-story-copy h2 {
+.theme-b .brand-story-copy :is(h1, h2) {
   font-size: 63px;
   line-height: 1.04;
 }
@@ -1446,7 +1449,7 @@
   background: #f7f4ed;
   border-bottom: 1px solid var(--line);
 }
-.theme-b .gatherings-section h2 {
+.theme-b .gatherings-section :is(h1, h2) {
   font-size: 46px;
   line-height: 1.1;
 }
@@ -1509,10 +1512,10 @@
   .theme-b .brand-story-section {
     gap: 6%;
   }
-  .theme-b .brand-story-copy h2 {
+  .theme-b .brand-story-copy :is(h1, h2) {
     font-size: 55px;
   }
-  .theme-b .gatherings-section h2 {
+  .theme-b .gatherings-section :is(h1, h2) {
     font-size: 41px;
   }
 }
@@ -1586,7 +1589,7 @@
   .theme-b .brand-story-photo > span {
     font-size: 8px;
   }
-  .theme-b .brand-story-copy h2 {
+  .theme-b .brand-story-copy :is(h1, h2) {
     font-size: 55px;
   }
   .theme-b .brand-story-copy .story-cn-title {
@@ -1604,7 +1607,7 @@
     gap: 32px;
     padding: 45px 5%;
   }
-  .theme-b .gatherings-section h2 {
+  .theme-b .gatherings-section :is(h1, h2) {
     font-size: 37px;
   }
   .theme-b .gatherings-cn-title {
