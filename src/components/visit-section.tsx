@@ -1,55 +1,31 @@
 export default function VisitSection() {
   return (
-  <section className="visit-section" id="visit">
-    <div className="visit-photo">
-      <img
-        src="/assets/interior.webp"
-        alt="Taste of Beauty dining room with warm wood interiors and a piano"
-        loading="lazy"
-      />
-    </div>
-    <div className="visit-info">
-      <div className="eyebrow">COME AS YOU ARE</div>
-      <h2>
-        A beautiful meal.
-        <br />
-        <em>A place to pause.</em>
-      </h2>
-      <div className="visit-pairs">
-        <div>
-          <h3>Find us</h3>
-          <p>
-            616 N Robertson Blvd
-            <br />
-            West Hollywood, CA 90069
-          </p>
-          <a
-            className="inline-link"
-            href="https://www.google.com/maps/search/?api=1&query=616+N+Robertson+Blvd+West+Hollywood+CA+90069"
-            target="_blank"
-            rel="noopener"
-          >
-            Directions
-          </a>
-        </div>
-        <div>
-          <h3>Tuesday–Sunday</h3>
-          <p>
-            Lunch · 12:30–3:30 pm
-            <br />
-            Dinner · 5:30–9:00 pm
-            <br />
-            Monday closed
-          </p>
-        </div>
+    <section className="visit-section" id="visit" aria-label="Our philosophy">
+      <div className="visit-photo">
+        <img
+          src="/assets/interior.webp"
+          alt="Taste of Beauty dining room with warm wood interiors and a piano"
+          loading="lazy"
+        />
       </div>
-      <a className="inline-link" href="tel:+16575063567">
-        (657) 506-3567
-      </a>
-      <p className="fine">
-        Dietary needs or allergies? Please let us know before you dine.
-      </p>
-    </div>
-  </section>
+      <div className="visit-info visit-philosophy">
+        <p className="philosophy-lead">
+          At Taste of Beauty, we believe beauty begins with seeing life differently.
+        </p>
+        <p>
+          A vegetable is more than a side dish. An animal is another living being.
+          We are part of nature, not above it.
+        </p>
+        <p>
+          That is why we celebrate the abundance of nature through thoughtfully
+          crafted vegan and vegetarian cuisine — transforming simple ingredients
+          into expressions of beauty, creativity, and flavor.
+        </p>
+        <p>
+          We believe a meal is more than food. It is a moment to connect, to
+          appreciate life, and to share a little more kindness.
+        </p>
+      </div>
+    </section>
   );
 }

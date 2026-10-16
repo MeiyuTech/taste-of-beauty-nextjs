@@ -58,7 +58,7 @@ export default function HomeContent() {
               <b>↗</b>
             </InternalLink>
             <InternalLink href="/menus?menu=lunch">
-              <img src="/assets/pot.webp" alt="Lunch at Taste of Beauty" />
+              <img src="/assets/vegetable-noodles.png" alt="Vegetable noodles with mushrooms and fresh basil at Taste of Beauty" />
               <div>
                 <strong>Lunch</strong>
                 <span>A little everyday pleasure</span>

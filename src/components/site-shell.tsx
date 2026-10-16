@@ -57,11 +57,36 @@ export default function SiteShell({
           Private gatherings
         </InternalLink>
       </section>
-      <footer>
-        <span>
-          TASTE OF BEAUTY<small>West Hollywood</small>
-        </span>
-        <span>© 2026 Taste of Beauty</span>
+      <footer className="restaurant-footer" id="restaurant-info">
+        <div className="footer-brand">
+          TASTE OF BEAUTY
+          <small>West Hollywood</small>
+        </div>
+        <div className="footer-location">
+          <h2>Find us</h2>
+          <address>
+            616 N Robertson Blvd<br />
+            West Hollywood, CA 90069
+          </address>
+          <div className="footer-contact-links">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=616+N+Robertson+Blvd+West+Hollywood+CA+90069"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Directions
+            </a>
+            <a href="tel:+16575063567">(657) 506-3567</a>
+          </div>
+        </div>
+        <div className="footer-hours">
+          <h2>Tuesday–Sunday</h2>
+          <p>Lunch · 12:30–3:30 pm<br />Dinner · 5:30–9:00 pm<br />Monday closed</p>
+        </div>
+        <div className="footer-bottom">
+          <p>Dietary needs or allergies? Please let us know before you dine.</p>
+          <span>© 2026 Taste of Beauty</span>
+        </div>
       </footer>
       <div className="sticky-actions">
         <InternalLink href="/menus">View menus</InternalLink>
