@@ -1835,3 +1835,120 @@
   .theme-b .visit-philosophy .philosophy-lead { font-size: 28px; }
   .theme-b .restaurant-footer { grid-template-columns: 1fr; gap: 24px; padding-top: 30px; }
 }
+
+
+/* Photographs fade into the warm paper palette beside the reading area. */
+.theme-b .image-story {
+  --panel-bg: var(--bg);
+  --panel-text: var(--ink);
+  --panel-muted: #625c51;
+  --panel-accent: #79694b;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 7%;
+  align-items: center;
+  min-height: 690px;
+  margin: 32px 4%;
+  padding: 48px 3.5%;
+  overflow: hidden;
+  background: var(--panel-bg);
+  color: var(--panel-text);
+}
+.theme-b .image-story-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.theme-b .image-story-media img { object-fit: cover; object-position: center; }
+.theme-b .image-story::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.theme-b .image-story--food .image-story-media { width: 70%; }
+.theme-b .image-story--food::after {
+  background: linear-gradient(90deg, rgba(243,240,232,0) 22%, rgba(243,240,232,.04) 32%, rgba(243,240,232,.88) 49%, rgba(243,240,232,.98) 56%, var(--panel-bg) 66%);
+}
+.theme-b .image-story-copy { position: relative; max-width: 580px; }
+.theme-b .image-story--food .image-story-copy { grid-column: 2; }
+.theme-b .image-story .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 24px;
+  color: var(--panel-accent);
+  font-size: 12px;
+  letter-spacing: 2.2px;
+}
+.theme-b .image-story .eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+.theme-b .image-story h2 {
+  color: var(--panel-text);
+  font: 400 clamp(56px, 5.3vw, 80px)/1.02 var(--serif);
+  letter-spacing: -2px;
+  margin: 0 0 28px;
+}
+.theme-b .image-story h2 em { color: var(--panel-accent); font-weight: 400; }
+.theme-b .image-story-copy > p {
+  color: var(--panel-muted);
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+  max-width: 54ch;
+}
+.theme-b .image-story-copy > p:last-child { margin-bottom: 0; }
+.theme-b .image-story .image-story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  color: var(--panel-text);
+  border-bottom: 1px solid var(--panel-accent);
+  padding: 8px 0;
+  margin-top: 6px;
+  font-size: 16px;
+}
+.theme-b .image-story-link span { color: var(--panel-accent); font-size: 22px; }
+.theme-b .image-story-link:hover { color: var(--panel-accent); }
+.theme-b .image-story a:focus-visible { outline-color: var(--panel-text); }
+.theme-b .image-story--philosophy { min-height: 660px; }
+.theme-b .image-story--philosophy .image-story-copy { grid-column: 2; }
+.theme-b .image-story--philosophy::after {
+  background: linear-gradient(90deg, rgba(243,240,232,0) 22%, rgba(243,240,232,.04) 34%, rgba(243,240,232,.88) 49%, rgba(243,240,232,.98) 57%, var(--panel-bg) 72%);
+}
+.theme-b .image-story--philosophy h2 {
+  font-size: clamp(34px, 3.1vw, 46px);
+  line-height: 1.16;
+  letter-spacing: -1px;
+}
+@media (min-width: 1800px) {
+  .theme-b .image-story { margin-inline: max(4%, calc((100vw - 1720px) / 2)); padding-inline: 64px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .theme-b .image-story { gap: 4%; padding: 40px 3%; min-height: 660px; }
+  .theme-b .image-story h2 { font-size: 58px; }
+  .theme-b .image-story--philosophy h2 { font-size: 36px; }
+  .theme-b .image-story-copy > p { font-size: 17px; }
+}
+@media (max-width: 900px) {
+  .theme-b .image-story {
+    --panel-photo-height: clamp(360px, 58vw, 500px);
+    display: block;
+    margin: 24px 4%;
+    padding: clamp(305px, 49vw, 435px) 5% 24px;
+    min-height: 0;
+  }
+  .theme-b .image-story .image-story-media { width: 100%; height: var(--panel-photo-height); }
+  .theme-b .image-story--food .image-story-media img { object-position: center 58%; }
+  .theme-b .image-story--philosophy .image-story-media img { object-position: 32% center; }
+  .theme-b .image-story::after {
+    background: linear-gradient(180deg, rgba(243,240,232,0) calc(var(--panel-photo-height) * .45), rgba(243,240,232,.94) calc(var(--panel-photo-height) * .84), var(--panel-bg) calc(var(--panel-photo-height) - 2px));
+  }
+  .theme-b .image-story-copy { max-width: 620px; margin-inline: auto; }
+  .theme-b .image-story h2 { font-size: clamp(48px, 8vw, 66px); letter-spacing: -1.5px; }
+  .theme-b .image-story--philosophy h2 { font-size: clamp(32px, 5.8vw, 42px); line-height: 1.2; letter-spacing: -.6px; }
+  .theme-b .image-story .eyebrow { font-size: 11px; margin-bottom: 20px; }
+  .theme-b .image-story-copy > p { font-size: 17px; line-height: 1.75; margin-bottom: 18px; }
+}

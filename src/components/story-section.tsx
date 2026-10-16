@@ -1,19 +1,20 @@
+import Image from "next/image";
 import InternalLink from "./internal-link";
 
 export default function StorySection() {
   return (
-    <section className="brand-story-section" id="our-story">
-      <div className="brand-story-photo">
-        <img
-          src="/assets/tea.webp"
-          alt="A quiet moment of tea being poured at Taste of Beauty"
-          loading="lazy"
+    <section className="image-story image-story--food" id="our-story" aria-labelledby="story-title">
+      <div className="image-story-media">
+        <Image
+          src="/images/food/pumpkin-soup-landscape.png"
+          alt="Golden pumpkin soup with delicate crisp garnish in a turquoise bowl"
+          fill
+          sizes="(max-width: 900px) 92vw, (min-width: 1800px) 1204px, 65vw"
         />
-        <span>BEAUTY IN THE EVERYDAY</span>
       </div>
-      <div className="brand-story-copy">
+      <div className="image-story-copy">
         <div className="eyebrow">OUR STORY</div>
-        <h2>
+        <h2 id="story-title">
           We’re all
           <br />
           <em>Earthlings.</em>
@@ -29,8 +30,8 @@ export default function StorySection() {
           menu or a gathering with people you love, our wish is simple: a good
           meal, a moment of connection, and a little more kindness.
         </p>
-        <InternalLink className="inline-link" href="/menus">
-          Discover our menus
+        <InternalLink className="image-story-link" href="/menus">
+          Discover our menus <span aria-hidden="true">↗</span>
         </InternalLink>
       </div>
     </section>

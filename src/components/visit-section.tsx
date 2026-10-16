@@ -1,17 +1,21 @@
+import Image from "next/image";
+
 export default function VisitSection() {
   return (
-    <section className="visit-section" id="visit" aria-label="Our philosophy">
-      <div className="visit-photo">
-        <img
-          src="/assets/interior.webp"
-          alt="Taste of Beauty dining room with warm wood interiors and a piano"
-          loading="lazy"
+    <section className="image-story image-story--philosophy" id="visit" aria-labelledby="philosophy-title">
+      <div className="image-story-media">
+        <Image
+          src="/images/restaurant/window-side-room.png"
+          alt="Warm dining room with Buddha hand artwork and plants beside sunlit windows"
+          fill
+          sizes="(min-width: 1800px) 1720px, 92vw"
         />
       </div>
-      <div className="visit-info visit-philosophy">
-        <p className="philosophy-lead">
-          At Taste of Beauty, we believe beauty begins with seeing life differently.
-        </p>
+      <div className="image-story-copy">
+        <div className="eyebrow">OUR PHILOSOPHY</div>
+        <h2 id="philosophy-title">
+          At Taste of Beauty, we believe beauty begins with <em>seeing life differently.</em>
+        </h2>
         <p>
           A vegetable is more than a side dish. An animal is another living being.
           We are part of nature, not above it.
