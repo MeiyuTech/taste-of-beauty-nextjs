@@ -2,29 +2,6 @@
 
 A Next.js App Router website based on the approved `TOB_B_Designer_Package` (October 15, 2026). The site uses the B design's warm stone palette and photography, with dedicated pages for menus and Xiaolongbao, with the full story, reservation form, gatherings and visit details on the homepage. The owner requested a multi-page adaptation and an English-only edition with larger type and more compact spacing.
 
-## Run locally
-
-Use Node.js 22 LTS and npm. Dependencies and a lockfile are included in the project setup.
-
-```sh
-npm ci
-npm run dev
-```
-
-Open http://localhost:3000. Run the development server in your own terminal when working on the site.
-
-## Deploy to Vercel
-
-1. Add this project to a Git repository and import it into Vercel.
-2. Choose the **Next.js** framework preset and this folder as the project root.
-3. Select Node.js **22.x**. Keep the default output directory; the build script is `next build`.
-4. Set `NEXT_PUBLIC_SITE_URL` to the final public origin, such as `https://your-domain.com`, when your production domain is known.
-5. Deploy. No database, API keys, or custom server are required.
-
-Vercel's `VERCEL_PROJECT_PRODUCTION_URL` is used for canonical URLs and the sitemap when an explicit site URL is not provided. Without either value, local development omits canonical URLs and returns an empty sitemap. Preview deployment access and indexing should be managed in Vercel.
-
-Official setup reference: https://vercel.com/docs/frameworks/full-stack/nextjs
-
 ## Routes and content
 
 - `/`: B-style hero, four menu entry links, the complete brand story, reservation form, full gathering section, and complete visit details above the footer.
