@@ -5,7 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ? [
         "",
         "/menus",
-        "/gatherings",
         "/xiaolongbao",
       ].map((path) => ({
         url: `${siteUrl}${path}`,

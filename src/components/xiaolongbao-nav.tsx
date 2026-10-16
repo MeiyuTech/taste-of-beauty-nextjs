@@ -52,7 +52,7 @@ export default function XiaolongbaoNav() {
         <InternalLink href="/#our-story">
           Our story
         </InternalLink>
-        <InternalLink href="/gatherings">
+        <InternalLink href="/#gatherings">
           Gatherings
         </InternalLink>
         <InternalLink href="/#visit">

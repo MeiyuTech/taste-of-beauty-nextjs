@@ -1,6 +1,6 @@
 # Taste of Beauty
 
-A Next.js App Router website based on the approved `TOB_B_Designer_Package` (October 15, 2026). The site uses the B design's warm stone palette and photography, with dedicated pages for menus, gatherings and Xiaolongbao, with the full story, reservation form and visit details on the homepage. The owner requested a multi-page adaptation and an English-only edition with larger type and more compact spacing.
+A Next.js App Router website based on the approved `TOB_B_Designer_Package` (October 15, 2026). The site uses the B design's warm stone palette and photography, with dedicated pages for menus and Xiaolongbao, with the full story, reservation form, gatherings and visit details on the homepage. The owner requested a multi-page adaptation and an English-only edition with larger type and more compact spacing.
 
 ## Run locally
 
@@ -27,10 +27,10 @@ Official setup reference: https://vercel.com/docs/frameworks/full-stack/nextjs
 
 ## Routes and content
 
-- `/`: B-style hero, four menu entry links, the complete brand story, reservation form, gathering introduction, and complete visit details above the footer.
+- `/`: B-style hero, four menu entry links, the complete brand story, reservation form, full gathering section, and complete visit details above the footer.
 - `/menus`: full menus and dietary selection.
 - `/#our-story`: the complete brand story on the homepage; `/our-story` redirects here.
-- `/gatherings`: private dining and gathering enquiries.
+- `/#gatherings`: private dining and gathering enquiries on the homepage, between reservations and visit details; `/gatherings` redirects here.
 - `/#visit`: address, hours, directions and contact details at the bottom of the homepage; `/visit` redirects here.
 - `/#booking`: menu preference and booking handoff on the homepage; `/reservations` redirects here. Booking links use `?booking=lunch#booking` (or another menu key) to retain the selected menu.
 - `/xiaolongbao`: handmade Xiaolongbao page, mobile navigation and FAQ.
@@ -67,4 +67,4 @@ Screenshots are stored in `output/playwright/` and are excluded from Git. No pro
 
 Menus, pricing, hours, contact details, dietary notes and images come from the supplied designer package. Its own handoff asks the restaurant to confirm these details, image rights and the bilingual production arrangement before launch. No new flavors, testimonials or business claims have been added. Designer-only footer links and preview labels have been removed from visitor-facing pages.
 
-Story, reservations and visit details were consolidated into the homepage on October 16, 2026. Their old routes return permanent redirects, preserving campaign parameters and converting the old menu preference to the homepage booking parameter. The sitemap lists only the four content pages.
+Story, reservations, gatherings and visit details were consolidated into the homepage on October 16, 2026. Their old routes return permanent redirects, preserving campaign parameters and converting the old menu preference to the homepage booking parameter. The sitemap lists only the three content pages.

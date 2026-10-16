@@ -3,7 +3,7 @@ import InternalLink from "./internal-link";
 import { ORDER_URL } from "@/lib/booking";
 const navigation = [
   ["/menus", "Menus"],
-  ["/gatherings", "Gatherings"],
+  ["/#gatherings", "Gatherings"],
   ["/#our-story", "Our story"],
   ["/#visit", "Visit"],
 ];
@@ -53,7 +53,7 @@ export default function SiteShell({
         <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">
           Pickup & delivery
         </a>
-        <InternalLink href="/gatherings">
+        <InternalLink href="/#gatherings">
           Private gatherings
         </InternalLink>
       </section>

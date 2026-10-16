@@ -1,12 +1,11 @@
 export const legacySections: Record<string, string> = {
   "#menus": "/menus",
   "#story": "/#our-story",
-  "#gatherings": "/gatherings",
-  "#gather": "/gatherings",
+  "#gather": "/#gatherings",
 };
 
 export function homeSectionUrl(
-  section: "our-story" | "booking" | "visit",
+  section: "our-story" | "booking" | "visit" | "gatherings",
   params: Record<string, string | string[] | undefined>,
 ) {
   const query = new URLSearchParams();

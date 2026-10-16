@@ -1777,10 +1777,5 @@
   .theme-b .sticky-actions a { font-size: 15px; padding: 14px 10px; }
 }
 
-/* Story, reservations and visit details live on the homepage. */
-.theme-b .home-gathering { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
-.theme-b .home-gathering > .inline-link { justify-self: start; }
-.theme-b #our-story, .theme-b #booking, .theme-b #visit { scroll-margin-top: 0; }
-@media (max-width: 700px) {
-  .theme-b .home-intro { grid-template-columns: 1fr; }
-}
+/* Homepage sections share the sticky-header anchor offset. */
+.theme-b #our-story, .theme-b #booking, .theme-b #gatherings, .theme-b #visit { scroll-margin-top: 0; }

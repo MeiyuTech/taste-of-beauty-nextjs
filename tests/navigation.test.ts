@@ -28,10 +28,11 @@ test("explicit menu links win over previous choices, unrelated parameters stay b
 });
 test("old source section bookmarks map to standalone pages", () => {
   assert.equal(legacySections["#story"], "/#our-story");
-  assert.equal(legacySections["#gather"], "/gatherings");
+  assert.equal(legacySections["#gather"], "/#gatherings");
   assert.equal(legacySections["#booking"], undefined);
   assert.equal(legacySections["#main"], undefined);
   assert.equal(legacySections["#visit"], undefined);
+  assert.equal(legacySections["#gatherings"], undefined);
 });
 
 test("old reservation links preserve preferences without triggering the menu redirect", () => {
@@ -40,6 +41,7 @@ test("old reservation links preserve preferences without triggering the menu red
     "/?booking=lunch&utm_source=email#booking",
   );
   assert.equal(homeSectionUrl("our-story", {}), "/#our-story");
+  assert.equal(homeSectionUrl("gatherings", { utm_source: "email" }), "/?utm_source=email#gatherings");
   assert.equal(homeSectionUrl("visit", { utm_source: "email" }), "/?utm_source=email#visit");
   assert.equal(legacySections["#our-story"], undefined);
   assert.equal(

@@ -1,3 +1,4 @@
+import GatheringsSection from "./gatherings-section";
 import VisitSection from "./visit-section";
 import StorySection from "./story-section";
 import BookingSection from "./booking-section";
@@ -77,19 +78,7 @@ export default function HomeContent() {
       </section>
       <StorySection />
       <BookingSection />
-      <section className="home-intro home-gathering" aria-label="Gatherings">
-        <div>
-          <div className="eyebrow">GATHERINGS</div>
-          <h2>
-            Bring your people.
-            <br />
-            <em>Make it beautiful.</em>
-          </h2>
-        </div>
-        <InternalLink className="inline-link" href="/gatherings">
-          Plan your gathering
-        </InternalLink>
-      </section>
+      <GatheringsSection />
       <VisitSection />
     </SiteShell>
   );
