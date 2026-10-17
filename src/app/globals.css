@@ -43,8 +43,7 @@ body {
 
 .theme-b .site-nav nav a[aria-current="page"] {
   color: #90452f;
-  box-shadow: 0 1px currentColor;
-  padding-bottom: 4px;
+  font-weight: 600;
 }
 .theme-b .home-intro {
   display: grid;

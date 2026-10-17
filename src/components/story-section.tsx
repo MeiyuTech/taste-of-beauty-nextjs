@@ -31,7 +31,7 @@ export default function StorySection() {
           meal, a moment of connection, and a little more kindness.
         </p>
         <InternalLink className="image-story-link" href="/menus">
-          Discover our menus <span aria-hidden="true">↗</span>
+          Discover our menus
         </InternalLink>
       </div>
     </section>

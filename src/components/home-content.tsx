@@ -47,7 +47,6 @@ export default function HomeContent() {
                 <strong>$59</strong>
                 <span>Five-course dinner</span>
               </div>
-              <b>↗</b>
             </InternalLink>
             <InternalLink href="/menus?menu=99">
               <img src="/assets/lotus.webp" alt="Eight-course tasting menu" />
@@ -55,7 +54,6 @@ export default function HomeContent() {
                 <strong>$99</strong>
                 <span>Eight-course tasting</span>
               </div>
-              <b>↗</b>
             </InternalLink>
             <InternalLink href="/menus?menu=lunch">
               <img src="/assets/vegetable-noodles.png" alt="Vegetable noodles with mushrooms and fresh basil at Taste of Beauty" />
@@ -63,7 +61,6 @@ export default function HomeContent() {
                 <strong>Lunch</strong>
                 <span>A little everyday pleasure</span>
               </div>
-              <b>↗</b>
             </InternalLink>
             <InternalLink href="/xiaolongbao">
               <img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao" />
@@ -71,7 +68,6 @@ export default function HomeContent() {
                 <strong>Xiaolongbao</strong>
                 <span>Handmade little comforts</span>
               </div>
-              <b>↗</b>
             </InternalLink>
           </div>
         </div>
