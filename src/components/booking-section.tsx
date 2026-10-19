@@ -12,7 +12,10 @@ export default function BookingSection() {
             <em>your table.</em>
           </h2>
         </div>
-        <BookingForm />
+        <div>
+          <p className="booking-helper">Book dinner, a tasting menu or lunch at our West Hollywood restaurant.</p>
+          <BookingForm />
+        </div>
       </section>
     </DiningProvider>
   );

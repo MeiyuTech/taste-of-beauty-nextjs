@@ -3,6 +3,8 @@ const config: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
+      { source: "/los-angeles", destination: "/menus", permanent: true },
+      { source: "/xiaolongbao", destination: "/vegan-xiaolongbao", permanent: true },
       {
         source: "/",
         has: [{ type: "query", key: "menu" }],
@@ -13,7 +15,7 @@ const config: NextConfig = {
       { source: "/version-b.html", destination: "/", permanent: true },
       {
         source: "/xiaolongbao.html",
-        destination: "/xiaolongbao",
+        destination: "/vegan-xiaolongbao",
         permanent: true,
       },
     ];

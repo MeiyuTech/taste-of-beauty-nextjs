@@ -168,13 +168,13 @@ export const menus: Record<MenuKey, DiningMenu> = {
     ]
   },
   "xlb": {
-    "title": "Handmade Xiaolongbao",
+    "title": "Handmade Vegan Xiaolongbao",
     "price": "By selection",
     "unit": "Daily selection",
     "eyebrow": "DINE IN · PICKUP · DELIVERY",
     "image": "xlb-0.webp",
     "alt": "Taste of Beauty xiaolongbao in a yellow steamer basket",
-    "intro": "A little basket of comfort, here or at home.",
+    "intro": "A little basket of comfort, here or at home. Our mini dumplings come in vegan and vegetarian fillings",
     "cta": "Reserve for lunch",
     "dinner": false,
     "courses": [

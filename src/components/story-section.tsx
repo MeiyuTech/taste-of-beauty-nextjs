@@ -30,6 +30,7 @@ export default function StorySection() {
           menu or a gathering with people you love, our wish is simple: a good
           meal, a moment of connection, and a little more kindness.
         </p>
+        <p>It’s why you’ll find plant-based fine dining in West Hollywood, right in the middle of Los Angeles’ most demanding restaurant scene.</p>
         <InternalLink className="image-story-link" href="/menus">
           Discover our menus
         </InternalLink>

@@ -177,14 +177,14 @@
   color: var(--muted);
   line-height: 1.9;
 }
-.theme-b h1,
+.theme-b .display-title,
 .theme-b h2,
 .theme-b h3,
 .theme-b h4,
 .theme-b p {
   margin-top: 0;
 }
-.theme-b h1,
+.theme-b .display-title,
 .theme-b h2 {
   font-family: var(--serif);
   font-weight: 400;
@@ -192,7 +192,7 @@
   letter-spacing: -2.3px;
   margin-bottom: 18px;
 }
-.theme-b h1 {
+.theme-b .display-title {
   font-size: clamp(50px, 5.1vw, 82px);
 }
 .theme-b h2 {
@@ -279,12 +279,12 @@
   gap: 40px;
   margin-bottom: 28px;
 }
-.theme-b .section-heading :is(h1, h2) {
+.theme-b .section-heading :is(.display-title, h2) {
   font-size: 43px;
   line-height: 1.1;
   margin-bottom: 10px;
 }
-.theme-b .section-heading :is(h1, h2) br {
+.theme-b .section-heading :is(.display-title, h2) br {
   display: none;
 }
 .theme-b .section-heading .zh {
@@ -336,7 +336,7 @@
   background: var(--ink);
   color: var(--bg);
 }
-.theme-b #menu-detail {
+.theme-b .menu-detail {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 6%;
@@ -365,13 +365,13 @@
   align-items: start;
   justify-content: space-between;
 }
-.theme-b .detail-heading h3 {
+.theme-b .detail-heading h2 {
   font: 35px/1.12 var(--serif);
   max-width: 320px;
   margin-bottom: 10px;
   letter-spacing: -1px;
 }
-.theme-b .detail-heading h3 small {
+.theme-b .detail-heading h2 small {
   display: block;
   font:
     12px/2 Arial,
@@ -418,11 +418,11 @@
   color: var(--muted);
   padding-top: 4px;
 }
-.theme-b .dish-list h4 {
+.theme-b .dish-list h3 {
   font: 19px/1.25 var(--serif);
   margin: 0 0 5px;
 }
-.theme-b .dish-list h4 span {
+.theme-b .dish-list h3 span {
   font:
     10px/1.8 Arial,
     sans-serif;
@@ -467,7 +467,7 @@
   background: var(--soft);
   color: var(--ink);
 }
-.theme-b .booking-title :is(h1, h2) {
+.theme-b .booking-title :is(.display-title, h2) {
   font-size: clamp(35px, 3.8vw, 55px);
 }
 .theme-b .booking-section {
@@ -543,7 +543,7 @@
 .theme-b .visit-photo img {
   height: 425px;
 }
-.theme-b .visit-info :is(h1, h2) {
+.theme-b .visit-info :is(.display-title, h2) {
   font-size: 39px;
 }
 .theme-b .visit-pairs {
@@ -680,7 +680,7 @@
 .theme-b .dark-hero-content {
   max-width: 680px;
 }
-.theme-b .dark-hero h1 {
+.theme-b .dark-hero .display-title {
   font-size: clamp(48px, 5.4vw, 83px);
   line-height: 1.03;
 }
@@ -716,7 +716,7 @@
 .theme-b .theme-c .menus-section {
   padding-top: 55px;
 }
-.theme-b .theme-c #menu-detail {
+.theme-b .theme-c .menu-detail {
   grid-template-columns: 1.1fr 1fr;
   gap: 8%;
 }
@@ -739,7 +739,7 @@
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
-.theme-b .theme-c .detail-heading h3 {
+.theme-b .theme-c .detail-heading h2 {
   font-size: 37px;
 }
 .theme-b .theme-c .price {
@@ -758,7 +758,7 @@
 .theme-b .theme-c .booking-box {
   background: #1b211b;
 }
-.theme-b .theme-c .booking-title :is(h1, h2) {
+.theme-b .theme-c .booking-title :is(.display-title, h2) {
   color: var(--accent);
 }
 @media (min-width: 1700px) {
@@ -790,7 +790,7 @@
   .theme-b .bright-hero {
     gap: 4%;
   }
-  .theme-b .bright-hero h1 {
+  .theme-b .bright-hero .display-title {
     font-size: 59px;
   }
   .theme-b .choice-grid {
@@ -835,13 +835,13 @@
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  .theme-b .visit-info :is(h1, h2) {
+  .theme-b .visit-info :is(.display-title, h2) {
     font-size: 34px;
   }
   .theme-b .dark-hero {
     height: 570px;
   }
-  .theme-b .dark-hero h1 {
+  .theme-b .dark-hero .display-title {
     font-size: 65px;
   }
 }
@@ -892,7 +892,7 @@
     font-size: 8px;
     letter-spacing: 1px;
   }
-  .theme-b .bright-hero h1 {
+  .theme-b .bright-hero .display-title {
     font-size: 54px;
     letter-spacing: -1.8px;
   }
@@ -961,15 +961,15 @@
     display: block;
     margin-bottom: 25px;
   }
-  .theme-b .section-heading :is(h1, h2) {
+  .theme-b .section-heading :is(.display-title, h2) {
     font-size: 34px;
     letter-spacing: -1px;
   }
-  .theme-b .section-heading :is(h1, h2) br {
+  .theme-b .section-heading :is(.display-title, h2) br {
     display: block;
   }
   .theme-b .section-heading > p {
-    display: none;
+    display: block;
   }
   .theme-b .menu-tabs {
     top: 77px;
@@ -987,8 +987,8 @@
   .theme-b .menu-tabs button:last-child {
     font-size: 14px;
   }
-  .theme-b #menu-detail,
-  .theme-b .theme-c #menu-detail {
+  .theme-b .menu-detail,
+  .theme-b .theme-c .menu-detail {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -1009,12 +1009,12 @@
     align-items: start;
     gap: 15px;
   }
-  .theme-b .detail-heading h3,
-  .theme-b .theme-c .detail-heading h3 {
+  .theme-b .detail-heading h2,
+  .theme-b .theme-c .detail-heading h2 {
     font-size: 30px;
     max-width: 230px;
   }
-  .theme-b .detail-heading h3 small {
+  .theme-b .detail-heading h2 small {
     font-size: 10px;
     margin-top: 8px;
   }
@@ -1044,10 +1044,10 @@
     padding: 14px 0;
     gap: 13px;
   }
-  .theme-b .dish-list h4 {
+  .theme-b .dish-list h3 {
     font-size: 18px;
   }
-  .theme-b .dish-list h4 span {
+  .theme-b .dish-list h3 span {
     display: block;
     margin: 4px 0 0;
     font-size: 10px;
@@ -1070,10 +1070,10 @@
     gap: 20px;
     scroll-margin-top: 0;
   }
-  .theme-b .booking-title :is(h1, h2) {
+  .theme-b .booking-title :is(.display-title, h2) {
     font-size: 40px;
   }
-  .theme-b .booking-title :is(h1, h2) br {
+  .theme-b .booking-title :is(.display-title, h2) br {
     display: none;
   }
   .theme-b .booking-title .zh {
@@ -1102,7 +1102,7 @@
   .theme-b .theme-c .visit-photo img {
     height: 310px;
   }
-  .theme-b .visit-info :is(h1, h2) {
+  .theme-b .visit-info :is(.display-title, h2) {
     font-size: 36px;
   }
   .theme-b .visit-pairs {
@@ -1153,7 +1153,7 @@
     padding: 50px 6% 90px;
     align-items: end;
   }
-  .theme-b .dark-hero h1 {
+  .theme-b .dark-hero .display-title {
     font-size: 50px;
     line-height: 1.06;
     letter-spacing: -1.8px;
@@ -1241,7 +1241,7 @@
 .theme-b .eyebrow {
   color: #74654e;
 }
-.theme-b h1 em,
+.theme-b .display-title em,
 .theme-b h2 em {
   color: #827052;
 }
@@ -1380,7 +1380,7 @@
   letter-spacing: 1px;
   margin-top: 14px;
 }
-.theme-b .brand-story-copy :is(h1, h2) {
+.theme-b .brand-story-copy :is(.display-title, h2) {
   font-size: 63px;
   line-height: 1.04;
 }
@@ -1414,7 +1414,7 @@
   background: #f7f4ed;
   border-bottom: 1px solid var(--line);
 }
-.theme-b .gatherings-section :is(h1, h2) {
+.theme-b .gatherings-section :is(.display-title, h2) {
   font-size: 46px;
   line-height: 1.1;
 }
@@ -1477,10 +1477,10 @@
   .theme-b .brand-story-section {
     gap: 6%;
   }
-  .theme-b .brand-story-copy :is(h1, h2) {
+  .theme-b .brand-story-copy :is(.display-title, h2) {
     font-size: 55px;
   }
-  .theme-b .gatherings-section :is(h1, h2) {
+  .theme-b .gatherings-section :is(.display-title, h2) {
     font-size: 41px;
   }
 }
@@ -1554,7 +1554,7 @@
   .theme-b .brand-story-photo > span {
     font-size: 8px;
   }
-  .theme-b .brand-story-copy :is(h1, h2) {
+  .theme-b .brand-story-copy :is(.display-title, h2) {
     font-size: 55px;
   }
   .theme-b .brand-story-copy .story-cn-title {
@@ -1572,7 +1572,7 @@
     gap: 32px;
     padding: 45px 5%;
   }
-  .theme-b .gatherings-section :is(h1, h2) {
+  .theme-b .gatherings-section :is(.display-title, h2) {
     font-size: 37px;
   }
   .theme-b .gatherings-cn-title {
@@ -1601,7 +1601,7 @@
 .theme-b .site-nav .nav-book { padding: 12px 20px; white-space: nowrap; }
 .theme-b .inline-link { font-size: 16px; }
 .theme-b .eyebrow, .theme-b .bright-hero .eyebrow { font-size: 12px; letter-spacing: 1.5px; margin-bottom: 16px; }
-.theme-b h1 { font-size: clamp(52px, 5.2vw, 80px); }
+.theme-b .display-title { font-size: clamp(52px, 5.2vw, 80px); }
 .theme-b .bright-hero { padding: 40px 5%; gap: 5%; }
 .theme-b .intro { font-size: 21px; line-height: 1.6; margin: 24px 0 0; }
 .theme-b .hero-actions { flex-wrap: wrap; gap: 20px; margin-top: 24px; }
@@ -1618,39 +1618,39 @@
 .theme-b .home-intro .inline-link { margin-top: 4px; }
 .theme-b .menus-section { padding: 40px 5% 48px; }
 .theme-b .section-heading { align-items: center; gap: 28px; margin-bottom: 26px; }
-.theme-b .section-heading :is(h1,h2) { font-size: clamp(40px,4.1vw,60px); }
+.theme-b .section-heading :is(.display-title,h2) { font-size: clamp(40px,4.1vw,60px); }
 .theme-b .section-heading > p { font-size: 17px; max-width: 320px; }
 .theme-b .menu-tabs { top: 88px; margin-bottom: 28px; }
 .theme-b .menu-tabs button { font-size: 25px; padding: 17px 20px; }
-.theme-b #menu-detail { grid-template-columns: minmax(0,0.85fr) minmax(0,1.15fr); gap: 4%; }
+.theme-b .menu-detail { grid-template-columns: minmax(0,0.85fr) minmax(0,1.15fr); gap: 4%; }
 .theme-b .detail-visual { top: 182px; }
 .theme-b .detail-visual img { height: clamp(380px,42vw,570px); }
 .theme-b .photo-label, .theme-b .brand-story-photo > span { font-size: 12px; line-height: 1.5; }
 .theme-b .detail-heading { flex-wrap: wrap; gap: 12px 20px; }
-.theme-b .detail-heading h3 { font-size: 38px; max-width: 360px; flex: 1 1 230px; }
+.theme-b .detail-heading h2 { font-size: 38px; max-width: 360px; flex: 1 1 230px; }
 .theme-b .price { font-size: 34px; }
 .theme-b .price small { font-size: 14px; }
 .theme-b .menu-intro { font-size: 18px; line-height: 1.6; margin-bottom: 18px; }
 .theme-b .dish-list { margin: 18px 0 24px; }
 .theme-b .dish-list li { padding: 13px 0; gap: 16px; }
 .theme-b .course-n { font-size: 13px; }
-.theme-b .dish-list h4 { font-size: 24px; }
+.theme-b .dish-list h3 { font-size: 24px; }
 .theme-b .dish-list p { font-size: 16px; line-height: 1.55; }
 .theme-b .diet-switch button { font-size: 16px; padding: 10px 18px; }
 .theme-b .fine, .theme-b .booking-error { font-size: 14px; line-height: 1.6; }
 .theme-b .brand-story-section, .theme-b .visit-section { padding: 44px 5%; gap: 5%; }
 .theme-b .brand-story-photo img { height: 460px; }
-.theme-b .brand-story-copy :is(h1,h2) { font-size: clamp(48px,4.7vw,68px); }
+.theme-b .brand-story-copy :is(.display-title,h2) { font-size: clamp(48px,4.7vw,68px); }
 .theme-b .brand-story-copy > p { font-size: 18px; line-height: 1.7; margin-bottom: 18px; max-width: 60ch; }
 .theme-b .gatherings-section { padding: 48px 5%; gap: 6%; align-items: center; }
-.theme-b .gatherings-section :is(h1,h2) { font-size: clamp(42px,4.2vw,60px); }
+.theme-b .gatherings-section :is(.display-title,h2) { font-size: clamp(42px,4.2vw,60px); }
 .theme-b .gatherings-intro > p { font-size: 18px; line-height: 1.65; max-width: 60ch; }
 .theme-b .gatherings-intro > .fine { font-size: 14px; }
 .theme-b .gathering-options > div { padding: 24px 0; gap: 18px; }
 .theme-b .gathering-options > div > span { font-size: 14px; }
 .theme-b .gathering-options h3 { font-size: 29px; line-height: 1.3; margin: 0; }
 .theme-b .booking-section { padding: 44px 5%; gap: 5%; grid-template-columns: minmax(0,0.8fr) minmax(0,1.2fr); }
-.theme-b .booking-title :is(h1, h2) { font-size: clamp(48px,4.7vw,68px); }
+.theme-b .booking-title :is(.display-title, h2) { font-size: clamp(48px,4.7vw,68px); }
 .theme-b .booking-box { padding: 28px; }
 .theme-b .selection-label { font-size: 12px; margin-bottom: 20px; }
 .theme-b .selection-label b { font: 28px/1.3 var(--serif); }
@@ -1661,7 +1661,7 @@
 .theme-b #booking-form .cta { font-size: 17px; }
 .theme-b .booking-box > .inline-link { font-size: 15px; }
 .theme-b .visit-photo img { height: 440px; }
-.theme-b .visit-info :is(h1,h2) { font-size: clamp(40px,4vw,58px); }
+.theme-b .visit-info :is(.display-title,h2) { font-size: clamp(40px,4vw,58px); }
 .theme-b .visit-pairs { gap: 24px; margin: 22px 0; padding-top: 20px; }
 .theme-b .visit-pairs h3 { font-size: 17px; font-weight: 600; }
 .theme-b .visit-pairs p { font-size: 16px; line-height: 1.7; }
@@ -1677,12 +1677,12 @@
   .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { font-size: 15px; }
   .theme-b .site-nav .nav-book { padding: 12px 15px; font-size: 15px; }
   .theme-b .bright-hero { gap: 4%; }
-  .theme-b .bright-title h1 { font-size: 52px; }
+  .theme-b .bright-title .display-title { font-size: 52px; }
   .theme-b .intro { font-size: 18px; }
   .theme-b .choice-grid strong { font-size: 25px; }
   .theme-b .choice-grid span { font-size: 14px; }
   .theme-b .booking-section { grid-template-columns: 1fr; gap: 24px; }
-  .theme-b .booking-title :is(h1, h2) br { display: none; }
+  .theme-b .booking-title :is(.display-title, h2) br { display: none; }
   .theme-b .visit-pairs { grid-template-columns: 1fr; gap: 12px; }
 }
 @media (max-width: 700px) {
@@ -1695,7 +1695,7 @@
   .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { font-size: 14px; padding: 8px 0; }
   .theme-b .site-nav .nav-book { font-size: 14px; padding: 10px 12px; min-height: 42px; }
   .theme-b .bright-hero { padding: 30px 5%; gap: 28px; }
-  .theme-b .bright-title h1 { font-size: clamp(44px,12vw,65px); letter-spacing: -1.8px; }
+  .theme-b .bright-title .display-title { font-size: clamp(44px,12vw,65px); letter-spacing: -1.8px; }
   .theme-b .eyebrow, .theme-b .bright-hero .eyebrow { font-size: 11px; letter-spacing: 1.1px; margin-bottom: 14px; }
   .theme-b .intro { font-size: 18px; margin-top: 18px; }
   .theme-b .hero-actions { gap: 16px; margin-top: 20px; }
@@ -1710,31 +1710,31 @@
   .theme-b .home-intro > div + div { padding-top: 24px; }
   .theme-b .home-intro h2 { font-size: 33px; }
   .theme-b .menus-section { padding: 30px 5% 36px; }
-  .theme-b .section-heading :is(h1,h2) { font-size: 39px; }
+  .theme-b .section-heading :is(.display-title,h2) { font-size: 39px; }
   .theme-b .section-heading > p { font-size: 16px; margin-top: 14px; max-width: none; }
   .theme-b .menu-tabs { top: 112px; margin-bottom: 22px; }
   .theme-b .menu-tabs button { font-size: 16px; padding: 16px 5px; text-align: center; }
-  .theme-b #menu-detail { grid-template-columns: 1fr; gap: 22px; }
+  .theme-b .menu-detail { grid-template-columns: 1fr; gap: 22px; }
   .theme-b .detail-visual { position: static; }
   .theme-b .detail-visual img { height: 280px; }
   .theme-b .photo-label { font-size: 11px; }
-  .theme-b .detail-heading h3 { font-size: 32px; flex-basis: 190px; }
+  .theme-b .detail-heading h2 { font-size: 32px; flex-basis: 190px; }
   .theme-b .price { font-size: 28px; }
   .theme-b .menu-intro { font-size: 17px; }
-  .theme-b .dish-list h4 { font-size: 23px; }
+  .theme-b .dish-list h3 { font-size: 23px; }
   .theme-b .brand-story-section, .theme-b .visit-section, .theme-b .gatherings-section, .theme-b .booking-section { grid-template-columns: 1fr; padding: 30px 5%; gap: 26px; }
   .theme-b .brand-story-photo img, .theme-b .visit-photo img { height: 300px; }
-  .theme-b .brand-story-copy :is(h1,h2) { font-size: 49px; }
+  .theme-b .brand-story-copy :is(.display-title,h2) { font-size: 49px; }
   .theme-b .brand-story-copy > p, .theme-b .gatherings-intro > p { font-size: 17px; }
   .theme-b .gatherings-intro > .fine { font-size: 14px; }
-  .theme-b .gatherings-section :is(h1,h2) { font-size: 41px; }
+  .theme-b .gatherings-section :is(.display-title,h2) { font-size: 41px; }
   .theme-b .gathering-options > div { padding: 20px 0; }
   .theme-b .gathering-options h3 { font-size: 25px; }
-  .theme-b .booking-title :is(h1, h2) { font-size: 44px; margin-bottom: 0; }
+  .theme-b .booking-title :is(.display-title, h2) { font-size: 44px; margin-bottom: 0; }
   .theme-b .booking-box { padding: 20px 16px; }
   .theme-b #booking-form { grid-template-columns: 1fr 1fr; gap: 16px 12px; }
   .theme-b #booking-form label:first-child { grid-column: 1/-1; }
-  .theme-b .visit-info :is(h1,h2) { font-size: 40px; }
+  .theme-b .visit-info :is(.display-title,h2) { font-size: 40px; }
   .theme-b .visit-pairs { grid-template-columns: 1fr; gap: 16px; }
   .theme-b .visit-pairs p { margin-bottom: 8px; }
   .theme-b .last-links { grid-template-columns: 1fr; gap: 12px; padding: 20px 5%; }
@@ -1950,4 +1950,40 @@
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* Semantic headings retain the existing visual hierarchy. */
+.theme-b h1.eyebrow { font: 500 12px/1.6 Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 16px; }
+.theme-b .bright-choices .menu-picker-heading { font: 400 clamp(26px, 2.5vw, 36px)/1.15 var(--serif); letter-spacing: -.6px; margin-bottom: 24px; }
+.theme-b .menu-detail[hidden], .theme-b .detail-copy section[hidden] { display: none; }
+.theme-b .diet-heading { font: 400 24px/1.3 var(--serif); letter-spacing: 0; margin: 24px 0 12px; }
+.theme-b .booking-helper, .theme-b .gathering-options p { font-size: 15px; line-height: 1.8; color: var(--muted); }
+.theme-b .gathering-options p { margin: 12px 0 0; }
+.theme-b .gathering-options > div > span { flex-shrink: 0; }
+
+.theme-b .section-heading > p a { text-decoration: underline; text-underline-offset: 4px; }
+
+/* The same navigation and visitor information appear on every page. */
+.theme-b .restaurant-footer .footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 18px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0;
+}
+.theme-b .restaurant-footer .footer-navigation a,
+.theme-b .restaurant-footer .footer-navigation a:last-child {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+}
+.theme-b .footer-navigation a:hover,
+.theme-b .footer-navigation a[aria-current="page"] { color: var(--cta); }
+.theme-b .xlb-detail-link { margin-bottom: 12px; }
+@media (max-width: 700px) {
+  .theme-b .site-nav nav { gap: 8px; }
+  .theme-b .site-nav nav a,
+  .theme-b .site-nav nav a:last-child { font-size: clamp(11px, 3.3vw, 14px); }
 }

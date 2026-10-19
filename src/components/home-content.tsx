@@ -11,16 +11,14 @@ export default function HomeContent() {
       <LegacyEntry />
       <section className="bright-hero">
         <div className="bright-title">
-          <div className="eyebrow">
-            VEGAN & VEGETARIAN DINING
-          </div>
-          <h1>
-            Good food.
+          <h1 className="eyebrow">Vegan Fine Dining in West Hollywood</h1>
+          <p className="display-title">
+            Good vegan food.
             <br />
             <em>Beautiful plans.</em>
-          </h1>
+          </p>
           <p className="intro">
-            Five courses for $59. Eight for $99.
+            Five courses for $59. An eight-course tasting menu, vegan or vegetarian, for $99.
             <br />
             Or make lunch your favorite part of the day.
           </p>
@@ -33,13 +31,14 @@ export default function HomeContent() {
             </InternalLink>
           </div>
           <div className="tiny-location">
-            616 N Robertson Blvd · West Hollywood
+            616 N Robertson Blvd · West Hollywood, CA
           </div>
         </div>
         <div className="bright-choices">
           <div className="eyebrow">
             WHAT ARE YOU IN THE MOOD FOR?
           </div>
+          <h2 className="menu-picker-heading">Your next vegan dinner, tasting menu or lunch</h2>
           <div className="choice-grid">
             <InternalLink href="/menus?menu=59">
               <img src="/assets/garden.webp" alt="Five-course vegan dinner" />
@@ -52,7 +51,7 @@ export default function HomeContent() {
               <img src="/assets/lotus.webp" alt="Eight-course tasting menu" />
               <div>
                 <strong>$99</strong>
-                <span>Eight-course tasting</span>
+                <span>Eight-course tasting menu</span>
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=lunch">
@@ -62,11 +61,11 @@ export default function HomeContent() {
                 <span>A little everyday pleasure</span>
               </div>
             </InternalLink>
-            <InternalLink href="/xiaolongbao">
+            <InternalLink href="/vegan-xiaolongbao">
               <img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao" />
               <div>
                 <strong>Xiaolongbao</strong>
-                <span>Handmade little comforts</span>
+                <span>Handmade vegan dumplings</span>
               </div>
             </InternalLink>
           </div>

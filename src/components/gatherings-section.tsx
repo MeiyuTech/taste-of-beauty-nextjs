@@ -11,9 +11,7 @@ export default function GatheringsSection() {
           <em>Make it beautiful.</em>
         </h2>
         <p>
-          For birthdays, meaningful celebrations and time together. Tell us
-          your date, guest count and occasion — we’ll help you explore the
-          dining arrangements.
+          For birthdays, anniversary dinners, meaningful celebrations and time together. Tell us your date, guest count and occasion — we’ll help you plan private dining in West Hollywood.
         </p>
         <div className="hero-actions">
           <a
@@ -34,21 +32,15 @@ export default function GatheringsSection() {
       <div className="gathering-options">
         <div>
           <span>01</span>
-          <h3>
-            Birthdays & anniversaries
-          </h3>
+          <div><h3>Birthday & anniversary dinners</h3><p>A tasting menu for the table, a quiet corner, and a reason to stay a little longer.</p></div>
         </div>
         <div>
           <span>02</span>
-          <h3>
-            Social & private gatherings
-          </h3>
+          <div><h3>Private dining & social gatherings</h3><p>Team dinners, family meals and long tables, with a menu planned with our team.</p></div>
         </div>
         <div>
           <span>03</span>
-          <h3>
-            Vegetarian wedding celebrations
-          </h3>
+          <div><h3>Vegetarian wedding celebrations</h3><p>Rehearsal dinners and intimate celebrations with a vegan or vegetarian menu built around your day.</p></div>
         </div>
       </div>
     </section>

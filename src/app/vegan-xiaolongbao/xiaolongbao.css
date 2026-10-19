@@ -148,7 +148,7 @@
   margin-bottom: 22px;
   font-weight: 500;
 }
-.xlb-page h1,
+.xlb-page .display-title,
 .xlb-page h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
@@ -156,7 +156,7 @@
   letter-spacing: -2.2px;
   margin: 0;
 }
-.xlb-page h1 {
+.xlb-page .display-title {
   font-size: clamp(48px, 5.2vw, 80px);
 }
 .xlb-page em {
@@ -636,7 +636,7 @@
   .xlb-page .hero {
     min-height: 620px;
   }
-  .xlb-page .hero h1 {
+  .xlb-page .hero .display-title {
     font-size: 55px;
   }
   .xlb-page .actions {
@@ -734,7 +734,7 @@
     font-size: 9px;
     margin-bottom: 18px;
   }
-  .xlb-page .hero h1 {
+  .xlb-page .hero .display-title {
     font-size: 55px;
     letter-spacing: -2.5px;
   }
@@ -950,7 +950,7 @@
 .xlb-page .xlb-hero .hero-photo > img {
   object-position: 50% center;
 }
-.xlb-page .xlb-hero h1 {
+.xlb-page .xlb-hero .display-title {
   font-size: clamp(48px, 5.2vw, 78px);
 }
 .xlb-page .xlb-strip {
@@ -1100,7 +1100,7 @@
   }
 }
 @media (max-width: 700px) {
-  .xlb-page .xlb-hero h1 {
+  .xlb-page .xlb-hero .display-title {
     font-size: 55px;
   }
   .xlb-page .xlb-strip {
@@ -1191,7 +1191,7 @@
   .xlb-page nav a { font-size: 14px; }
   .xlb-page .reserve { font-size: 14px; padding: 12px; }
   .xlb-page .hero-copy { padding: 36px 7%; }
-  .xlb-page .xlb-hero h1 { font-size: 52px; }
+  .xlb-page .xlb-hero .display-title { font-size: 52px; }
   .xlb-page .xlb-ways { gap: 22px; }
   .xlb-page .xlb-ways h3 { font-size: 27px; }
   .xlb-page .xlb-ways p { font-size: 16px; }
@@ -1205,7 +1205,7 @@
   .xlb-page nav a { font-size: 17px; }
   .xlb-page .hero { min-height: 0; }
   .xlb-page .hero-copy { padding: 32px 6%; }
-  .xlb-page .xlb-hero h1 { font-size: clamp(45px,12vw,60px); }
+  .xlb-page .xlb-hero .display-title { font-size: clamp(45px,12vw,60px); }
   .xlb-page .hero-copy .intro { font-size: 19px; margin: 18px 0; }
   .xlb-page .hero-photo { height: 300px; }
   .xlb-page .photo-caption { flex-wrap: wrap; padding: 45px 20px 18px; gap: 8px; }
@@ -1227,3 +1227,18 @@
   .xlb-page footer { padding: 28px 6% 90px; }
   .xlb-page .mobile-cta a { font-size: 16px; }
 }
+
+.xlb-page h1.eyebrow { font: 500 12px/1.6 Arial, sans-serif; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 18px; }
+.xlb-page .xlb-ways-intro { max-width: 680px; line-height: 1.8; margin: 24px 0; }
+.xlb-page .xlb-ways-address { font-size: 15px; line-height: 1.8; margin: 36px 0 0; }
+
+.xlb-page .xlb-fillings { padding: 0; margin: 28px 0 20px; list-style: none; }
+.xlb-page .xlb-fillings li { border-top: 1px solid var(--line); padding: 18px 0; }
+.xlb-page .xlb-fillings h3 { font-size: 24px; margin: 0 0 8px; line-height: 1.3; }
+.xlb-page .xlb-fillings p { margin: 0; font-size: 15px; }
+.xlb-page .xlb-fillings .filling-diet { display: block; margin-top: 6px; font: 12px/1.5 Arial, sans-serif; letter-spacing: .5px; }
+.xlb-page .filling-key { font-size: 13px; line-height: 1.7; }
+
+/* Preserve the product page palette inside the shared site shell. */
+.theme-b .xlb-page .display-title em,
+.theme-b .xlb-page h2 em { color: inherit; }

@@ -10,7 +10,7 @@ A Next.js App Router website based on the approved `TOB_B_Designer_Package` (Oct
 - `/#gatherings`: private dining and gathering enquiries on the homepage, between reservations and visit details; `/gatherings` redirects here.
 - `/#visit`: restaurant philosophy over a dining-room photo with Buddha hand artwork at the bottom of the homepage; `/visit` redirects here. Address, hours, directions, phone and dietary guidance are in the shared footer.
 - `/#booking`: menu preference and booking handoff on the homepage; `/reservations` redirects here. Booking links use `?booking=lunch#booking` (or another menu key) to retain the selected menu.
-- `/xiaolongbao`: handmade Xiaolongbao page, mobile navigation and FAQ.
+- `/vegan-xiaolongbao`: handmade Xiaolongbao page and FAQ, using the shared site navigation and footer.
 - `/menus?menu=59`, `/menus?menu=99`, `/menus?menu=lunch`, `/menus?menu=xlb`: direct menu entry points. Switching menus preserves existing query parameters such as UTM tags. Internal navigation carries UTM and advertising click IDs; menu-to-booking links carry the menu preference. Old homepage menu queries redirect to `/menus`; old section bookmarks forward to their current page or homepage section.
 - `/index.html`, `/version-b.html` and `/xiaolongbao.html`: permanent redirects from the handoff's legacy URLs; query parameters are retained.
 - `/robots.txt` and `/sitemap.xml`: generated metadata routes.
@@ -42,6 +42,18 @@ Screenshots are stored in `output/playwright/` and are excluded from Git. No pro
 
 ## Source review before launch
 
-Menus, pricing, hours, contact details, dietary notes and images come from the supplied designer package. Its own handoff asks the restaurant to confirm these details, image rights and the bilingual production arrangement before launch. No new flavors, testimonials or business claims have been added. Designer-only footer links and preview labels have been removed from visitor-facing pages.
+Menus, pricing, hours, contact details, dietary notes and images come from the supplied designer package. Its own handoff asks the restaurant to confirm these details, image rights and the bilingual production arrangement before launch. Xiaolongbao preparation claims were confirmed by the owner on October 19, 2026. Four filling descriptions and dietary labels were checked against the restaurant’s Uber Eats menu on that date. Dumpling-specific testimonials are still pending and are not displayed. Designer-only footer links and preview labels have been removed from visitor-facing pages.
 
 Story, reservations, gatherings and visit details were consolidated into the homepage on October 16, 2026. Their old routes return permanent redirects, preserving campaign parameters and converting the old menu preference to the homepage booking parameter. The sitemap lists only the three content pages.
+
+
+## October 19 SEO rewrite
+
+Applied `TOB New Site Rewrite.docx` to the homepage, menus and Xiaolongbao page. The visual display lines remain paragraphs, with one descriptive H1 per page. All menu courses, including both tasting diets, render in the initial HTML; tab controls only change visibility. Restaurant, Menu and FAQPage JSON-LD use the same menu/FAQ data as the page content. The canonical Xiaolongbao route is `/vegan-xiaolongbao`; `/xiaolongbao`, `/xiaolongbao.html` and `/los-angeles` redirect permanently to their current destinations. The configured site origin takes precedence; otherwise canonical URLs use `https://thetasteofbeauty.com`.
+
+The owner confirmed the preparation claims. The filling list uses the restaurant’s [Uber Eats menu](https://www.ubereats.com/store/tob-vegan-kitchen-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA) pending the owner's final list. No dumpling-specific reviews have been added; three attributable reviews are still needed. The ingredient FAQ describes the individual fillings instead of presenting the draft's single example as the recipe for every filling.
+
+Validation for the October 19 rewrite: TypeScript and all eight existing tests passed. Raw HTTP responses include all 27 menu courses and all 12 FAQ answers; FAQ JSON-LD matches the visible answers. Titles and descriptions meet the document's length limits, canonicals resolve to the expected URLs, and permanent redirects retain campaign parameters. Codex in-app browser checks passed at the default desktop viewport and 390 × 844 for the three pages, menu/diet switching and FAQ expansion. Screenshots for this session are in the ToB workspace at `../ToB/output/playwright/`. No build or deployment was run.
+
+
+All content pages and the not-found page now use `SiteShell` for the header, footer and sticky booking actions. Both header and footer link to Menus, Xiaolongbao, Our story, Gatherings and Visit. Xiaolongbao remains the fourth menu tab, with an explicit “Explore our xiaolongbao” link immediately below its introduction. It has not moved into Lunch.

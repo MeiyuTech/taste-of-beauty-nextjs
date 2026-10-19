@@ -1,8 +1,11 @@
+import SiteShell from "@/components/site-shell";
+
 export default function NotFound() {
   return (
-    <main
+    <SiteShell>
+    <section
       style={{
-        minHeight: "100vh",
+        minHeight: "55vh",
         display: "grid",
         placeContent: "center",
         padding: 32,
@@ -18,6 +21,7 @@ export default function NotFound() {
       <a href="/" style={{ color: "#90452f" }}>
         Back to home
       </a>
-    </main>
+    </section>
+    </SiteShell>
   );
 }

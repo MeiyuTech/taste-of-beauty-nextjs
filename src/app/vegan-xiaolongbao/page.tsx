@@ -1,46 +1,37 @@
 import InternalLink from "@/components/internal-link";
 import type { Metadata } from "next";
-import { ORDER_URL } from "@/lib/booking";
-import XiaolongbaoNav from "@/components/xiaolongbao-nav";
+import { BOOKING_URL, ORDER_URL } from "@/lib/booking";
+import SiteShell from "@/components/site-shell";
 import "./xiaolongbao.css";
 import { siteUrl } from "@/lib/site";
+import JsonLd from "@/components/json-ld";
+import { xiaolongbaoFaqs, xiaolongbaoFillings } from "@/lib/xiaolongbao";
 export const metadata: Metadata = {
-  title: "Handmade Xiaolongbao",
+  title: "Vegan Xiaolongbao in West Hollywood",
   description:
-    "Discover handmade xiaolongbao at Taste of Beauty, West Hollywood. Dine in, order pickup or delivery.",
-  ...(siteUrl ? { alternates: { canonical: "/xiaolongbao" } } : {}),
+    "Handmade vegan and vegetarian xiaolongbao in West Hollywood. Dine in at lunch, or order pickup and delivery.",
+  ...(siteUrl ? { alternates: { canonical: "/vegan-xiaolongbao" } } : {}),
 };
 export default function XiaolongbaoPage() {
   return (
-    <div className="xlb-page">
-      <a className="skip" href="#main">
-        Skip to content
-      </a>
-      <XiaolongbaoNav />
-      <main id="main">
+    <SiteShell active="vegan-xiaolongbao">
+      <div className="xlb-page">
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: xiaolongbaoFaqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) }} />
+
         <section className="hero xlb-hero">
           <div className="hero-copy">
-            <div className="eyebrow">TASTE OF BEAUTY · WEST HOLLYWOOD</div>
-            <h1>
+            <h1 className="eyebrow">Vegan Xiaolongbao in West Hollywood</h1>
+            <p className="display-title">
               Small folds.
               <br />
               <em>Beautiful bites.</em>
-            </h1>
+            </p>
             <p className="intro">
-              Handmade xiaolongbao, made for the simple pleasure of a good meal.
+              Handmade vegan xiaolongbao and vegetarian mini dumplings. Dine in at lunch, or take a basket home.
             </p>
             <div className="actions">
-              <a
-                className="button"
-                href={ORDER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order xiaolongbao
-              </a>
-              <a className="text-link" href="#enjoy">
-                Make it your moment
-              </a>
+              <a className="button" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Reserve now</a>
+              <a className="text-link" href={ORDER_URL} target="_blank" rel="noopener noreferrer">Order pickup or delivery</a>
             </div>
             <div className="hero-note">
               HANDMADE · READY TO SHARE
@@ -80,16 +71,20 @@ export default function XiaolongbaoPage() {
             <h2>
               Folded
               <br />
-              <em>with care.</em>
+              <em>with Care.</em>
             </h2>
             <p>
               A delicate wrapper. A savory filling. The pleasure of bringing a
               basket to the table and reaching for the first bite. Some of the
               best moments are the simplest.
             </p>
-            <a className="text-link" href="#selection">
-              Explore the selection
-            </a>
+            <p><a href="https://en.wikipedia.org/wiki/Xiaolongbao" target="_blank" rel="noopener noreferrer">Xiaolongbao</a> are Shanghai-style mini dumplings, traditionally made with pork. Ours are vegan or vegetarian, so you can enjoy the whole basket without meat.</p>
+            <p>Find us at 616 N Robertson Blvd — a <InternalLink href="/">vegan and vegetarian restaurant in West Hollywood</InternalLink>, so you never have to hunt for the one meat-free item on the menu.</p>
+            <div className="actions">
+              <a className="button" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Reserve now</a>
+              <a className="text-link" href={ORDER_URL} target="_blank" rel="noopener noreferrer">Order pickup or delivery</a>
+            </div>
+
           </div>
         </section>
         <section className="section xlb-selection" id="selection">
@@ -99,7 +94,7 @@ export default function XiaolongbaoPage() {
                 02 — FIND YOUR FAVORITE
               </div>
               <h2>
-                A basket <em>to make your own.</em>
+                Choose Your Filling: <em>Vegan or Vegetarian</em>
               </h2>
             </div>
             <p>
@@ -123,6 +118,12 @@ export default function XiaolongbaoPage() {
                 portions and prices. Offerings may vary between dine-in and
                 delivery.
               </p>
+              <ul className="xlb-fillings">
+                {xiaolongbaoFillings.map(({ name, description, diet, label }) => (
+                  <li key={name}><h3>{name} <span className="filling-diet">{label} · {diet}</span></h3><p>{description}</p></li>
+                ))}
+              </ul>
+              <p className="filling-key">V = Vegan · VG = Vegetarian. Check today’s menu for availability.</p>
               <div className="diet-note">
                 <b>
                   A note on dietary preferences
@@ -162,11 +163,12 @@ export default function XiaolongbaoPage() {
               </h2>
             </div>
           </div>
+          <p className="xlb-ways-intro">You can enjoy our vegan soup dumplings three ways, all from the same kitchen on N Robertson Blvd:</p>
           <div className="xlb-ways">
             <article>
               <span>01 / DINE IN</span>
               <h3>
-                A slower lunch.
+                Dine In
               </h3>
               <p>
                 Join us for lunch, Tuesday–Sunday, 12:30–3:30 pm. Ask our team
@@ -182,11 +184,10 @@ export default function XiaolongbaoPage() {
             <article>
               <span>02 / PICKUP</span>
               <h3>
-                On your way home.
+                Pickup
               </h3>
               <p>
-                Choose pickup on our ordering page and check availability and
-                collection time before placing your order.
+                Order on Uber Eats and choose pickup. Check availability and collection time before you order.
               </p>
               <a
                 className="button light"
@@ -200,11 +201,10 @@ export default function XiaolongbaoPage() {
             <article>
               <span>03 / DELIVERY</span>
               <h3>
-                Comfort, delivered.
+                Delivery
               </h3>
               <p>
-                Enter your address on Uber Eats to see delivery availability,
-                current prices and estimated arrival time.
+                Delivered across West Hollywood and nearby Los Angeles neighborhoods via Uber Eats.
               </p>
               <a
                 className="button light"
@@ -216,49 +216,18 @@ export default function XiaolongbaoPage() {
               </a>
             </article>
           </div>
+          <p className="xlb-ways-address">616 N Robertson Blvd, West Hollywood, CA 90069 · <a href="tel:+16575063567">(657) 506-3567</a>. Minutes from Beverly Hills, Melrose and the Design District.</p>
         </section>
         <section className="section xlb-faq">
           <div className="eyebrow">BEFORE YOUR FIRST BITE</div>
-          <h2>
-            A little <em>good to know.</em>
-          </h2>
-          <details>
-            <summary>
-              Are all the xiaolongbao vegan?{" "}
-              <span>＋</span>
-            </summary>
-            <p>
-              No. Check the specific filling before ordering. Egg-containing
-              fillings are vegetarian and are not suitable for a vegan diet.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Can I order them for dinner?<span>＋</span>
-            </summary>
-            <p>
-              Please call our team to confirm dinner availability and ordering
-              arrangements before visiting.
-            </p>
-          </details>
-          <details>
-            <summary>
-              Where can I see flavors and prices?{" "}
-              <span>＋</span>
-            </summary>
-            <p>
-              Our ordering page shows the current online selection. Dine-in
-              options may differ; call us for the day's restaurant offering.
-            </p>
-            <a
-              className="text-link"
-              href={ORDER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Current ordering menu
-            </a>
-          </details>
+          <h2>Vegan Xiaolongbao <em>FAQ</em></h2>
+          {xiaolongbaoFaqs.map(({ question, answer, href, label }) => (
+            <details key={question}>
+              <summary>{question}<span>＋</span></summary>
+              <p>{answer}</p>
+              {href && (href.startsWith("/") ? <InternalLink className="text-link" href={href}>{label}</InternalLink> : <a className="text-link" href={href} target={href.startsWith("https:") ? "_blank" : undefined} rel={href.startsWith("https:") ? "noopener noreferrer" : undefined}>{label}</a>)}
+            </details>
+          ))}
           <div className="xlb-end">
             <p>616 N Robertson Blvd · West Hollywood, CA 90069</p>
             <InternalLink className="text-link" href="/#visit">
@@ -266,35 +235,7 @@ export default function XiaolongbaoPage() {
             </InternalLink>
           </div>
         </section>
-      </main>
-      <footer>
-        <div className="footer-brand">
-          TASTE OF BEAUTY
-          <small>
-            Good food. A gentler world.
-            </small>
-        </div>
-        <div>
-          <InternalLink href="/menus">Menus</InternalLink>
-          <InternalLink href="/?booking=xlb#booking">
-            Reservations
-          </InternalLink>
-          <InternalLink href="/xiaolongbao">Xiaolongbao</InternalLink>
-          <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">
-            Takeaway
-          </a>
-          <a href="mailto:events@thetasteofbeauty.com">Private dining</a>
-        </div>
-        <div className="footer-bottom">
-          <span>© 2026 Taste of Beauty</span>
-        </div>
-      </footer>
-      <div className="mobile-cta">
-        <InternalLink href="/menus">Menus</InternalLink>
-        <InternalLink href="/?booking=xlb#booking">
-          Reserve
-        </InternalLink>
       </div>
-    </div>
+    </SiteShell>
   );
 }

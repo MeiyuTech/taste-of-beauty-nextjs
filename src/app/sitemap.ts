@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ? [
         "",
         "/menus",
-        "/xiaolongbao",
+        "/vegan-xiaolongbao",
       ].map((path) => ({
         url: `${siteUrl}${path}`,
         changeFrequency: path === "/menus" ? "weekly" : "monthly",

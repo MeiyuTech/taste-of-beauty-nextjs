@@ -76,9 +76,6 @@ export function MenuPanel() {
   const { active, select } = useContext(DiningContext);
   const [diet, setDiet] = useState<"vegan" | "vegetarian">("vegan");
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
-  const menu = menus[active];
-  const courses =
-    active === "99" && diet === "vegetarian" ? menu.vegetarian! : menu.courses;
   function choose(key: MenuKey) {
     setDiet("vegan");
     select(key);
@@ -106,7 +103,7 @@ export function MenuPanel() {
             }}
             role="tab"
             id={`menu-tab-${key}`}
-            aria-controls="menu-detail"
+            aria-controls={`menu-detail-${key}`}
             aria-selected={active === key}
             tabIndex={active === key ? 0 : -1}
             className={active === key ? "selected" : ""}
@@ -117,10 +114,15 @@ export function MenuPanel() {
           </button>
         ))}
       </div>
-      <div
-        id="menu-detail"
+      {menuKeys.map((key) => {
+        const menu = menus[key];
+        return <div
+        key={key}
+        className="menu-detail"
+        hidden={active !== key}
+        id={`menu-detail-${key}`}
         role="tabpanel"
-        aria-labelledby={`menu-tab-${active}`}
+        aria-labelledby={`menu-tab-${key}`}
         tabIndex={0}
       >
         <div className="detail-visual">
@@ -130,18 +132,23 @@ export function MenuPanel() {
         <div className="detail-copy">
           <div className="eyebrow">{menu.eyebrow}</div>
           <div className="detail-heading">
-            <h3>
+            <h2>
               {menu.title}
-            </h3>
+            </h2>
             <div className="price">
               {menu.price}
               <small>{menu.unit}</small>
             </div>
           </div>
           <p className="menu-intro">
-            {menu.intro}
+            {menu.intro}{key === "xlb" && <> — see the <InternalLink href="/vegan-xiaolongbao">full xiaolongbao page</InternalLink>.</>}
           </p>
-          {active === "99" && (
+          {key === "xlb" && (
+            <InternalLink className="secondary xlb-detail-link" href="/vegan-xiaolongbao">
+              Explore our xiaolongbao <span aria-hidden="true">→</span>
+            </InternalLink>
+          )}
+          {key === "99" && (
             <div className="diet-switch" role="group" aria-label="Dietary menu">
               <button
                 type="button"
@@ -159,33 +166,29 @@ export function MenuPanel() {
               </button>
             </div>
           )}
-          <ol className="dish-list">
-            {courses.map((course, index) => (
-              <li key={course[0]}>
-                <span className="course-n">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h4>
-                    {course[0]}
-                  </h4>
-                  <p>
-                    {course[1]}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          {active === "lunch" && (
+          {(key === "99" ? ["vegan", "vegetarian"] as const : ["vegan"] as const).map((variant) => (
+            <section key={variant} hidden={key === "99" && diet !== variant} aria-label={key === "99" ? `${variant} tasting menu` : undefined}>
+              {key === "99" && <h2 className="diet-heading">The Tasting Experience – {variant === "vegan" ? "Vegan" : "Vegetarian"}</h2>}
+              <ol className="dish-list">
+                {(variant === "vegetarian" ? menu.vegetarian! : menu.courses).map((course, index) => (
+                  <li key={course[0]}>
+                    <span className="course-n">{String(index + 1).padStart(2, "0")}</span>
+                    <div><h3>{course[0]}</h3><p>{course[1]}</p></div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ))}
+          {key === "lunch" && (
             <p className="fine">
               Selected lunch dishes shown.
             </p>
           )}
           <div className="menu-actions">
-            <InternalLink className="cta" href={`/?booking=${active}#booking`}>
+            <InternalLink className="cta" href={`/?booking=${key}#booking`}>
               {menu.cta}
             </InternalLink>
-            {active === "xlb" && (
+            {key === "xlb" && (
               <>
                 <a
                   className="secondary"
@@ -195,9 +198,7 @@ export function MenuPanel() {
                 >
                   Order online
                 </a>
-                <InternalLink className="inline-link" href="/xiaolongbao">
-                  Discover more
-                </InternalLink>
+
               </>
             )}
           </div>
@@ -211,7 +212,8 @@ export function MenuPanel() {
             Tell us about allergies before ordering.
           </p>
         </div>
-      </div>
+      </div>;
+      })}
     </>
   );
 }
