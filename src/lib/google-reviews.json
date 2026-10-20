@@ -1,0 +1,155 @@
+[
+  {
+    "id": "jay-goyani",
+    "name": "Jay Goyani",
+    "rating": 5,
+    "date": "2026-09-15",
+    "dateLabel": "Sep 15, 2026",
+    "avatar": "/images/reviews/jay-goyani-avatar.jpg",
+    "text": "Wilson was really helpful with ideas and really good food.\n\nNOTE: they dont validate parking, even if they say so over the call. We had to suffer parking costs for the same.",
+    "photos": [
+      "/images/reviews/jay-goyani-1.jpg",
+      "/images/reviews/jay-goyani-2.jpg",
+      "/images/reviews/jay-goyani-3.jpg",
+      "/images/reviews/jay-goyani-4.jpg",
+      "/images/reviews/jay-goyani-5.jpg"
+    ],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "ellie-lehman",
+    "name": "Ellie Lehman",
+    "rating": 5,
+    "date": "2026-09-03",
+    "dateLabel": "Sep 3, 2026",
+    "avatar": "/images/reviews/ellie-lehman-avatar.jpg",
+    "text": "Went here for the first time tonight and was blown away. They were able to create such rich, creamy, and satisfying flavors without any animal products! My non-vegetarian/vegan boyfriend loved it as well!",
+    "photos": [],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "alex-charak",
+    "name": "Alex Charak",
+    "rating": 5,
+    "date": "2026-09-01",
+    "dateLabel": "Sep 1, 2026",
+    "avatar": "/images/reviews/alex-charak-avatar.jpg",
+    "text": "A treasure! The most delicious and creative menu. The vegan dishes are all so tasty. The staff is friendly and the restaurant has a great vibe.",
+    "photos": [
+      "/images/reviews/alex-charak-1.jpg",
+      "/images/reviews/alex-charak-2.jpg",
+      "/images/reviews/alex-charak-3.jpg",
+      "/images/reviews/alex-charak-4.jpg"
+    ],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "vanessa-schneider",
+    "name": "Vanessa Schneider",
+    "rating": 5,
+    "date": "2026-07-31",
+    "dateLabel": "Jul 31, 2026",
+    "avatar": "/images/reviews/vanessa-schneider-avatar.jpg",
+    "text": "Wilson was amazing! Fun food and delicious\nSomething new and interesting. Did 8 course vegan and wine pairing was very nice. Def go worth every penny",
+    "photos": [
+      "/images/reviews/vanessa-schneider-1.jpg",
+      "/images/reviews/vanessa-schneider-2.jpg",
+      "/images/reviews/vanessa-schneider-3.jpg",
+      "/images/reviews/vanessa-schneider-4.jpg",
+      "/images/reviews/vanessa-schneider-5.jpg",
+      "/images/reviews/vanessa-schneider-6.jpg",
+      "/images/reviews/vanessa-schneider-7.jpg",
+      "/images/reviews/vanessa-schneider-8.jpg"
+    ],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "keith-loritz",
+    "name": "Keith Loritz",
+    "rating": 5,
+    "date": "2026-07-19",
+    "dateLabel": "Jul 19, 2026",
+    "avatar": "/images/reviews/keith-loritz-avatar.jpg",
+    "text": "Awesome, must visit if you are a vegan/vegetarian.",
+    "photos": [
+      "/images/reviews/keith-loritz-1.jpg",
+      "/images/reviews/keith-loritz-2.jpg"
+    ],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "evelyn-lorena",
+    "name": "Evelyn Lorena",
+    "rating": 5,
+    "date": "2026-07-14",
+    "dateLabel": "Jul 14, 2026",
+    "avatar": "/images/reviews/evelyn-lorena-avatar.jpg",
+    "text": "I really hope Michelin is able to stop by and consider this restaurant. Having been to many Michelin starred restaurants (and sometimes feeling disappointed) I was so impressed with ToB. The elegance and whimsy that is in the food as well as the thoughtfulness and consideration placed into the dishes is outstanding. The quality and uniqueness of the recipes highlighted the vegetables in such a delicious and beautiful way. Really artfully crafted and creative. I had a full tasting menu and felt satisfied, in awe, and still did not have that awful stuffed feeling. If anything I felt like the menu inspired: light. They also have options and tailor the menu to be accessible which I feel can be missing in many fine dining -- its either quality or no, and ToB has both. The server was also so specific and kind and respectful. It was truly one of the most unique dining experiences I've ever had in both LA and elsewhere. And not to mention DELICIOUS. I adored this. Thank you for a wonderful experience.",
+    "photos": [],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "lisa-m",
+    "name": "Lisa M",
+    "rating": 5,
+    "date": "2026-07-10",
+    "dateLabel": "Jul 10, 2026",
+    "avatar": "/images/reviews/lisa-m-avatar.jpg",
+    "text": "We had such a wonderful experience and the food was absolutely delicious! Every dish was unique and the presentation was beautiful. We can’t wait to come back! Even non vegans will enjoy this place.",
+    "photos": [],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "daniel-martinez",
+    "name": "Daniel Martinez",
+    "rating": 5,
+    "date": "2026-07-04",
+    "dateLabel": "Jul 4, 2026",
+    "avatar": "/images/reviews/daniel-martinez-avatar.jpg",
+    "text": "We came to celebrate my wife’s birthday, and the experience was simply unforgettable.\n\nFrom the moment we walked in, every detail made us feel like we were part of something truly special. The tasting menu was, without exaggeration, one of the best dining experiences we’ve ever had. Every course was beautifully presented, full of creativity, and absolutely delicious. You can really feel the passion and storytelling behind each dish.\n\nWhat made the evening even more memorable was the exceptional service from our waiter, Wilson. He was warm, attentive, knowledgeable, and struck the perfect balance between professionalism and making us feel at home. His recommendations and the way he guided us through each course elevated an already incredible experience.\n\nTaste of Beauty isn’t just a restaurant—it’s an experience. If you’re looking for a place to celebrate a special occasion or simply enjoy one of the most unique tasting menus in Los Angeles, this is it.\n\nThank you to the entire team for giving us such an unforgettable birthday celebration. We’ll definitely be back. ❤️",
+    "photos": [
+      "/images/reviews/daniel-martinez-1.jpg",
+      "/images/reviews/daniel-martinez-2.jpg",
+      "/images/reviews/daniel-martinez-3.jpg",
+      "/images/reviews/daniel-martinez-4.jpg",
+      "/images/reviews/daniel-martinez-5.jpg",
+      "/images/reviews/daniel-martinez-6.jpg",
+      "/images/reviews/daniel-martinez-7.jpg",
+      "/images/reviews/daniel-martinez-8.jpg",
+      "/images/reviews/daniel-martinez-9.jpg",
+      "/images/reviews/daniel-martinez-10.jpg",
+      "/images/reviews/daniel-martinez-11.jpg",
+      "/images/reviews/daniel-martinez-12.jpg",
+      "/images/reviews/daniel-martinez-13.jpg",
+      "/images/reviews/daniel-martinez-14.jpg",
+      "/images/reviews/daniel-martinez-15.jpg",
+      "/images/reviews/daniel-martinez-16.jpg",
+      "/images/reviews/daniel-martinez-17.jpg",
+      "/images/reviews/daniel-martinez-18.jpg",
+      "/images/reviews/daniel-martinez-19.jpg"
+    ],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "jamie-flores",
+    "name": "Jamie Flores",
+    "rating": 5,
+    "date": "2026-06-30",
+    "dateLabel": "Jun 30, 2026",
+    "avatar": "/images/reviews/jamie-flores-avatar.jpg",
+    "text": "The atmosphere and service were great. Wilson was a great host and fun to talk to. There were two multi-course vegan dinner options. The presentations were nice, creative and well thought out with their unique themes. The food was good, but it did not hold to the same level as the presentation. I would recommend this place to try out for the experience but I don't think I would go back just for the food unless I wanted to show somebody something unique. It was a fun and good experience, but the food just did not hold up to the price and presentation.",
+    "photos": [],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  },
+  {
+    "id": "eddie-carrillo",
+    "name": "Eddie Carrillo",
+    "rating": 5,
+    "date": "2026-06-27",
+    "dateLabel": "Jun 27, 2026",
+    "avatar": "/images/reviews/eddie-carrillo-avatar.jpg",
+    "text": "✨️ 👏 great food and an unforgettable experience.  Thank you Chris, Wilson and Chef 👨‍🍳 Jerry",
+    "photos": [],
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJmcxvJI-_woAR5plgo-oPrAQ"
+  }
+]

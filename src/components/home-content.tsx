@@ -1,3 +1,4 @@
+import GoogleReviews from "./google-reviews";
 import MediaLogos from "./media-logos";
 import { pressMedia } from "@/lib/press";
 import GatheringsSection from "./gatherings-section";
@@ -75,6 +76,7 @@ export default function HomeContent() {
       </section>
       <MediaLogos logos={pressMedia} />
       <StorySection />
+      <GoogleReviews />
       <BookingSection />
       <GatheringsSection />
       <VisitSection />
