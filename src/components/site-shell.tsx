@@ -25,8 +25,8 @@ export default function SiteShell({
         Skip to content
       </a>
       <header className="site-nav">
-        <InternalLink className="wordmark" href="/">
-          TASTE OF BEAUTY<small>WEST HOLLYWOOD</small>
+        <InternalLink className="wordmark" href="/" aria-label="Taste of Beauty home">
+          <img className="header-logo" src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width="1024" height="346" />
         </InternalLink>
         <nav aria-label="Main">
           {navigation.map(([href, label]) => (
@@ -62,7 +62,9 @@ export default function SiteShell({
       </section>
       <footer className="restaurant-footer" id="restaurant-info">
         <div className="footer-brand">
-          <img className="footer-logo" src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width="280" height="95" loading="lazy" />
+          <InternalLink className="footer-home" href="/" aria-label="Taste of Beauty home">
+            <img className="footer-logo" src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width="1024" height="346" loading="lazy" />
+          </InternalLink>
           <small>West Hollywood</small>
           <nav className="footer-navigation" aria-label="Footer">
             {navigation.map(([href, label]) => (
