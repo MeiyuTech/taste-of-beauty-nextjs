@@ -6,6 +6,7 @@ const navigation = [
   ["/vegan-xiaolongbao", "Xiaolongbao"],
   ["/#our-story", "Our story"],
   ["/#gatherings", "Gatherings"],
+  ["/press", "Press"],
   ["/#visit", "Visit"],
 ];
 export default function SiteShell({

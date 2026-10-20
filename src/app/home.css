@@ -1987,3 +1987,18 @@
   .theme-b .site-nav nav a,
   .theme-b .site-nav nav a:last-child { font-size: clamp(11px, 3.3vw, 14px); }
 }
+
+/* Keep the shared six-link navigation comfortable at smaller widths. */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .theme-b .site-nav { gap: 16px; padding-inline: 4%; }
+  .theme-b .site-nav nav { gap: 14px; }
+  .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { font-size: 14px; }
+  .theme-b .site-nav .wordmark { font-size: 20px; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .theme-b .site-nav .nav-book { display: none; }
+}
+@media (max-width: 700px) {
+  .theme-b .site-nav nav { gap: 6px; }
+  .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { font-size: clamp(10px, 3.1vw, 14px); }
+}
