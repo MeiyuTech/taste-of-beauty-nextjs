@@ -44,7 +44,7 @@ Screenshots are stored in `output/playwright/` and are excluded from Git. No pro
 
 Menus, pricing, hours, contact details, dietary notes and images come from the supplied designer package. Its own handoff asks the restaurant to confirm these details, image rights and the bilingual production arrangement before launch. Xiaolongbao preparation claims were confirmed by the owner on October 19, 2026. Four filling descriptions and dietary labels were checked against the restaurant’s Uber Eats menu on that date. Dumpling-specific testimonials are still pending and are not displayed. Designer-only footer links and preview labels have been removed from visitor-facing pages.
 
-Story, reservations, gatherings and visit details were consolidated into the homepage on October 16, 2026. Their old routes return permanent redirects, preserving campaign parameters and converting the old menu preference to the homepage booking parameter. The sitemap lists only the three content pages.
+Story, reservations, gatherings and visit details were consolidated into the homepage on October 16, 2026. Their old routes return permanent redirects, preserving campaign parameters and converting the old menu preference to the homepage booking parameter. The sitemap lists the current content pages.
 
 
 ## October 19 SEO rewrite
@@ -56,4 +56,13 @@ The owner confirmed the preparation claims. The filling list uses the restaurant
 Validation for the October 19 rewrite: TypeScript and all eight existing tests passed. Raw HTTP responses include all 27 menu courses and all 12 FAQ answers; FAQ JSON-LD matches the visible answers. Titles and descriptions meet the document's length limits, canonicals resolve to the expected URLs, and permanent redirects retain campaign parameters. Codex in-app browser checks passed at the default desktop viewport and 390 × 844 for the three pages, menu/diet switching and FAQ expansion. Screenshots for this session are in the ToB workspace at `../ToB/output/playwright/`. No build or deployment was run.
 
 
-All content pages and the not-found page now use `SiteShell` for the header, footer and sticky booking actions. Both header and footer link to Menus, Xiaolongbao, Our story, Gatherings and Visit. Xiaolongbao remains the fourth menu tab, with an explicit “Explore our xiaolongbao” link immediately below its introduction. It has not moved into Lunch.
+All content pages and the not-found page now use `SiteShell` for the header, footer and sticky booking actions. Both header and footer link to Menus, Xiaolongbao, Our story, Gatherings, Press and Visit. Xiaolongbao remains the fourth menu tab, with an explicit “Explore our xiaolongbao” link immediately below its introduction. It has not moved into Lunch.
+
+
+## Press archive
+
+`/press` preserves the original WordPress page's 11 article titles, dates, outbound links, photographs and publication logos, two Iframely embeds, location notice and media assets. Original assets are stored in `public/images/press/`; shared footer icons retain the original Yelp, Instagram and Facebook artwork and destinations. Videos depend on the original publishers and Iframely.
+
+The press enquiry form and accompanying chef portrait section were removed at the owner’s request on October 20, 2026. No submission endpoint is implemented. The homepage now shows all 13 unique press logos immediately after the hero. It reuses the archive data, links each logo to its coverage, supports manual horizontal scrolling without a pause button, pauses on hover or keyboard focus, and disables automatic motion when reduced motion is preferred.
+
+Visual interaction rules are documented in [design.md](design.md). Follow these rules for all new and updated UI.

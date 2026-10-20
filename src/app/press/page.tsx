@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import SiteShell from "@/components/site-shell";
 import InternalLink from "@/components/internal-link";
 import { pressArticles, pressVideos } from "@/lib/press";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     title: "Press & Media Highlights | Taste of Beauty",
     description: "Television features, dining stories and media enquiries at Taste of Beauty.",
     url: "/press",
-    images: [{ url: "/images/food/pumpkin-soup-landscape.png", alt: "A plated dish at Taste of Beauty" }],
+    images: [{ url: "/images/press/aa_0505-scaled-1.jpg", alt: "A plated dish at Taste of Beauty" }],
   },
 };
 
@@ -21,60 +22,42 @@ export default function PressPage() {
     <SiteShell active="press" page>
       <div className="press-page">
         <section className="press-hero" aria-labelledby="press-title">
-          <div className="press-hero-copy">
-            <p className="eyebrow">TASTE OF BEAUTY · IN THE SPOTLIGHT</p>
-            <h1 id="press-title">Press &amp;<br /><em>stories.</em></h1>
-            <p>A seat at our table.<br />A story beyond it.</p>
-            <a className="inline-link" href="#press-coverage">Explore the coverage <span aria-hidden="true">↓</span></a>
-          </div>
-          <figure className="press-hero-image">
-            <img src="/images/food/pumpkin-soup-landscape.png" alt="An artfully plated dish with crisp garnishes at Taste of Beauty" fetchPriority="high" />
-            <figcaption>Plant-based dining. A different perspective.</figcaption>
-          </figure>
+          <img src="/images/press/aa_0505-scaled-1.jpg" alt="A tasting-menu dish on a turquoise plate at Taste of Beauty" fetchPriority="high" />
+          <h1 id="press-title">Press</h1>
         </section>
-
-        <aside className="press-location" aria-labelledby="location-note">
-          <h2 id="location-note">A note on our location</h2>
-          <p>Some stories below feature our former Orange County restaurant, which has closed. You’ll now find us at <strong>616 N Robertson Blvd, West Hollywood</strong>. <InternalLink href="/#visit">Plan your visit <span aria-hidden="true">↗</span></InternalLink></p>
-        </aside>
-
-        <section className="press-broadcasts" aria-labelledby="broadcast-title">
-          <div className="press-section-heading">
-            <div><p className="eyebrow">ON SCREEN</p><h2 id="broadcast-title">A taste of the story.</h2></div>
-            <p>Watch the features on our media partners’ websites.</p>
+        <section className="press-intro" aria-labelledby="location-note">
+          <div className="press-location">
+            <h2 id="location-note">Location Update</h2>
+            <p>Please note that some articles on this page refer to The Taste of Beauty’s former Orange County location. That location has closed, and the restaurant is now located in West Hollywood, Los Angeles. For current details and reservations, please visit our <InternalLink href="/#restaurant-info">Contact</InternalLink>.</p>
           </div>
-          <div className="press-video-grid">
+          <div className="press-video-grid" aria-label="Television coverage">
             {pressVideos.map((video) => (
-              <a className="press-video" key={video.href} href={video.href} target="_blank" rel="noopener noreferrer">
-                <div className="press-video-top"><span className="press-outlet">{video.publication}<small>{video.region}</small></span><span className="press-play" aria-hidden="true">▶</span></div>
-                <h3>{video.title}</h3>
-                <span className="press-video-link">Watch on {video.publication} <span aria-hidden="true">↗</span><span className="press-sr-only"> (opens in a new tab)</span></span>
-              </a>
+              <div className="press-video" key={video.href}>
+                <img className="press-media-logo" src={video.logo} alt={video.publication} width="300" height="122" />
+                <div className="iframely-embed">
+                  <div className="iframely-responsive" style={{ paddingBottom: "56.25%", paddingTop: 120 }}>
+                    <a href={video.href} data-iframely-url={video.embedUrl}>{video.title}</a>
+                  </div>
+                </div>
+                <a className="press-video-source" href={video.href} target="_blank" rel="noopener noreferrer">{video.title}<span className="press-sr-only"> (opens in a new tab)</span></a>
+              </div>
             ))}
           </div>
+          <Script src="https://iframely.net/embed.js" strategy="afterInteractive" />
         </section>
-
-        <section className="press-coverage" id="press-coverage" aria-labelledby="coverage-title">
-          <div className="press-section-heading">
-            <div><p className="eyebrow">THE PRESS ARCHIVE</p><h2 id="coverage-title">In good company.</h2></div>
-            <p>Dining stories, reviews &amp; moments worth sharing.</p>
-          </div>
-          <ol className="press-article-list">
+        <section className="press-coverage" aria-label="Press articles">
+          <ol className="press-article-grid">
             {pressArticles.map((article) => (
               <li key={article.href}>
                 <a className="press-article" href={article.href} target="_blank" rel="noopener noreferrer">
-                  <time dateTime={article.date}>{article.displayDate}</time>
-                  <div className="press-article-copy"><p className="press-publication">{article.publication}{article.format && <span>{article.format}</span>}</p><h3>{article.title}</h3></div>
-                  <span className="press-article-arrow" aria-hidden="true">↗</span><span className="press-sr-only">Opens in a new tab</span>
+                  <div className="press-logo-space"><img className="press-media-logo" src={article.logo} alt={article.publication} loading="lazy" /></div>
+                  <img className="press-article-image" src={article.image} alt={article.imageAlt} loading="lazy" />
+                  <div className="press-article-copy"><time dateTime={article.date}>{article.displayDate}</time><h2>{article.title}</h2></div>
+                  <span className="press-sr-only">Opens in a new tab</span>
                 </a>
               </li>
             ))}
           </ol>
-        </section>
-
-        <section className="press-contact" aria-labelledby="press-contact-title">
-          <div><p className="eyebrow">FOR THE PRESS</p><h2 id="press-contact-title">Let’s tell<br /><em>a beautiful story.</em></h2></div>
-          <div className="press-contact-copy"><p>Interested in featuring Taste of Beauty? For interviews, photography requests or a closer look at our food and philosophy, get in touch with our team.</p><a className="cta" href="mailto:media@thetasteofbeauty.com?subject=Press%20enquiry">Contact our media team <span aria-hidden="true">↗</span></a><a className="press-email" href="mailto:media@thetasteofbeauty.com">media@thetasteofbeauty.com</a><p className="press-contact-note">Please include your publication, story idea and deadline.</p></div>
         </section>
       </div>
     </SiteShell>

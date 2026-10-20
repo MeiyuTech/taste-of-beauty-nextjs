@@ -145,7 +145,7 @@ export function MenuPanel() {
           </p>
           {key === "xlb" && (
             <InternalLink className="secondary xlb-detail-link" href="/vegan-xiaolongbao">
-              Explore our xiaolongbao <span aria-hidden="true">→</span>
+              Explore our xiaolongbao
             </InternalLink>
           )}
           {key === "99" && (

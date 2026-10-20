@@ -1,3 +1,5 @@
+import MediaLogos from "./media-logos";
+import { pressMedia } from "@/lib/press";
 import GatheringsSection from "./gatherings-section";
 import VisitSection from "./visit-section";
 import StorySection from "./story-section";
@@ -71,6 +73,7 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
+      <MediaLogos logos={pressMedia} />
       <StorySection />
       <BookingSection />
       <GatheringsSection />
