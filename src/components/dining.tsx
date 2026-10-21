@@ -67,7 +67,7 @@ export function DiningProvider({
   );
 }
 const tabLabels = {
-  "59": "$59 Special Tasting.",
+  "59": "$59 Special Tasting",
   "99": "$99 Tasting Menu",
   lunch: "Lunch",
   xlb: "Xiaolongbao",
