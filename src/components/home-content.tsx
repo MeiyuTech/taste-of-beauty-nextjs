@@ -46,8 +46,8 @@ export default function HomeContent() {
             <InternalLink href="/menus?menu=59">
               <img src="/assets/garden.webp" alt="Five-course vegan dinner" />
               <div>
-                <strong>$59</strong>
-                <span>Five-course dinner</span>
+                <strong>$59<br />Special&nbsp;Tasting</strong>
+                <span>5-Course Special Tasting</span>
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=99">
