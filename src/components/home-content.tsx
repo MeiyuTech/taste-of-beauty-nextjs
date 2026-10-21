@@ -46,7 +46,7 @@ export default function HomeContent() {
             <InternalLink href="/menus?menu=59">
               <img src="/assets/garden.webp" alt="Five-course vegan dinner" />
               <div>
-                <strong>$59<br />Special&nbsp;Tasting</strong>
+                <strong>$59</strong>
                 <span>5-Course Special Tasting</span>
               </div>
             </InternalLink>
@@ -54,7 +54,7 @@ export default function HomeContent() {
               <img src="/assets/lotus.webp" alt="Eight-course tasting menu" />
               <div>
                 <strong>$99</strong>
-                <span>Eight-course tasting menu</span>
+                <span>8-Course Tasting Menu</span>
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=lunch">
