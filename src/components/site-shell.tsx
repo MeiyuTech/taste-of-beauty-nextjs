@@ -14,12 +14,16 @@ export default function SiteShell({
   children,
   active,
   page = false,
+  reservationHref,
+  menuHref = "/menus",
 }: {
   children: ReactNode;
   active?: string;
   page?: boolean;
+  reservationHref?: string;
+  menuHref?: string;
 }) {
-  const bookingHref = active === "vegan-xiaolongbao" ? "/?booking=xlb#booking" : "/#booking";
+  const bookingHref = reservationHref ?? (active === "vegan-xiaolongbao" ? "/?booking=xlb#booking" : "/#booking");
   return (
     <div className="theme-b">
       <a className="skip" href="#main">
@@ -114,7 +118,7 @@ export default function SiteShell({
         </div>
       </footer>
       <div className="sticky-actions">
-        <InternalLink href="/menus">View menus</InternalLink>
+        <InternalLink href={menuHref}>View menus</InternalLink>
         <InternalLink href={bookingHref}>
           Book a table
         </InternalLink>

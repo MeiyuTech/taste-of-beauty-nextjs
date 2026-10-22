@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/menus",
         "/vegan-xiaolongbao",
         "/press",
+        "/hollywood-google",
+        "/hollywood-meta",
+        "/hollywood-romantic-google",
         "/gift-card",
       ].map((path) => ({
         url: `${siteUrl}${path}`,

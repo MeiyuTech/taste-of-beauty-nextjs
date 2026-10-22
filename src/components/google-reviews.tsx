@@ -26,7 +26,7 @@ function ReviewHeader({ review, titleId }: { review: Review; titleId?: string })
   );
 }
 
-export default function GoogleReviews() {
+export default function GoogleReviews({ bookingHref = "/#booking", heading, eyebrow = "SELECTED 5-STAR GOOGLE REVIEWS" }: { bookingHref?: string; heading?: string; eyebrow?: string } = {}) {
   const track = useRef<HTMLDivElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
@@ -81,8 +81,8 @@ export default function GoogleReviews() {
   return (
     <section className="google-reviews" id="reviews" aria-labelledby="reviews-title">
       <div className="google-reviews-heading">
-        <p className="eyebrow">SELECTED 5-STAR GOOGLE REVIEWS</p>
-        <h2 id="reviews-title">Why customers <em>love us.</em></h2>
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 id="reviews-title">{heading ?? <>Why customers <em>love us.</em></>}</h2>
       </div>
       <div className="google-reviews-stage">
         <div
@@ -134,7 +134,7 @@ export default function GoogleReviews() {
         <a className="google-reviews-link" href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">
           Read all reviews on Google
         </a>
-        <InternalLink className="cta" href="/#booking">Reserve a table</InternalLink>
+        <InternalLink className="cta" href={bookingHref}>Reserve a table</InternalLink>
       </div>
       <dialog
         ref={dialog}

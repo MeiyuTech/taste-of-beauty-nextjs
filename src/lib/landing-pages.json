@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "src": "/images/landing/weixin-image_2025-08-25_121538_358-scaled.jpg",
+    "alt": "Taste of Beauty dining room in West Hollywood"
+  },
+  "pages": {
+    "hollywood-google": {
+      "source": "https://tob260615.wpenginepowered.com/hollywood-google/",
+      "title": "Michelin-Level Vegan Dining in West Hollywood | Taste of Beauty",
+      "description": "Michelin-level vegan tasting menus in West Hollywood. Seasonal, plant-based courses crafted as narrative journeys. Book now.",
+      "socialTitle": "Plant-based Tasting Menus in Los Angeles | Taste of Beauty",
+      "eyebrow": "Luxury Plant-Based Fine Dining in",
+      "headline": "West Hollywood",
+      "intro": "Savor 5- and 8-course vegan tasting menus in Los Angeles, crafted as narrative journeys for date nights, anniversary dinners, and every special occasion.",
+      "bookingUrl": "https://www.opentable.com/r/taste-of-beauty-restaurant-tob-west-hollywood-reservations-west-hollywood?restref=1466308&lang=en-US&ot_source=Google&ot_campaign=GTcampaign",
+      "story": [
+        "Eat Your Art Out",
+        "Multi-sensory vegetarian and vegan tasting menus crafted with seasonal, locally sourced ingredients and global inspiration, Taste of Beauty is built for:",
+        "Located in the heart of West Hollywood, we’re one of the most distinctive plant-based romantic vegan restaurants in LA: close to Beverly Hills, yet worlds away from the noise."
+      ],
+      "occasions": [
+        "Date nights in West Hollywood and Beverly Hills",
+        "Anniversary dinners and romantic celebrations",
+        "Special occasion restaurant experiences in Los Angeles",
+        "Birthdays, proposals, and every night worth marking"
+      ],
+      "about": [
+        "About Us",
+        "Taste of Beauty is Los Angeles’s destination for plant-based fine dining, where every dish is crafted as a story and every meal is a multi-sensory journey. Our restaurant blends global flavors, artistic presentation, and Southern California’s cultural richness to show that vegan and vegetarian cuisine can be as indulgent as it is responsible."
+      ],
+      "storyImage": {
+        "src": "/images/landing/the-desert_02.jpeg",
+        "alt": "The Desert"
+      }
+    },
+    "hollywood-meta": {
+      "source": "https://tob260615.wpenginepowered.com/hollywood-meta/",
+      "title": "Michelin-Level Vegan Dining in West Hollywood | Taste of Beauty",
+      "description": "Michelin-level vegan tasting menus in West Hollywood. Seasonal, plant-based courses crafted as narrative journeys. Book now.",
+      "socialTitle": "Plant-based Tasting Menus in Los Angeles | Taste of Beauty",
+      "eyebrow": "Luxury Plant-Based Fine Dining in",
+      "headline": "West Hollywood",
+      "intro": "Savor 5- and 8-course vegan tasting menus in Los Angeles, crafted as narrative journeys for date nights, anniversary dinners, and every special occasion.",
+      "bookingUrl": "https://www.opentable.com/r/taste-of-beauty-restaurant-tob-west-hollywood-reservations-west-hollywood?restref=1466308&lang=en-US&ot_source=Meta&ot_campaign=GTcampaign",
+      "story": [
+        "Eat Your Art Out",
+        "Multi-sensory vegetarian and vegan tasting menus crafted with seasonal, locally sourced ingredients and global inspiration, Taste of Beauty is built for:",
+        "Located in the heart of West Hollywood, we’re one of the most distinctive plant-based romantic vegan restaurants in LA: close to Beverly Hills, yet worlds away from the noise."
+      ],
+      "occasions": [
+        "Date nights in West Hollywood and Beverly Hills",
+        "Anniversary dinners and romantic celebrations",
+        "Special occasion restaurant experiences in Los Angeles",
+        "Birthdays, proposals, and every night worth marking"
+      ],
+      "about": [
+        "About Us",
+        "Taste of Beauty is Los Angeles’s destination for plant-based fine dining, where every dish is crafted as a story and every meal is a multi-sensory journey. Our restaurant blends global flavors, artistic presentation, and Southern California’s cultural richness to show that vegan and vegetarian cuisine can be as indulgent as it is responsible."
+      ],
+      "storyImage": {
+        "src": "/images/landing/the-desert_02.jpeg",
+        "alt": "The Desert"
+      }
+    },
+    "hollywood-romantic-google": {
+      "source": "https://tob260615.wpenginepowered.com/hollywood-romantic-google/",
+      "title": "Vegan Tasting Menu Los Angeles | Romantic Date Night | Taste of Beauty",
+      "description": "The best vegan tasting menu in Los Angeles. Taste of Beauty is West Hollywood’s most romantic date night restaurant — plant-based fine dining perfect for anniversaries & special occasions. Book now.",
+      "socialTitle": "Vegan Fine Dining & Date Night Restaurant in West Hollywood | Taste of Beauty",
+      "eyebrow": "Best Plant-based Dining in",
+      "headline": "West Hollywood",
+      "intro": "Plant-based tasting menus in Los Angeles crafted for date nights, anniversary dinners, and every special occasion worth remembering.",
+      "bookingUrl": "https://www.opentable.com/r/taste-of-beauty-restaurant-tob-west-hollywood-reservations-west-hollywood?restref=1466308&lang=en-US&ot_source=Google&ot_campaign=GTcampaign",
+      "story": [
+        "Eat Your art out",
+        "Whether it’s a first date, a milestone anniversary, or simply a night that deserves to be memorable, Taste of Beauty is built for exactly this:",
+        "",
+        "Located in the heart of West Hollywood, we’re one of the most distinctive plant-based romantic vegan restaurants in LA: close to Beverly Hills, yet worlds away from the noise.",
+        ""
+      ],
+      "occasions": [
+        "Date nights in West Hollywood and Beverly Hills",
+        "Anniversary dinners and romantic celebrations",
+        "Special occasion dinners in Los Angeles",
+        "Birthdays, proposals, and everything"
+      ],
+      "about": [
+        "About Us",
+        "Taste of Beauty is Los Angeles’s destination for plant-based fine dining, where every dish is crafted as a story and every meal is a multi-sensory journey.",
+        "Our guests, coming from all across LA, arrive for date nights and anniversaries, for birthdays and first impressions, for the kind of dinner that needs no explanation — just a reservation."
+      ],
+      "storyImage": {
+        "src": "/images/landing/the-desert_02.jpeg",
+        "alt": "The Desert"
+      }
+    }
+  }
+}
