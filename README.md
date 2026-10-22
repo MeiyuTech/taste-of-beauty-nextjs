@@ -66,3 +66,10 @@ All content pages and the not-found page now use `SiteShell` for the header, foo
 The press enquiry form and accompanying chef portrait section were removed at the owner’s request on October 20, 2026. No submission endpoint is implemented. The homepage now shows all 13 unique press logos immediately after the hero. It reuses the archive data, links each logo to its coverage, supports manual horizontal scrolling without a pause button, pauses on hover or keyboard focus, and disables automatic motion when reduced motion is preferred.
 
 Visual interaction rules are documented in [design.md](design.md). Follow these rules for all new and updated UI.
+
+
+## Gift cards
+
+`/gift-card` uses the shared warm stone theme, navigation and footer. It preserves the original [WordPress gift card page](https://tob260615.wpenginepowered.com/gift-card/)'s drinks photograph and Square merchant destination (`MLW8KJMXKTTVM`). The photograph is stored in `public/images/gift-card/drinks.jpg` and was sourced from `/wp-content/uploads/2025/08/DSCF3120-Edit-scaled.jpg` on the old site.
+
+Square hosts the embedded purchase form, available amounts, delivery options and checkout. Direct checkout, reload and balance links remain available outside the embed. No payment data is collected by this Next.js site. The page is linked in the shared header and footer and included in the sitemap.

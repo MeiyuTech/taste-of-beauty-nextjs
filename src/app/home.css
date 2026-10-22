@@ -2061,3 +2061,25 @@
   .theme-b .media-strip-actions a,
   .theme-b .media-strip-logo { transition: none; }
 }
+
+/* Allow the shared navigation to accommodate the gift card page. */
+@media (min-width: 1101px) and (max-width: 1250px) {
+  .theme-b .site-nav { gap: 20px; }
+  .theme-b .site-nav nav { gap: 18px; }
+  .theme-b .site-nav nav a { font-size: 14px; }
+  .theme-b .header-logo { width: 190px; }
+}
+@media (min-width: 701px) and (max-width: 850px) {
+  .theme-b .site-nav nav { gap: 10px; }
+  .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { font-size: 13px; }
+  .theme-b .header-logo { width: 160px; }
+}
+@media (max-width: 700px) {
+  html { scroll-padding-top: 170px; }
+  .theme-b .site-nav { height: 148px; grid-template-rows: 62px 76px; }
+  .theme-b .menu-tabs { top: 148px; }
+  .theme-b .site-nav nav { min-width: 0; flex-wrap: wrap; align-content: center; justify-content: flex-start; gap: 0 18px; padding: 3px 0; }
+  .theme-b .site-nav nav a, .theme-b .site-nav nav a:last-child { flex-shrink: 0; font-size: 13px; }
+}
+.theme-b .site-nav nav a:is(:focus-visible, :active),
+.theme-b .footer-navigation a:is(:focus-visible, :active) { color: var(--cta); background: var(--soft); }

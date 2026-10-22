@@ -6,6 +6,7 @@ const navigation = [
   ["/vegan-xiaolongbao", "Xiaolongbao"],
   ["/#our-story", "Our story"],
   ["/#gatherings", "Gatherings"],
+  ["/gift-card", "Gift cards"],
   ["/press", "Press"],
   ["/#visit", "Visit"],
 ];
