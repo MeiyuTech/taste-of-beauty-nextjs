@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import SiteShell from "./site-shell";
 import GoogleReviews from "./google-reviews";
 import LandingMenu from "./landing-menu";
 import source from "@/lib/landing-pages.json";
@@ -36,8 +35,20 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
     </div>
     <div><p className="eyebrow">{page.about[0]}</p><h2 id="campaign-about-title">Taste of <em>Beauty</em></h2>{page.about.slice(1).filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph.includes("just a reservation") ? <>{paragraph.split("just a reservation")[0]}<a href={page.bookingUrl} target="_blank" rel="noopener noreferrer">just a reservation</a>.</> : paragraph}</p>)}{book()}</div>
   </section>;
-  return <SiteShell reservationHref="#booking" menuHref="#menu">
-    <div className="campaign-page">
+  return <div className="theme-b campaign-shell">
+    <a className="skip" href="#main">Skip to content</a>
+    <header className="campaign-header">
+      <div className="campaign-brand">
+        <Image src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width={1024} height={346} priority />
+      </div>
+      <div className="campaign-header-actions">
+        {book("Reserve Now")}
+        <a className="campaign-call" href="tel:6575063567" aria-label="Call Taste of Beauty at (657) 506-3567">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z" /></svg>
+        </a>
+      </div>
+    </header>
+    <main id="main" className="campaign-page">
       <section className="campaign-hero">
         <div className="campaign-hero-copy">
           <p className="eyebrow">{page.eyebrow}</p>
@@ -68,11 +79,19 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
       {romantic && about}
       <LandingMenu bookingUrl={page.bookingUrl} />
       {!romantic && about}
-      <section className="campaign-section campaign-visit" id="booking" aria-labelledby="campaign-visit-title">
-        <div><p className="eyebrow">Eat Your Art Out</p><h2 id="campaign-visit-title">Come Visit <em>Us Today</em></h2><a className="inline-link" href="https://share.google/SlyRrQg9jN9R2F0MO" target="_blank" rel="noopener noreferrer">616 N Robertson Blvd<br />West Hollywood, CA 90069</a><p><a className="campaign-phone" href="tel:6575063567">(657) 506-3567</a></p>{book()}</div>
-        <div className="campaign-hours"><div><h3>Hours</h3><p>Mon: Closed<br />Tue-Sun: 12:30pm – 3:30pm<br />Tue-Sun: 5:30pm – 9:00pm</p></div><div><h3>Takeout</h3><p>Wed-Sun: 11:30am – 10:30pm<br />Pick up in-store or order via <a href="https://www.ubereats.com/store/taste-of-beauty-tob-west-hollywood-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA?surfaceName=" target="_blank" rel="noopener noreferrer">Uber Eats</a></p></div></div>
-        <iframe className="campaign-map" title="616 N Robertson Blvd West Hollywood, CA 90069" src="https://maps.google.com/maps?q=616%20N%20Robertson%20Blvd%20West%20Hollywood%2C%20CA%2090069&t=m&z=10&output=embed&iwloc=near" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-      </section>
-    </div>
-  </SiteShell>;
+    </main>
+    <footer className="campaign-page campaign-section campaign-visit" id="booking" aria-labelledby="campaign-visit-title">
+      <iframe className="campaign-map" title="Map to Taste of Beauty, 616 N Robertson Blvd, West Hollywood" src="https://maps.google.com/maps?q=616%20N%20Robertson%20Blvd%20West%20Hollywood%2C%20CA%2090069&t=m&z=14&output=embed&iwloc=near" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+      <div className="campaign-visit-info">
+        <p className="eyebrow">Eat Your Art Out</p>
+        <h2 id="campaign-visit-title">Come Visit <em>Us Today</em></h2>
+        <div className="campaign-hours">
+          <div><h3>Hours</h3><p>Mon: Closed<br />Tue-Sun: 12:30pm – 3:30pm<br />Tue-Sun: 5:30pm – 9:00pm</p></div>
+          <div><h3>Takeout</h3><p>Wed-Sun: 11:30am – 10:30pm<br />Pick up in-store or order via <a href="https://www.ubereats.com/store/taste-of-beauty-tob-west-hollywood-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA?surfaceName=" target="_blank" rel="noopener noreferrer">Uber Eats</a></p></div>
+        </div>
+        <address><a href="https://share.google/SlyRrQg9jN9R2F0MO" target="_blank" rel="noopener noreferrer">616 N Robertson Blvd<br />West Hollywood, CA 90069</a><a className="campaign-phone" href="tel:6575063567">(657) 506-3567</a></address>
+        {book()}
+      </div>
+    </footer>
+  </div>;
 }

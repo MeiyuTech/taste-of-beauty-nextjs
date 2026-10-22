@@ -16,12 +16,13 @@ The 23 local original images are recorded in `landing-image-sources.json`, inclu
 
 ## Design and behavior
 
-- Shared site navigation, footer, typography, palette and button treatments.
+- Dedicated campaign header: non-linked logo/restaurant name, a campaign-specific Reserve Now button and an accessible telephone button. Uses the current site typography, palette and button treatments.
+- Dedicated footer: embedded map on the left, hours, takeout, address, telephone and booking on the right; stacks on mobile. No general site navigation or duplicate footer.
 - Original content arranged as a split hero, image-and-copy story, reviews, four-step experience, complete menus, About Us and location section.
 - The site's existing sourced Google review component is reused with the original landing-page section heading.
 - Seven keyboard-accessible menu tabs; expandable tasting and takeout groups; scrollable original photo galleries.
 - Existing menu hashes (`#tasting-courses`, `#a-la-carte`, `#dessert`, `#drink`, `#wine`, `#takeout`, `#lunch`) select the corresponding category. Tab changes preserve query parameters.
-- All direct campaign reservation links retain `ot_campaign=GTcampaign` and the page's `ot_source=Google` or `ot_source=Meta`. Header, review and sticky reservation buttons stay on the landing page and lead to its reservation/location section.
+- All direct campaign reservation links retain `ot_campaign=GTcampaign` and the page's `ot_source=Google` or `ot_source=Meta`. Header and footer reservation buttons open the campaign booking destination. The review reservation link leads to the landing page’s location footer.
 - Source page titles/descriptions and social titles retained, with canonical URLs and sitemap entries on the new domain.
 - Existing shared components retain their default behavior on other pages.
 
@@ -36,3 +37,10 @@ The 23 local original images are recorded in `landing-image-sources.json`, inclu
 - Screenshots and the content audit are saved under `/Users/plusone/Desktop/Websites/ToB/output/playwright/`.
 
 The verification above covers local development, not production deployment.
+
+## Campaign header and footer revision
+
+- All three campaign pages use a non-linked brand and exactly two header links: attributed OpenTable reservation and telephone.
+- Desktop map and restaurant information are side by side; mobile stacks the map above the information. Original business information is retained.
+- TypeScript and the 8 existing tests passed. In-app browser checks covered all three routes, the Google/Meta booking destinations, loaded map, review-to-footer navigation, desktop at 1440 px, mobile at 390 px and a 320 px overflow check.
+- The scoped revision is verified locally; no production build or deployment was performed.
