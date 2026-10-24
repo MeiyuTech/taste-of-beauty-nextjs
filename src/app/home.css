@@ -2085,5 +2085,10 @@
 .theme-b .footer-navigation a:is(:focus-visible, :active) { color: var(--cta); background: var(--soft); }
 
 /* Keep the menu format beside the dish name, wrapping on narrow cards. */
-.theme-b .choice-grid .choice-title-with-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
-.theme-b .choice-grid .choice-menu-label { font: 400 14px/1.4 Arial, sans-serif; color: var(--accent); white-space: nowrap; }
+.theme-b .choice-grid .choice-title-with-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 24px; }
+.theme-b .choice-grid .choice-menu-label { font: 600 22px/1.2 var(--serif); color: var(--cta); white-space: nowrap; }
+
+@media (max-width: 700px) {
+  .theme-b .choice-grid .choice-title-with-label { font-size: 21px; }
+  .theme-b .choice-grid .choice-menu-label { font-size: 21px; }
+}
