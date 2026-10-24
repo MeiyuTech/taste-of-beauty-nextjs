@@ -132,7 +132,7 @@ export const menus: Record<MenuKey, DiningMenu> = {
   },
   "lunch": {
     "title": "A Better Lunch Break",
-    "price": "À la carte",
+    "price": "A la carte",
     "unit": "Tue–Sun",
     "eyebrow": "LUNCH · 12:30–3:30 PM",
     "image": "vegetable-noodles.png",

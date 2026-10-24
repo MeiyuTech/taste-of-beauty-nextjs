@@ -19,7 +19,7 @@ export function landingMetadata(slug: LandingSlug): Metadata {
 const steps = [
   ["Pick your date & party size", "Lock in your table."],
   ["Tell us your needs", "Add any dietary notes when you book."],
-  ["Make it yours", "Choose vegan or vegetarian, a tasting menu or à la carte,"],
+  ["Make it yours", "Choose vegan or vegetarian, a tasting menu or A la carte,"],
   ["Savor the moment", "Sit back and let the experience unfold."],
 ];
 

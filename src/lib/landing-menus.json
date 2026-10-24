@@ -367,13 +367,13 @@
   },
   {
     "id": "a-la-carte",
-    "label": "À La Carte",
+    "label": "A la carte",
     "intro": [
       {
-        "title": "À La Carte Menu",
+        "title": "A la carte Menu",
         "price": "",
         "paragraphs": [
-          "À la carte selections may be ordered independently during lunch service. During dinner service, they are available only as additions to a tasting menu.",
+          "A la carte selections may be ordered independently during lunch service. During dinner service, they are available only as additions to a tasting menu.",
           "v – vegan | gf – gluten free | * – gluten free options available upon request"
         ]
       }

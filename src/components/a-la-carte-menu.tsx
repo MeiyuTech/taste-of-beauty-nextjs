@@ -11,7 +11,7 @@ export default function ALaCarteMenu({ groups }: { groups: MenuGroup[] }) {
     if (next === null) return;
     event.preventDefault(); setActive(next); tabs.current[next]?.focus();
   }
-  return <section className="alc-menu" aria-label="À la carte dishes">
+  return <section className="alc-menu" aria-label="A la carte dishes">
     <div className="alc-tabs" role="tablist" aria-label="Menu categories">
       {groups.map((group, index) => <button key={group.label} ref={(node) => { tabs.current[index] = node; }} type="button" role="tab" id={`alc-tab-${index}`} aria-selected={active === index} aria-controls={`alc-panel-${index}`} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={(event) => keyboard(event, index)}>{group.label}</button>)}
     </div>

@@ -19,7 +19,7 @@ export default function DiningChoice() {
   return <>
     <button ref={trigger} className="choice-trigger" type="button" aria-haspopup="dialog" onClick={() => setOpen(true)}>
       <img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao" />
-      <div><strong className="choice-title-with-label">Xiaolongbao <span className="choice-menu-label">&amp; a la carte</span></strong><span>Handmade vegan dumplings</span></div>
+      <div><strong className="choice-title-with-label">Xiaolongbao <span className="choice-menu-label">&amp; A la carte</span></strong><span>Handmade vegan dumplings</span></div>
     </button>
     <dialog ref={dialog} className="dining-choice-dialog" aria-labelledby="dining-choice-title" onClose={() => { setOpen(false); trigger.current?.focus(); }} onClick={(event) => {
       if (event.target !== event.currentTarget) return;
@@ -31,7 +31,7 @@ export default function DiningChoice() {
       <h2 id="dining-choice-title">Choose your <em>menu</em></h2>
       <div className="dining-choice-options">
         <InternalLink href="/vegan-xiaolongbao"><img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao in a bamboo steamer" /><div><h3>Xiaolongbao</h3><p>Handmade vegan dumplings</p><span>Explore Xiaolongbao</span></div></InternalLink>
-        <InternalLink href="/a-la-carte"><img src="/images/landing/dscf0743-scaled-1-rp0i8xah9rke4dbnj0p82fthunzhtmq8a7mlupn1c0.jpg" alt="Soup served in a porcelain bowl" /><div><h3>À la carte</h3><p>Soup, appetizers &amp; entrees</p><span>Explore À la carte</span></div></InternalLink>
+        <InternalLink href="/a-la-carte"><img src="/images/landing/dscf0743-scaled-1-rp0i8xah9rke4dbnj0p82fthunzhtmq8a7mlupn1c0.jpg" alt="Soup served in a porcelain bowl" /><div><h3>A la carte</h3><p>Soup, appetizers &amp; entrees</p><span>Explore A la carte</span></div></InternalLink>
       </div>
     </dialog>
   </>;
