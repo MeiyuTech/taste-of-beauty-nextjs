@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "",
         "/menus",
         "/vegan-xiaolongbao",
+        "/a-la-carte",
         "/press",
         "/hollywood-google",
         "/hollywood-meta",

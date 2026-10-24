@@ -235,7 +235,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.theme-b .choice-grid > a {
+.theme-b .choice-grid > :is(a, .choice-trigger) {
   padding: 0;
   border: 0;
   background: var(--bg);
@@ -251,7 +251,7 @@
   object-position: center 62%;
   transition: transform 0.3s;
 }
-.theme-b .choice-grid > a > div {
+.theme-b .choice-grid > :is(a, .choice-trigger) > div {
   padding: 13px 16px 16px;
 }
 .theme-b .choice-grid strong {
@@ -941,7 +941,7 @@
   .theme-b .choice-grid img {
     height: 125px;
   }
-  .theme-b .choice-grid > a > div {
+  .theme-b .choice-grid > :is(a, .choice-trigger) > div {
     padding: 10px 12px 13px;
   }
   .theme-b .choice-grid strong {
@@ -1253,7 +1253,7 @@
 .theme-b .inline-link {
   color: #90452f;
 }
-.theme-b .choice-grid > a {
+.theme-b .choice-grid > :is(a, .choice-trigger) {
   background: #f7f4ed;
   color: #302e29;
 }
@@ -1608,7 +1608,7 @@
 .theme-b .tiny-location { font-size: 14px; margin-top: 24px; }
 .theme-b .choice-grid { gap: 16px; }
 .theme-b .choice-grid img { height: 155px; }
-.theme-b .choice-grid > a > div { padding: 14px 16px 16px; }
+.theme-b .choice-grid > :is(a, .choice-trigger) > div { padding: 14px 16px 16px; }
 .theme-b .choice-grid strong { font-size: 30px; }
 .theme-b .choice-grid span { font-size: 15px; line-height: 1.4; }
 
@@ -1702,7 +1702,7 @@
   .theme-b .tiny-location { font-size: 13px; margin-top: 20px; }
   .theme-b .choice-grid { gap: 12px; }
   .theme-b .choice-grid img { height: 135px; }
-  .theme-b .choice-grid > a > div { padding: 12px 12px 14px; }
+  .theme-b .choice-grid > :is(a, .choice-trigger) > div { padding: 12px 12px 14px; }
   .theme-b .choice-grid strong { font-size: 23px; }
   .theme-b .choice-grid span { font-size: 14px; }
 
@@ -1905,7 +1905,7 @@
 }
 
 /* Clickable surfaces use depth and color instead of decorative marks. */
-.theme-b .choice-grid > a:focus-visible,
+.theme-b .choice-grid > :is(a, .choice-trigger):focus-visible,
 .theme-b .last-links a:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(48,46,41,.14);
@@ -1926,12 +1926,12 @@
 }
 .theme-b .footer-contact-links a:focus-visible { background: rgba(138,115,83,.18); }
 @media (hover: hover) and (pointer: fine) {
-  .theme-b .choice-grid > a:hover,
+  .theme-b .choice-grid > :is(a, .choice-trigger):hover,
   .theme-b .last-links a:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(48,46,41,.14);
   }
-  .theme-b .choice-grid > a:hover img { transform: scale(1.025); }
+  .theme-b .choice-grid > :is(a, .choice-trigger):hover img { transform: scale(1.025); }
   .theme-b .inline-link:hover,
   .theme-b .image-story-link:hover {
     transform: translateY(-2px);
@@ -1942,7 +1942,7 @@
   .theme-b .site-nav nav a:hover { color: var(--cta); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .theme-b .choice-grid > a,
+  .theme-b .choice-grid > :is(a, .choice-trigger),
   .theme-b .choice-grid img,
   .theme-b .last-links a,
   .theme-b .inline-link,
@@ -2083,3 +2083,7 @@
 }
 .theme-b .site-nav nav a:is(:focus-visible, :active),
 .theme-b .footer-navigation a:is(:focus-visible, :active) { color: var(--cta); background: var(--soft); }
+
+/* Keep the menu format beside the dish name, wrapping on narrow cards. */
+.theme-b .choice-grid .choice-title-with-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.theme-b .choice-grid .choice-menu-label { font: 400 14px/1.4 Arial, sans-serif; color: var(--accent); white-space: nowrap; }

@@ -1,3 +1,4 @@
+import DiningChoice from "./dining-choice";
 import GoogleReviews from "./google-reviews";
 import MediaLogos from "./media-logos";
 import { pressMedia } from "@/lib/press";
@@ -64,13 +65,7 @@ export default function HomeContent() {
                 <span>A little everyday pleasure</span>
               </div>
             </InternalLink>
-            <InternalLink href="/vegan-xiaolongbao">
-              <img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao" />
-              <div>
-                <strong>Xiaolongbao</strong>
-                <span>Handmade vegan dumplings</span>
-              </div>
-            </InternalLink>
+            <DiningChoice />
           </div>
         </div>
       </section>

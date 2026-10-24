@@ -1,0 +1,27 @@
+.theme-b .alc-page { font-size: 18px; line-height: 1.75; }
+.theme-b .alc-intro { display: grid; grid-template-columns: .85fr 1.15fr; gap: 7%; padding: 64px 5%; align-items: center; }
+.theme-b .alc-photo img { width: 100%; height: 460px; object-fit: cover; }
+.theme-b .alc-copy h1 { font: 400 clamp(44px, 5vw, 72px)/1.05 var(--serif); margin: 22px 0 28px; }
+.theme-b .alc-copy h1 em { color: var(--accent); }
+.theme-b .alc-copy p { margin-bottom: 24px; }
+.theme-b .alc-menu { padding: 0 5% 72px; }
+.theme-b .alc-tabs { display: flex; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 12px; }
+.theme-b .alc-tabs button { min-height: 48px; padding: 12px 28px; border: 1px solid var(--line); color: var(--ink); background: transparent; }
+.theme-b .alc-tabs button[aria-selected="true"] { color: var(--oncta); background: var(--cta); border-color: var(--cta); }
+.theme-b .alc-tabs button:not([aria-selected="true"]):is(:hover, :focus-visible, :active) { background: var(--soft); border-color: var(--accent); }
+.theme-b .alc-dishes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; }
+.theme-b .alc-dishes article { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.theme-b .alc-dish-title { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+.theme-b .alc-dish-title h2 { font: 400 30px/1.25 var(--serif); margin: 0 0 18px; letter-spacing: -.3px; }
+.theme-b .alc-dish-title span { color: var(--cta); white-space: nowrap; }
+.theme-b .alc-dishes p { margin: 0 0 12px; }
+.theme-b .alc-allergens { color: var(--muted); font-size: 16px; }
+@media (max-width: 700px) {
+  .theme-b .alc-intro { grid-template-columns: 1fr; gap: 28px; padding: 32px 5%; }
+  .theme-b .alc-photo img { height: 260px; }
+  .theme-b .alc-page { font-size: 17px; }
+  .theme-b .alc-tabs { gap: 8px; }
+  .theme-b .alc-tabs button { flex: 1; font-size: 15px; padding: 12px 8px; }
+  .theme-b .alc-dishes { grid-template-columns: 1fr; }
+  .theme-b .alc-dish-title h2 { font-size: 27px; }
+}
