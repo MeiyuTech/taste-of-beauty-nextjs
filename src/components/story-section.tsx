@@ -9,7 +9,7 @@ export default function StorySection() {
           src="/images/dishes/the-island-landscape.png"
           alt="Golden pumpkin soup with delicate crisp garnish in a turquoise bowl"
           fill
-          sizes="(max-width: 900px) 92vw, (min-width: 1800px) 1204px, 65vw"
+          sizes="(max-width: 900px) 100vw, 70vw"
         />
       </div>
       <div className="image-story-copy">

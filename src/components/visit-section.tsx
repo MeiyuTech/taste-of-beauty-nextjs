@@ -8,7 +8,7 @@ export default function VisitSection() {
           src="/images/restaurant/window-side-room.png"
           alt="Warm dining room with Buddha hand artwork and plants beside sunlit windows"
           fill
-          sizes="(min-width: 1800px) 1720px, 92vw"
+          sizes="100vw"
         />
       </div>
       <div className="image-story-copy">

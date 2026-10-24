@@ -21,7 +21,7 @@ These rules apply to every Taste of Beauty page, including shared navigation, me
 - Round the outer card and clip its image and overlays to the same outer contour. Images that touch a card edge inherit that edge's radius; inset images use a smaller radius with consistent padding.
 - Apply clipping to the media wrapper when clipping the entire card would hide keyboard focus outlines, menus, or popovers. Focus indicators must remain fully visible.
 - Text-only links do not need a filled container. Transparent buttons still use the control radius so hover, active, and focus treatments follow a rounded contour.
-- Our Story and Our Philosophy use background photography with a soft gradient fade into the reading area. Preserve this immersive treatment on desktop and mobile; do not convert these backgrounds into isolated rounded image cards. Buttons inside these sections still follow the shared rounded-control rules.
+- Our Story and Our Philosophy use background photography with a soft gradient fade into the reading area. Preserve this immersive treatment on desktop and mobile; do not convert these backgrounds into isolated rounded image cards. The background sections extend to both viewport edges without horizontal outer margins, while the copy retains the shared page gutters. Buttons inside these sections still follow the shared rounded-control rules.
 - Page backgrounds, full-width section bands, dividers, and the header/footer shell are structural surfaces rather than cards. Keep their normal edge-to-edge geometry; round the cards and controls inside them.
 - Remove existing `border-radius: 0` rules from cards and controls during implementation. Do not apply a universal radius to every HTML element.
 
@@ -72,7 +72,7 @@ The visual direction is warm, natural, and refined: cream backgrounds, terracott
 
 - `src/app/design-system.css` owns the shared tokens, visual component rules, and responsive adjustments. Update this file for sitewide design changes instead of appending competing overrides to legacy page styles.
 - `SiteShell` and `HollywoodLanding` opt into the same `tob-design` scope. The nested xiaolongbao page maps its legacy palette variables to the shared palette.
-- Homepage story and philosophy retain the original `.image-story` background-photo layout and gradient overlays in `src/app/home.css`. On desktop the photograph fades horizontally into the text area; on mobile it fades vertically into the reading surface. Keep the original responsive image sizes and do not override these sections with the shared inset-image styling.
+- Homepage story and philosophy retain the original `.image-story` background-photo layout and gradient overlays in `src/app/home.css`. On desktop the photograph fades horizontally into the text area; on mobile it fades vertically into the reading surface. The shared design stylesheet removes the main-site shell width cap and horizontal section margins, so backgrounds reach the viewport edges even on wide displays; content keeps its shared page gutters. Responsive image sizes match the full-width layout: `100vw` for both mobile backgrounds and the philosophy background, and `70vw` for the desktop story photograph. Do not apply rounded inset-image styling to these backgrounds.
 - Long menu names use rounded rectangular tabs with a two-column mobile layout. Short dietary and category selectors use pill shapes. Keep selected, hover, focus, and active states distinct.
 - Review cards retain their compact density while adopting the shared radius and surface treatment.
 - `/our-story`, `/gatherings`, `/visit`, and `/reservations` are compatibility redirects into homepage sections. Preserve these redirects; the destination sections receive the updated design.
@@ -130,3 +130,4 @@ The visual direction is warm, natural, and refined: cream backgrounds, terracott
 
 - Restored the original background-photo gradients for Our Story and Our Philosophy, while retaining the shared rounded CTA styling.
 - Verified both sections in the Codex in-app browser and at `1440`, `768`, `390`, and `320px` using supplemental browser checks. The desktop horizontal fades and mobile vertical fades render correctly; all eight section/viewport checks passed without horizontal overflow or clipped copy.
+- Follow-up edge-to-edge refinement: both background sections passed browser checks at `1920`, `1440`, `768`, `390`, and `320px`, with no horizontal overflow, readable copy gutters, and the original gradients retained.

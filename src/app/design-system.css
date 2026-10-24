@@ -135,7 +135,12 @@
 .theme-b.tob-design .dish-wall-card { border-radius: var(--radius-card); }
 .theme-b.tob-design .dish-wall-card:focus-visible { outline: 3px solid #fff8ef; outline-offset: -6px; }
 
-/* Story and philosophy retain the background-photo fades in home.css. */
+/* Background photographs reach the viewport edges; content keeps its own gutters. */
+.theme-b.tob-design.site-layout { max-width: none; }
+.theme-b.tob-design .image-story {
+  margin-inline: 0;
+  padding-inline: var(--page-gutter);
+}
 
 /* Menu browsing uses individual rounded tabs and a quieter reading surface. */
 .theme-b.tob-design :is(.menus-section, .alc-intro, .alc-menu, .gift-hero, .gift-order, .press-coverage) { padding-inline: var(--page-gutter); max-width: none; }
