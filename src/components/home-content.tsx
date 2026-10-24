@@ -1,4 +1,5 @@
 import DiningChoice from "./dining-choice";
+import DishWall from "./dish-wall";
 import GoogleReviews from "./google-reviews";
 import MediaLogos from "./media-logos";
 import { pressMedia } from "@/lib/press";
@@ -70,6 +71,7 @@ export default function HomeContent() {
         </div>
       </section>
       <MediaLogos logos={pressMedia} />
+      <DishWall />
       <StorySection />
       <GoogleReviews />
       <BookingSection />

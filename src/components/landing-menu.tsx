@@ -5,13 +5,14 @@ import Image from "next/image";
 import menuSections from "@/lib/landing-menus.json";
 import DishGallery from "./dish-gallery";
 import { getDishImage } from "@/lib/dish-images";
+import { landingDishId } from "@/lib/landing-menu-links";
 
 type Entry = { title: string; price: string; paragraphs: string[] };
 type MenuImage = { src: string; alt: string; caption?: string };
 
-function MenuEntries({ entries, groupLabel }: { entries: Entry[]; groupLabel?: string }) {
+function MenuEntries({ entries, groupLabel, sectionId, groupIndex }: { entries: Entry[]; groupLabel?: string; sectionId?: string; groupIndex?: number }) {
   return <div className="campaign-dishes">{entries.map((entry, index) => (
-    <article className={(!entry.price && entry.paragraphs.length === 0) || entry.title.toLowerCase() === groupLabel?.toLowerCase() ? "campaign-menu-label" : "campaign-dish"} key={index}>
+    <article id={sectionId !== undefined && groupIndex !== undefined ? landingDishId(sectionId, groupIndex, entry.title) : undefined} tabIndex={-1} className={(!entry.price && entry.paragraphs.length === 0) || entry.title.toLowerCase() === groupLabel?.toLowerCase() ? "campaign-menu-label" : "campaign-dish"} key={index}>
       {entry.title && <div className="campaign-dish-heading"><h3>{entry.title}</h3>{entry.price && <span>{entry.price}</span>}</div>}
       {entry.paragraphs.map((paragraph, i) => <p key={i} className={/^(contains:|\*|VEGAN|VEGETARIAN)/i.test(paragraph) ? "campaign-diet-note" : undefined}>{paragraph}</p>)}
     </article>
@@ -32,17 +33,29 @@ export default function LandingMenu({ bookingUrl }: { bookingUrl: string }) {
   const [active, setActive] = useState(menuSections[0].id);
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
   useEffect(() => {
+    let frame = 0;
     function restore() {
-      const section = menuSections.find((section) => `#${section.id}` === window.location.hash);
-      if (section) {
-        setActive(section.id);
-        requestAnimationFrame(() => document.getElementById("menu")?.scrollIntoView({ behavior: "instant" }));
-      }
+      const target = document.getElementById(window.location.hash.slice(1));
+      const panel = target?.closest(".campaign-menu-panel");
+      const section = menuSections.find((section) => `#${section.id}` === window.location.hash || section.id === panel?.id);
+      if (!section) return;
+      setActive(section.id);
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (target?.id.startsWith("campaign-dish-")) {
+          const group = target.closest("details");
+          if (group) group.open = true;
+          target.scrollIntoView({ behavior: "instant", block: "start" });
+          target.focus({ preventScroll: true });
+        } else {
+          document.getElementById("menu")?.scrollIntoView({ behavior: "instant" });
+        }
+      });
     }
     restore();
     window.addEventListener("hashchange", restore);
     window.addEventListener("popstate", restore);
-    return () => { window.removeEventListener("hashchange", restore); window.removeEventListener("popstate", restore); };
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("hashchange", restore); window.removeEventListener("popstate", restore); };
   }, []);
   function choose(index: number) {
     const id = menuSections[index].id;
@@ -70,9 +83,9 @@ export default function LandingMenu({ bookingUrl }: { bookingUrl: string }) {
           <summary>{group.label}<span aria-hidden="true">＋</span></summary>
           <DishGallery names={group.entries.map((entry) => entry.title)} label={`${group.label} dish photos`} />
           {!group.entries.some((entry) => getDishImage(entry.title)) && <MenuPhotos images={group.images} />}
-          <MenuEntries entries={group.entries} groupLabel={group.label} />
+          <MenuEntries entries={group.entries} groupLabel={group.label} sectionId={section.id} groupIndex={index} />
         </details>
-      ) : <div key={group.label}><DishGallery names={group.entries.map((entry) => entry.title)} label={`${group.label} dish photos`} /><div className={group.images.length ? "campaign-menu-single" : undefined}><MenuPhotos images={group.images} /><MenuEntries entries={group.entries} groupLabel={group.label} /></div></div>)}
+      ) : <div key={group.label}><DishGallery names={group.entries.map((entry) => entry.title)} label={`${group.label} dish photos`} /><div className={group.images.length ? "campaign-menu-single" : undefined}><MenuPhotos images={group.images} /><MenuEntries entries={group.entries} groupLabel={group.label} sectionId={section.id} groupIndex={index} /></div></div>)}
       {section.id === "takeout" && <a className="inline-link" href="https://www.ubereats.com/store/taste-of-beauty-tob-west-hollywood-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA?surfaceName=" target="_blank" rel="noopener noreferrer">Uber Eats</a>}
       <a className="cta campaign-menu-book" href={bookingUrl} target="_blank" rel="noopener noreferrer">Book Now</a>
     </div>)}

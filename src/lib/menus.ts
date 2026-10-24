@@ -1,4 +1,7 @@
 export type MenuKey = "59" | "99" | "lunch" | "xlb";
+export function menuDishId(menu: MenuKey, diet: "vegan" | "vegetarian", name: string) {
+  return `dish-${menu}-${diet}-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+}
 export type Course = [name: string, description: string];
 export interface DiningMenu {
   title: string;

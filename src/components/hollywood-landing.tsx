@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import GoogleReviews from "./google-reviews";
 import LandingMenu from "./landing-menu";
+import DishWall from "./dish-wall";
 import source from "@/lib/landing-pages.json";
 import "./hollywood-landing.css";
 
@@ -71,6 +72,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
           <div className="hero-actions">{book()}<a className="inline-link" href="#menu">Our Menus</a></div>
         </div>
       </section>
+      <DishWall campaignMenu />
       <GoogleReviews bookingHref="#booking" heading="5-Star Reviews" eyebrow="Why Customers Love Us" />
       <section className="campaign-section campaign-experience" aria-labelledby="campaign-experience-title">
         <div className="campaign-section-heading"><div><p className="eyebrow">The Experience</p><h2 id="campaign-experience-title">What to <em>Expect</em></h2><p>Dining with us is simple, seamless, and unforgettable.</p></div>{book()}</div>

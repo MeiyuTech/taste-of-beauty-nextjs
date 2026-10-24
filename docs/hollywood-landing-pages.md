@@ -44,3 +44,12 @@ The verification above covers local development, not production deployment.
 - Desktop map and restaurant information are side by side; mobile stacks the map above the information. Original business information is retained.
 - TypeScript and the 8 existing tests passed. In-app browser checks covered all three routes, the Google/Meta booking destinations, loaded map, review-to-footer navigation, desktop at 1440 px, mobile at 390 px and a 320 px overflow check.
 - The scoped revision is verified locally; no production build or deployment was performed.
+
+## Campaign dish photo wall
+
+- Reuses the homepage's 14-photo wall between the restaurant story and customer reviews on all three campaign pages.
+- Keeps the default image-only presentation, hover/focus labels, touch-to-reveal interaction, native mobile swiping, motion controls, and reduced-motion support. No decorative arrows.
+- Photo links select the matching menu tab on the same campaign page, open the relevant tasting group, and focus the matching dish. Xiaolongbao links to the lunch menu's XIAO LONG BAO section.
+- Same-page navigation preserves the complete campaign query string and all existing attributed booking destinations. Homepage links continue to use the standalone menus page.
+- Verified all three pages in the Codex in-app browser at desktop and mobile sizes, including 320 px overflow checks, same-page dish links, expanded vegan/vegetarian groups, lunch, direct dish URLs, and legacy menu hashes. All 14 wall targets per campaign page exist; homepage menu links and campaign booking attribution remain correct.
+- TypeScript, the existing 8 tests, and whitespace checks passed. Used an isolated port-3033 preview because the user's port-3000 development process was serving stale campaign pages; restart that process to load the changes. No production build or deployment was performed.

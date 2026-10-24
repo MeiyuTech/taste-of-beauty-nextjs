@@ -9,7 +9,7 @@ import {
   type KeyboardEvent,
   type FormEvent,
 } from "react";
-import { menus, menuKeys, isMenuKey, type MenuKey } from "@/lib/menus";
+import { menus, menuKeys, isMenuKey, menuDishId, type MenuKey } from "@/lib/menus";
 import {
   BOOKING_URL,
   ORDER_URL,
@@ -54,7 +54,12 @@ export function DiningProvider({
   }, [queryKey]);
   function select(menu: MenuKey, jump = false) {
     setActive(menu);
-    window.history.replaceState(null, "", menuUrl(window.location.href, menu, queryKey));
+    const url = menuUrl(window.location.href, menu, queryKey);
+    if (queryKey === "menu") {
+      url.searchParams.delete("diet");
+      if (/^#(?:dish-|menu-detail-)/.test(url.hash)) url.hash = "";
+    }
+    window.history.replaceState(null, "", url);
     if (jump)
       document.getElementById("menus")?.scrollIntoView({
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -78,6 +83,34 @@ export function MenuPanel() {
   const { active, select } = useContext(DiningContext);
   const [diet, setDiet] = useState<"vegan" | "vegetarian">("vegan");
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  useEffect(() => {
+    function restoreDiet() {
+      const query = new URLSearchParams(window.location.search);
+      setDiet(query.get("menu") === "99" && query.get("diet") === "vegetarian" ? "vegetarian" : "vegan");
+    }
+    restoreDiet();
+    window.addEventListener("popstate", restoreDiet);
+    return () => window.removeEventListener("popstate", restoreDiet);
+  }, []);
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!/^(?:dish-|menu-detail-)/.test(hash)) return;
+    const target = document.getElementById(hash);
+    if (!target || target.closest("[hidden]")) return;
+    const frame = requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "instant", block: "start" });
+      target.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [active, diet]);
+  function chooseDiet(next: "vegan" | "vegetarian") {
+    setDiet(next);
+    const url = new URL(window.location.href);
+    url.searchParams.set("diet", next);
+    if (/^#dish-/.test(url.hash)) url.hash = "";
+    window.history.replaceState(null, "", url);
+  }
+
   function choose(key: MenuKey) {
     setDiet("vegan");
     select(key);
@@ -159,14 +192,14 @@ export function MenuPanel() {
               <button
                 type="button"
                 aria-pressed={diet === "vegan"}
-                onClick={() => setDiet("vegan")}
+                onClick={() => chooseDiet("vegan")}
               >
                 Vegan
               </button>
               <button
                 type="button"
                 aria-pressed={diet === "vegetarian"}
-                onClick={() => setDiet("vegetarian")}
+                onClick={() => chooseDiet("vegetarian")}
               >
                 Vegetarian
               </button>
@@ -177,7 +210,7 @@ export function MenuPanel() {
               {key === "99" && <h2 className="diet-heading">The Tasting Experience – {variant === "vegan" ? "Vegan" : "Vegetarian"}</h2>}
               <ol className="dish-list">
                 {(variant === "vegetarian" ? menu.vegetarian! : menu.courses).map((course, index) => (
-                  <li key={course[0]}>
+                  <li key={course[0]} id={menuDishId(key, variant, course[0])} tabIndex={-1}>
                     <span className="course-n">{String(index + 1).padStart(2, "0")}</span>
                     <div className="course-copy"><h3>{course[0]}</h3><p>{course[1]}</p></div>
                   </li>

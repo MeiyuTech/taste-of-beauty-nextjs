@@ -82,6 +82,7 @@
 @media (max-width: 900px) {
   .theme-b .campaign-hero, .theme-b .campaign-story, .theme-b .campaign-about { grid-template-columns: 1fr; }
   .theme-b .campaign-hero-copy { padding: 45px 6%; }
+  .theme-b .campaign-story { row-gap: 32px; }
   .theme-b .campaign-hero-photo { min-height: 380px; }
   .theme-b .campaign-hero .display-title { font-size: clamp(60px, 11vw, 90px); }
   .theme-b .campaign-section { padding: 44px 6%; }
@@ -133,4 +134,15 @@
 @media (max-width: 700px) {
   .theme-b .campaign-menu-single, .theme-b .campaign-menu-overview { grid-template-columns: 1fr; gap: 20px; }
   .theme-b .campaign-menu-single .campaign-menu-photos img { height: 300px; }
+}
+
+.theme-b .campaign-page > .dish-wall { margin: 0 0 24px; }
+.theme-b .campaign-dishes > article[id] { scroll-margin-top: 125px; }
+.theme-b .campaign-dishes > article[id]:target {
+  background: var(--soft);
+  box-shadow: -8px 0 0 var(--soft), -11px 0 0 var(--accent), 8px 0 0 var(--soft);
+}
+@media (max-width: 700px) {
+  .theme-b .campaign-page > .dish-wall { margin-bottom: 12px; }
+  .theme-b .campaign-dishes > article[id] { scroll-margin-top: 90px; }
 }

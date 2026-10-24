@@ -20,3 +20,13 @@ These rules apply to every Taste of Beauty page, including shared navigation, me
 - Use an underlined text link with hover/focus highlighting for “View all coverage”, and subtle surface highlighting for clickable logos.
 - Pause automatic motion while the strip is hovered or keyboard-focused. Allow manual horizontal scrolling; manual touch or wheel interaction pauses automatic scrolling for that mount.
 - Disable automatic motion when reduced motion is preferred.
+
+## Dish photo wall
+
+- Keep the default wall image-only, with no heading, promotional copy, or permanent dish labels.
+- Reveal the dish name and a descriptive menu link on hover, keyboard focus, or touch. Never append decorative arrows to photo overlays, menu links, or scrolling hints, including “View the $59 menu” and “Scroll to explore”. This applies on desktop and mobile; do not substitute an SVG or CSS arrow.
+- Link each photo to its matching menu, dietary variant, and dish when available. Use only verified dish photos.
+- On touch screens, support native horizontal swiping. The first tap reveals the dish and destination; the next tap follows the link. A swipe must not navigate.
+- Keep desktop motion slow and pause it on hover or keyboard focus. Provide a motion control, disable automatic motion on mobile, and respect reduced-motion preferences.
+
+- Reuse the photo wall on all three Hollywood campaign landing pages, between the restaurant story and customer reviews. Campaign photo links must stay on the current landing page, select the matching menu tab, and expand the matching group. Preserve campaign query parameters and attributed booking links.

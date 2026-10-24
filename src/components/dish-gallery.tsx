@@ -25,7 +25,7 @@ export default function DishGallery({ names, label, featured = false }: { names:
   </section>;
 
   return <section className="dish-gallery dish-gallery-strip" aria-label={label}>
-    <p className="dish-gallery-heading"><span>A closer look</span>{dishes.length > 1 && <span className={`dish-gallery-hint${dishes.length <= 3 ? " dish-gallery-hint-mobile" : ""}`}>Scroll to explore →</span>}</p>
+    <p className="dish-gallery-heading"><span>A closer look</span>{dishes.length > 1 && <span className={`dish-gallery-hint${dishes.length <= 3 ? " dish-gallery-hint-mobile" : ""}`}>Scroll to explore</span>}</p>
     <div className="dish-gallery-rail" tabIndex={0} aria-label={`${label}, scroll to explore`} style={{ "--gallery-columns": Math.min(dishes.length, 3) } as CSSProperties}>
       {dishes.map((name) => <figure key={name}>
         <DishPhoto name={name} sizes="(max-width: 700px) 76vw, 30vw" />
