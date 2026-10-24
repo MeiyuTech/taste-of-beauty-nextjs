@@ -6,3 +6,6 @@ node_modules/
 *.tsbuildinfo
 .DS_Store
 output/
+
+# Local WordPress source archive; website assets are tracked separately.
+/public/images/wordpress-backup/

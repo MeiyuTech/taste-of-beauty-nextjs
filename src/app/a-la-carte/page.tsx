@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 export default function ALaCartePage() {
   const menu = menus.find((section) => section.id === "a-la-carte")!;
-  return <SiteShell>
+  return <SiteShell active="a-la-carte">
     <div className="alc-page">
       <section className="alc-intro">
         <div className="alc-photo"><img src="/images/dishes/pearl-fresh.webp" alt="Pearl Fresh mushroom broth served with a pale green teapot at Taste of Beauty" /></div>

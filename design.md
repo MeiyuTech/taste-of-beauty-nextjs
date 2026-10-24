@@ -1,6 +1,80 @@
-# Interaction Design Guidelines
+# Taste of Beauty Design Guidelines
 
 These rules apply to every Taste of Beauty page, including shared navigation, menus, press coverage, cards, media logos, and calls to action.
+
+## Rounded corners — required across the entire website
+
+- All cards and buttons must have clearly visible rounded corners. Sharp rectangular cards and buttons are not allowed, including at mobile breakpoints and in hover, focus, active, selected, and disabled states.
+- This applies to native buttons, links styled as buttons, clickable image cards, menu selectors, booking controls, icon buttons, navigation toggles, dialog close controls, media cards, and campaign calls to action.
+- Use a shared radius scale instead of choosing unrelated values in individual pages:
+
+| Element | Shared token | Radius |
+| --- | --- | --- |
+| Small thumbnails and compact badges | `--radius-sm` | `8px` |
+| Standard buttons, icon-button surfaces, inputs, and selects | `--radius-control` | `12px` |
+| Standalone content images and inset media | `--radius-media` | `16px` |
+| Dining choices, dish cards, review cards, and press cards | `--radius-card` | `20px` |
+| Large feature cards, inset feature images, and dialogs | `--radius-feature` | `28px` |
+| Short filter chips and compact segmented choices | `--radius-pill` | `999px` |
+
+- Keep ordinary calls to action softly rounded at `12px`; use pill shapes for short selectors. Circular icon controls may remain circular.
+- Round the outer card and clip its image and overlays to the same outer contour. Images that touch a card edge inherit that edge's radius; inset images use a smaller radius with consistent padding.
+- Apply clipping to the media wrapper when clipping the entire card would hide keyboard focus outlines, menus, or popovers. Focus indicators must remain fully visible.
+- Text-only links do not need a filled container. Transparent buttons still use the control radius so hover, active, and focus treatments follow a rounded contour.
+- Page backgrounds, full-width section bands, dividers, and the header/footer shell are structural surfaces rather than cards. Keep their normal edge-to-edge geometry; round the cards and controls inside them.
+- Remove existing `border-radius: 0` rules from cards and controls during implementation. Do not apply a universal radius to every HTML element.
+
+## Sitewide visual direction
+
+The proposed direction is warm, natural, and refined: cream backgrounds, terracotta actions, generous spacing, expressive serif headings, and real food photography. These are implementation targets; this document does not indicate that the UI changes have already shipped.
+
+### Color and surface hierarchy
+
+- Build on the current palette: cream `#f3f0e8`, warm charcoal `#302e29`, muted text `#706b61`, terracotta `#90452f`, and sand `#e9e4d8`. Use the existing deep green `#293127` for the footer and occasional supporting surfaces.
+- Use terracotta consistently for the primary action. Secondary actions use a pale surface or a quiet outline with equivalent sizing and corner treatment.
+- Use slightly lighter card surfaces, a restrained border, and a soft shadow where separation is needed. Reserve stronger elevation for floating menus and dialogs.
+- Verify text and control contrast in every state. Treat the palette as a starting point, not a guarantee that every possible foreground/background pair is accessible.
+
+### Typography and spacing
+
+- Keep serif display headings and a readable sans-serif for descriptions, navigation, and controls. Begin with the existing fonts and refine their sizes, line heights, and wrapping.
+- Target body text at `16–18px`, with approximately `1.5–1.7` line height. Use smaller type for secondary metadata only; avoid shrinking essential menu details or button labels to make a layout fit.
+- Keep heading levels meaningful and scale display text responsively. Avoid forced line breaks that leave isolated words on narrower screens.
+- Use an `8px` spacing rhythm, card gaps around `20–24px` on desktop and `12–16px` on mobile, and card padding around `24px` on desktop and `16–20px` on mobile.
+- Use a centered content width around `1200–1280px`; allow deliberately full-width image sections. Target section spacing of `72–96px` on desktop and `40–56px` on mobile, adjusting to content density.
+
+### Photography and interaction
+
+- Give food and the restaurant space visual priority. Keep consistent aspect ratios within each card group and choose focal positions that preserve the dish instead of cutting off the plate.
+- Preserve authentic photography, existing dish identities, and the image-only default of the dish wall. Do not substitute invented food images or permanent labels for that interaction.
+- Use approximately `180ms` color, border, and shadow transitions. Interactive cards may lift by at most `2px`; static informational cards should not imply that they are clickable.
+- Provide comfortable touch targets, targeting at least `44px` for standalone controls. Keep long labels readable and allow layouts to wrap.
+- Retain the existing no-decorative-arrows rule, visible keyboard focus, touch feedback, and reduced-motion behavior.
+
+## Page-by-page design plan
+
+| Area | Proposed treatment |
+| --- | --- |
+| Shared header and footer | Consistent rounded reservation and navigation controls; clearer primary-action hierarchy; softly rounded floating navigation panels; preserve readable link groups and contact information. |
+| Homepage `/` | Refine the existing text-and-food opening composition; turn the four dining choices into cohesive rounded cards with aligned text areas, consistent image crops, and more breathing room. Preserve the media strip directly below the hero and the image-only dish wall. |
+| Menus `/menus` | Replace the rigid rectangular tab strip with spaced rounded selectors; keep menu names and prices easy to scan; soften the dish gallery and thumbnails while maintaining a clear menu-reading order. |
+| À la carte `/a-la-carte` and xiaolongbao `/vegan-xiaolongbao` | Apply the same button, card, image, and typography rules across both page themes. Let dish imagery and menu groups establish hierarchy. |
+| Story `/our-story` and gatherings `/gatherings` | Use spacious alternating image-and-text sections, large rounded inset photographs, and a focused action at the end of each relevant section. |
+| Gift cards `/gift-card` | Give the introduction and gift presentation a clear visual hierarchy; round first-party controls and the checkout container where supported without obscuring the purchase flow. |
+| Press `/press` | Use consistent rounded article cards, balanced logo areas, and readable titles; preserve original publisher logos and authentic coverage links. |
+| Visit `/visit` and reservations `/reservations` | Group practical information and booking controls into calm rounded panels; prioritize readable hours, directions, form labels, and validation feedback. |
+| Hollywood campaign pages | Reuse the same visual tokens while preserving each campaign's content, menu selection, photo-wall behavior, query parameters, and attributed booking destinations. |
+| Dialogs, review galleries, and mobile navigation | Match the radius scale, spacing, focus treatment, and control sizes; check opened states as carefully as the default pages. |
+
+## Implementation and acceptance
+
+1. Establish shared color, radius, spacing, and control styles for both `.theme-b` and `.xlb-page`. Review existing CSS overrides before changing them so legacy rules do not undo the new system.
+2. Apply the system to shared navigation, buttons, selectors, cards, images, form controls, and dialogs. Use the homepage and menus page as the first visual references.
+3. Extend the verified styling to every remaining public page and all three campaign landing pages. Preserve menu names, prices, descriptions, dietary labels, booking behavior, and tracking parameters.
+4. Inspect the affected pages in the Codex in-app browser using the existing local development server. Check desktop, tablet, and mobile layouts, including approximately `1440px`, `768px`, and `390px`, plus a narrow `320px` overflow check.
+5. Verify hover, keyboard focus, touch/active, selected tabs, open navigation, and open dialogs. Check that rounded media clips correctly, focus rings remain visible, and sticky elements do not obscure content.
+6. Confirm that all first-party cards and buttons follow the radius scale and that shared components remain consistent across routes. Check third-party embeds separately; style their surrounding first-party containers without assuming access to the embedded UI.
+7. Report the pages and states actually verified and any verification limits. Do not run `pnpm build`.
 
 ## Clickable elements
 
