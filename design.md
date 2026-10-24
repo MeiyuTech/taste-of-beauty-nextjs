@@ -52,11 +52,32 @@ The visual direction is warm, natural, and refined: cream backgrounds, terracott
 - Provide comfortable touch targets, targeting at least `44px` for standalone controls. Keep long labels readable and allow layouts to wrap.
 - Retain the existing no-decorative-arrows rule, visible keyboard focus, touch feedback, and reduced-motion behavior.
 
+## Navigation design
+
+### Desktop header
+
+- Use `20px`, medium-weight sans-serif navigation (`18px` between `960–1150px`) and a `16px` reservation label. Keep the existing `80px` header height.
+- The Menus dropdown is a full-width cream band, flush with the bottom of the header. Use a minimum height of `132px`, centered horizontal links, and `18px` regular-weight sans-serif labels. Do not turn this structural band into an inset floating card.
+- Keep link hit areas and controls rounded, with visible focus feedback.
+
+### Mobile navigation
+
+- Below `960px`, open a full-width cream sheet with rounded lower corners and a soft backdrop. Center the inner content within `640px` on tablets.
+- Use Arial/sans-serif consistently: every destination link is `18px`, weight `500`, with `1.4` line height; section labels are `12px` uppercase; the reservation button is `16px`. Do not use serif display headings for navigation.
+- Group destinations under **Menus** (All menus, Xiaolongbao, A la carte) and **Explore** (Gatherings, Gift cards, Our story, Press, Visit us, Pickup & delivery). Use a single-column menu card and a two-column Explore grid.
+- Navigation links have no underlines in default, visited, hover, focus, active, or current-page states. This is an explicit exception to the general text-link treatment; use rounded hit areas and surface/color feedback instead.
+- Give links at least `48px` touch height, `12px` horizontal inner padding, and `12px` corners. Let long labels wrap rather than shrinking their font.
+- Mark the current page with `aria-current="page"`, a pale sand background, a subtle border, terracotta text, and a small status dot.
+- Keep the brand and `44px` close control in the top row. Place the full-width Book a table action and compact West Hollywood location label in a separate footer.
+- Constrain the sheet to the dynamic viewport height. On short screens, only the middle link area scrolls; the close and reservation controls remain reachable. Respect the bottom safe area and reset the link area to the top when reopening.
+- Preserve native modal focus containment, Escape/backdrop dismissal, focus return to the trigger, body scroll locking, link dismissal, and automatic close at the desktop breakpoint.
+- Keep these styles in `src/app/design-system.css`; remove superseded mobile navigation rules from `src/components/site-chrome.css` instead of stacking competing font and underline overrides.
+
 ## Page and section design
 
 | Area | Design treatment |
 | --- | --- |
-| Shared header and footer | Consistent rounded reservation and navigation controls; clearer primary-action hierarchy; softly rounded floating navigation panels; preserve readable link groups and contact information. |
+| Shared header and footer | Consistent rounded reservation and navigation controls; the full-width desktop dropdown and compact mobile sheet specified above; preserve readable footer link groups and contact information. |
 | Homepage `/` | Refine the existing text-and-food opening composition; turn the four dining choices into cohesive rounded cards with aligned text areas, consistent image crops, and more breathing room. Preserve the media strip directly below the hero and the image-only dish wall. |
 | Menus `/menus` | Replace the rigid rectangular tab strip with spaced rounded selectors; keep menu names and prices easy to scan; soften the dish gallery and thumbnails while maintaining a clear menu-reading order. |
 | À la carte `/a-la-carte` and xiaolongbao `/vegan-xiaolongbao` | Apply the same button, card, image, and typography rules across both page themes. Let dish imagery and menu groups establish hierarchy. |
@@ -131,3 +152,13 @@ The visual direction is warm, natural, and refined: cream backgrounds, terracott
 - Restored the original background-photo gradients for Our Story and Our Philosophy, while retaining the shared rounded CTA styling.
 - Verified both sections in the Codex in-app browser and at `1440`, `768`, `390`, and `320px` using supplemental browser checks. The desktop horizontal fades and mobile vertical fades render correctly; all eight section/viewport checks passed without horizontal overflow or clipped copy.
 - Follow-up edge-to-edge refinement: both background sections passed browser checks at `1920`, `1440`, `768`, `390`, and `320px`, with no horizontal overflow, readable copy gutters, and the original gradients retained.
+
+
+### Mobile navigation refinement
+
+- Replaced the mixed serif/sans-serif mobile hierarchy and underlined submenu links with consistent `18px` sans-serif destinations, two labeled groups, and rounded current-page feedback.
+- Verified the homepage and a la carte navigation in the Codex in-app browser. Checked `390×844`, `320×568`, `768×1024`, `768×600`, and `768×390` layouts; the sheet stayed within the viewport with no horizontal overflow.
+- Confirmed nine destination links, minimum `48px` link targets, current-page styling, visible keyboard focus, Escape and backdrop dismissal, focus return to the trigger, link navigation, body scroll restoration, and automatic dismissal when resizing to desktop.
+- On short screens, the middle link area scrolls while close/reservation controls remain visible. Reopening resets that scroll position.
+- At `1440×900`, verified the full-width desktop dropdown, `132px` panel height, `20px` main navigation, `18px` submenu labels, and `16px` reservation label.
+- TypeScript checking, all eight existing booking/navigation tests, and whitespace validation passed. This verification used the existing local server; no production deployment or build was performed.

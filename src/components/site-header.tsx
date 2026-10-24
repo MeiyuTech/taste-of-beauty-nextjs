@@ -14,6 +14,7 @@ export default function SiteHeader({ active, bookingHref }: { active?: string; b
   const disclosure = useRef<HTMLDetailsElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
+  const navigationContent = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const menuActive = ["menus", "vegan-xiaolongbao", "a-la-carte"].includes(active ?? "");
 
@@ -42,6 +43,7 @@ export default function SiteHeader({ active, bookingHref }: { active?: string; b
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.current?.showModal();
+    navigationContent.current?.scrollTo({ top: 0 });
     const desktop = window.matchMedia("(min-width: 960px)");
     function closeOnDesktop() { if (desktop.matches) dialog.current?.close(); }
     desktop.addEventListener("change", closeOnDesktop);
@@ -89,26 +91,31 @@ export default function SiteHeader({ active, bookingHref }: { active?: string; b
     }}>
       <div className="mobile-navigation-top">
         <InternalLink className="site-brand" href="/" aria-label="Taste of Beauty home">{logo}</InternalLink>
-        <button className="navigation-close" type="button" onClick={close} aria-label="Close navigation" autoFocus>×</button>
+        <button className="navigation-close" type="button" onClick={close} aria-label="Close navigation" autoFocus><span className="navigation-close-icon" aria-hidden="true" /></button>
       </div>
-      <nav aria-label="Mobile main" className="mobile-navigation-links">
-        <div className="mobile-menu-group">
-          <InternalLink href="/menus" aria-current={active === "menus" ? "page" : undefined}>Menus</InternalLink>
-          <div className="mobile-menu-options">
-            {menuLinks.slice(1).map(([href, label]) => <InternalLink key={href} href={href} aria-current={href === `/${active}` ? "page" : undefined}>{label}</InternalLink>)}
-          </div>
-        </div>
-        <InternalLink href="/#gatherings">Gatherings</InternalLink>
-        <InternalLink href="/#restaurant-info">Visit us</InternalLink>
-        <InternalLink href="/gift-card" aria-current={active === "gift-card" ? "page" : undefined}>Gift cards</InternalLink>
-      </nav>
-      <nav aria-label="More from Taste of Beauty" className="mobile-secondary-links">
-        <InternalLink href="/#our-story">Our story</InternalLink>
-        <InternalLink href="/press" aria-current={active === "press" ? "page" : undefined}>Press</InternalLink>
-        <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">Pickup &amp; delivery</a>
-      </nav>
-      <InternalLink className="header-book mobile-book" href={bookingHref}>Book a table</InternalLink>
-      <p className="mobile-location">616 N Robertson Blvd · West Hollywood</p>
+      <div ref={navigationContent} className="mobile-navigation-content">
+        <section className="mobile-navigation-group" aria-labelledby="mobile-menus-title">
+          <h2 className="mobile-nav-heading" id="mobile-menus-title">Menus</h2>
+          <nav aria-label="Mobile menus" className="mobile-nav-list">
+            {menuLinks.map(([href, label]) => <InternalLink key={href} href={href} aria-current={href === `/${active}` ? "page" : undefined}>{label}</InternalLink>)}
+          </nav>
+        </section>
+        <section className="mobile-navigation-group" aria-labelledby="mobile-explore-title">
+          <h2 className="mobile-nav-heading" id="mobile-explore-title">Explore</h2>
+          <nav aria-label="Mobile explore" className="mobile-nav-grid">
+            <InternalLink href="/#gatherings">Gatherings</InternalLink>
+            <InternalLink href="/gift-card" aria-current={active === "gift-card" ? "page" : undefined}>Gift cards</InternalLink>
+            <InternalLink href="/#our-story">Our story</InternalLink>
+            <InternalLink href="/press" aria-current={active === "press" ? "page" : undefined}>Press</InternalLink>
+            <InternalLink href="/#restaurant-info">Visit us</InternalLink>
+            <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">Pickup &amp; delivery</a>
+          </nav>
+        </section>
+      </div>
+      <div className="mobile-navigation-footer">
+        <InternalLink className="header-book mobile-book" href={bookingHref}>Book a table</InternalLink>
+        <p className="mobile-location">West Hollywood</p>
+      </div>
     </dialog>
   </>;
 }
