@@ -15,7 +15,7 @@ export default function ALaCartePage() {
   return <SiteShell>
     <div className="alc-page">
       <section className="alc-intro">
-        <div className="alc-photo"><img src={menu.images[0].src} alt="Soup served in a porcelain bowl at Taste of Beauty" /></div>
+        <div className="alc-photo"><img src="/images/dishes/pearl-fresh.webp" alt="Pearl Fresh mushroom broth served with a pale green teapot at Taste of Beauty" /></div>
         <div className="alc-copy">
           <p className="eyebrow">Taste of Beauty · West Hollywood</p>
           <h1>A la carte <em>menu</em></h1>

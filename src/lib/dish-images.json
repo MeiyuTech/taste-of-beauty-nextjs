@@ -1,0 +1,135 @@
+{
+  "the wizard of oz": {
+    "src": "/images/dishes/the-wizard-of-oz.webp",
+    "alt": "Green vegetable soup with coconut cream in a white bowl",
+    "width": 900,
+    "height": 1200,
+    "position": "50% 62%"
+  },
+  "the secret garden": {
+    "src": "/images/dishes/the-secret-garden.webp",
+    "alt": "Sliced avocado over purple cabbage on a white plate",
+    "width": 900,
+    "height": 1200,
+    "position": "50% 62%"
+  },
+  "alice in wonderland": {
+    "src": "/images/dishes/alice-in-wonderland.webp",
+    "alt": "Lily bulb tempura topped with a delicate golden lattice crisp",
+    "width": 900,
+    "height": 1200,
+    "position": "50% 62%"
+  },
+  "the princess and the pea": {
+    "src": "/images/dishes/the-princess-and-the-pea.webp",
+    "alt": "Herb-coated jicama cakes with cream and a delicate sauce",
+    "width": 900,
+    "height": 1200,
+    "position": "50% 62%"
+  },
+  "jack and the beanstalk": {
+    "src": "/images/dishes/jack-and-the-beanstalk.webp",
+    "alt": "Golden tofu pouch served over green peas",
+    "width": 900,
+    "height": 1200,
+    "position": "50% 62%"
+  },
+  "the island": {
+    "src": "/images/dishes/the-island.webp",
+    "alt": "Golden pumpkin soup with crisp rice paper in a turquoise bowl",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "the jade": {
+    "src": "/images/dishes/the-jade.webp",
+    "alt": "Quinoa, tofu, sliced avocado and cherry tomatoes in a blue bowl",
+    "width": 960,
+    "height": 679,
+    "position": "50% 50%"
+  },
+  "the veil": {
+    "src": "/images/dishes/the-veil.webp",
+    "alt": "Crisp perilla tempura lifted with chopsticks above fresh greens",
+    "width": 960,
+    "height": 1181,
+    "position": "50% 50%"
+  },
+  "the petal": {
+    "src": "/images/dishes/the-petal.webp",
+    "alt": "Bright pink fruit and sweet potato bites on crisp chips",
+    "width": 960,
+    "height": 1148,
+    "position": "50% 50%"
+  },
+  "the dunes": {
+    "src": "/images/dishes/the-dunes.webp",
+    "alt": "Nori-wrapped bites topped with mango, aloe and fresh greens",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "the orchard": {
+    "src": "/images/dishes/the-orchard.webp",
+    "alt": "Two quinoa-coated spheres topped with fresh perilla leaves",
+    "width": 960,
+    "height": 540,
+    "position": "50% 50%"
+  },
+  "the rainforest": {
+    "src": "/images/dishes/the-rainforest.webp",
+    "alt": "Vegetable risotto served in a folded banana leaf",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "pearl fresh": {
+    "src": "/images/dishes/pearl-fresh.webp",
+    "alt": "Mushroom broth poured from a pale green teapot into a matching cup",
+    "width": 800,
+    "height": 1200,
+    "position": "50% 50%"
+  },
+  "mountains and rivers": {
+    "src": "/images/dishes/mountains-and-rivers.webp",
+    "alt": "Morel mushrooms rising above a pale pur\u00e9e dusted with green powder",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "the forest": {
+    "src": "/images/dishes/the-forest.webp",
+    "alt": "Charcoal-seared oyster mushrooms on a small grill with rosemary",
+    "width": 800,
+    "height": 1200,
+    "position": "50% 50%"
+  },
+  "the grassland": {
+    "src": "/images/dishes/the-grassland.webp",
+    "alt": "Quinoa, beets, berries and microgreens in a dark bowl",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "the desert": {
+    "src": "/images/dishes/the-desert.webp",
+    "alt": "Crisp spiced mushrooms and squash on a sculpted plate",
+    "width": 960,
+    "height": 640,
+    "position": "50% 50%"
+  },
+  "sushi trio": {
+    "src": "/images/dishes/sushi-trio.webp",
+    "alt": "Plant-based sushi bites with mango, aloe and greens on a blue plate",
+    "width": 960,
+    "height": 679,
+    "position": "50% 50%"
+  },
+  "black pepper vegetable noodles": {
+    "src": "/images/dishes/black-pepper-vegetable-noodles.webp",
+    "alt": "Vegetable noodles with mushrooms, peppers and fresh basil on a black plate",
+    "width": 960,
+    "height": 1200,
+    "position": "50% 50%"
+  }
+}

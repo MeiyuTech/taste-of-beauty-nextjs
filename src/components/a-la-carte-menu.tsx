@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type KeyboardEvent } from "react";
+import DishGallery from "./dish-gallery";
 
 type MenuGroup = { label: string; entries: { title: string; price: string; paragraphs: string[] }[] };
 export default function ALaCarteMenu({ groups }: { groups: MenuGroup[] }) {
@@ -16,6 +17,7 @@ export default function ALaCarteMenu({ groups }: { groups: MenuGroup[] }) {
       {groups.map((group, index) => <button key={group.label} ref={(node) => { tabs.current[index] = node; }} type="button" role="tab" id={`alc-tab-${index}`} aria-selected={active === index} aria-controls={`alc-panel-${index}`} tabIndex={active === index ? 0 : -1} onClick={() => setActive(index)} onKeyDown={(event) => keyboard(event, index)}>{group.label}</button>)}
     </div>
     {groups.map((group, index) => <div key={group.label} id={`alc-panel-${index}`} role="tabpanel" aria-labelledby={`alc-tab-${index}`} tabIndex={0} hidden={active !== index}>
+      <DishGallery names={group.entries.map((dish) => dish.title)} label={`${group.label} dish photos`} />
       <div className="alc-dishes">{group.entries.map((dish) => <article key={dish.title}>
         <div className="alc-dish-title"><h2>{dish.title}</h2><span>{dish.price}</span></div>
         {dish.paragraphs.map((text) => <p key={text} className={text.startsWith("Contains:") ? "alc-allergens" : undefined}>{text}</p>)}

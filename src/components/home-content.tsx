@@ -52,7 +52,7 @@ export default function HomeContent() {
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=99">
-              <img src="/assets/lotus.webp" alt="Eight-course tasting menu" />
+              <img src="/images/dishes/the-island.webp" alt="The Island pumpkin soup from the eight-course tasting menu" />
               <div>
                 <strong>$99</strong>
                 <span>8-Course Tasting Menu</span>

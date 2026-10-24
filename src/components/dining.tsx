@@ -22,6 +22,8 @@ import {
   dateError,
 } from "@/lib/booking";
 import InternalLink from "./internal-link";
+import DishGallery from "./dish-gallery";
+import { getDishImage } from "@/lib/dish-images";
 const DiningContext = createContext<{
   active: MenuKey;
   select: (menu: MenuKey, jump?: boolean) => void;
@@ -116,6 +118,8 @@ export function MenuPanel() {
       </div>
       {menuKeys.map((key) => {
         const menu = menus[key];
+        const courses = key === "99" && diet === "vegetarian" ? menu.vegetarian! : menu.courses;
+        const photoNames = courses.map(([name]) => name).filter((name) => getDishImage(name));
         return <div
         key={key}
         className="menu-detail"
@@ -126,8 +130,10 @@ export function MenuPanel() {
         tabIndex={0}
       >
         <div className="detail-visual">
-          <img src={`/assets/${menu.image}`} alt={menu.alt} loading="lazy" />
-          <div className="photo-label">TASTE OF BEAUTY · {menu.title}</div>
+          {photoNames.length ? <DishGallery key={`${key}-${diet}`} names={photoNames} label={`${menu.title} dish photos`} featured /> : <>
+            <img src={`/assets/${menu.image}`} alt={menu.alt} loading="lazy" />
+            <div className="photo-label">TASTE OF BEAUTY · {menu.title}</div>
+          </>}
         </div>
         <div className="detail-copy">
           <div className="eyebrow">{menu.eyebrow}</div>
@@ -173,7 +179,7 @@ export function MenuPanel() {
                 {(variant === "vegetarian" ? menu.vegetarian! : menu.courses).map((course, index) => (
                   <li key={course[0]}>
                     <span className="course-n">{String(index + 1).padStart(2, "0")}</span>
-                    <div><h3>{course[0]}</h3><p>{course[1]}</p></div>
+                    <div className="course-copy"><h3>{course[0]}</h3><p>{course[1]}</p></div>
                   </li>
                 ))}
               </ol>

@@ -1,0 +1,377 @@
+{
+  "reviewed_on": "2026-10-24",
+  "scope": "Repository image audit; no external or generated photos.",
+  "matches": [
+    {
+      "dish": "The Wizard of Oz",
+      "source": "/images/wordpress-backup/2026/06/the-wizard-of-oz.png",
+      "source_sha256": "e553cbaea2d4e8ff89fafd372dc8072d817585ff51971b6eab8cc86ba3bf11bb",
+      "public_path": "/images/dishes/the-wizard-of-oz.webp",
+      "evidence": "Existing named photo; green soup matches the menu.",
+      "bytes": 93868
+    },
+    {
+      "dish": "The Secret Garden",
+      "source": "/images/wordpress-backup/2026/06/the-secret-garden.png",
+      "source_sha256": "f5016fd692ef1ee9e764b7f8eb0f18ab8d2083e1bf6e650a4164f9be1c71d4d0",
+      "public_path": "/images/dishes/the-secret-garden.webp",
+      "evidence": "Existing named photo and matching plating.",
+      "bytes": 99874
+    },
+    {
+      "dish": "Alice in Wonderland",
+      "source": "/images/wordpress-backup/2026/06/alice-in-wonderland.png",
+      "source_sha256": "c00599bc70fe4c7f7a62c869a1a5efa17cafb7c6b4e99ff40a8e3a3da8feb050",
+      "public_path": "/images/dishes/alice-in-wonderland.webp",
+      "evidence": "Existing named photo and matching plating.",
+      "bytes": 79540
+    },
+    {
+      "dish": "The Princess and the Pea",
+      "source": "/images/wordpress-backup/2026/06/the-princess-and-the-pea.png",
+      "source_sha256": "262016c71a7fb4ec309020b12e3e24cbbdcf3a8dfd7c8007b76a69a78e738224",
+      "public_path": "/images/dishes/the-princess-and-the-pea.webp",
+      "evidence": "Existing named photo and matching plating.",
+      "bytes": 151298
+    },
+    {
+      "dish": "Jack and the Beanstalk",
+      "source": "/images/wordpress-backup/2026/06/jack-and-the-beanstalk.png",
+      "source_sha256": "cbdb91a9306a6a728652f3ae0996b4f551392e625d73a5498352350872319f4f",
+      "public_path": "/images/dishes/jack-and-the-beanstalk.webp",
+      "evidence": "Existing named photo and matching plating.",
+      "bytes": 95692
+    },
+    {
+      "dish": "The Island",
+      "source": "/images/wordpress-backup/2025/08/aa_0505-scaled-2.jpg",
+      "source_sha256": "880454988dcb06f76603a763ae94b3ff4a5dd89b89112e0da0707265717ae3e5",
+      "public_path": "/images/dishes/the-island.webp",
+      "evidence": "Existing landing-menu caption and matching ingredients.",
+      "bytes": 57012
+    },
+    {
+      "dish": "The Jade",
+      "source": "/images/wordpress-backup/2026/03/veil.jpeg",
+      "source_sha256": "13e266123fb72944b47b06514df2e0d96570accf64094b96c0559a214d215a61",
+      "public_path": "/images/dishes/the-jade.webp",
+      "evidence": "Visual correction: the file called veil.jpeg shows the quinoa, tofu and avocado dish described as The Jade.",
+      "bytes": 79670
+    },
+    {
+      "dish": "The Veil",
+      "source": "/images/wordpress-backup/2026/03/5376f9aa51f620af6ceb8152afcbb096.jpeg",
+      "source_sha256": "bc2ae7f04d2268cb84a763cd7cefd4a505d98ebbf040dc79c8e0d7e325e7be89",
+      "public_path": "/images/dishes/the-veil.webp",
+      "evidence": "Visual correction: this photo shows the tempura described as The Veil, not the quinoa dish.",
+      "bytes": 184186
+    },
+    {
+      "dish": "The Petal",
+      "source": "/images/wordpress-backup/2026/03/995c7b420a47cc220b8ceab3467ebd71.jpeg",
+      "source_sha256": "7c80616735b0a3ac2527750dae94dda7ae9eb16d0751ab915d1b174a4e96db35",
+      "public_path": "/images/dishes/the-petal.webp",
+      "evidence": "Existing landing-menu caption and matching plating.",
+      "bytes": 122732
+    },
+    {
+      "dish": "The Dunes",
+      "source": "/images/wordpress-backup/2025/08/tob_dunes_1.webp",
+      "source_sha256": "4554167dec711bc30a5281672f9a27f10cbb8d376b886b293e1f3e9992baf965",
+      "public_path": "/images/dishes/the-dunes.webp",
+      "evidence": "Named archive photo and existing caption; matches the cactus, aloe and mango description.",
+      "bytes": 58112
+    },
+    {
+      "dish": "The Orchard",
+      "source": "/images/food/quinoa-hero.png",
+      "source_sha256": "b661a8b5c243969f69e202560e9c50d3730c85dd13c88f89e919340c7ef75630",
+      "public_path": "/images/dishes/the-orchard.webp",
+      "evidence": "Distinctive two-sphere presentation matches the current menu description.",
+      "bytes": 43050
+    },
+    {
+      "dish": "The Rainforest",
+      "source": "/images/wordpress-backup/2025/08/The-Rainforest.webp",
+      "source_sha256": "3e4bb7defb69e14e6c166372147b44fe949dd57c96fd49c4b851a42c0133ab59",
+      "public_path": "/images/dishes/the-rainforest.webp",
+      "evidence": "Named archive photo and matching banana-leaf plating.",
+      "bytes": 37740
+    },
+    {
+      "dish": "Pearl Fresh",
+      "source": "/images/wordpress-backup/2025/08/pearl-fresh-v2.jpeg",
+      "source_sha256": "cf6c721a67438f42ec08e85a6bc90a04014a09c25f86773762f90b78ed378a34",
+      "public_path": "/images/dishes/pearl-fresh.webp",
+      "evidence": "Named archive photo and existing landing-menu caption.",
+      "bytes": 28634
+    },
+    {
+      "dish": "Mountains and Rivers",
+      "source": "/images/wordpress-backup/2025/08/MG_3746-Large.jpeg",
+      "source_sha256": "063ee09bad680d98499e8be6cdb0ee2c1a0925804117eef60a02b39b4cf1f1f3",
+      "public_path": "/images/dishes/mountains-and-rivers.webp",
+      "evidence": "Distinctive morels and green-dusted purée match the current menu description.",
+      "bytes": 59658
+    },
+    {
+      "dish": "The Forest",
+      "source": "/images/wordpress-backup/2025/08/the-forest-v1.jpeg",
+      "source_sha256": "ff0267f86b5046dd1eb3bf9155380f1d16c50860c1fe1c063a44d72201ebb672",
+      "public_path": "/images/dishes/the-forest.webp",
+      "evidence": "Named archive photo and matching plating.",
+      "bytes": 118888
+    },
+    {
+      "dish": "The Grassland",
+      "source": "/images/wordpress-backup/2025/08/TOB_Grassland_1-2.webp",
+      "source_sha256": "a74fd7ce803cbc0e5a96f7075bcb60d7c52f04aa3021fd9cdbf8712461b9a81e",
+      "public_path": "/images/dishes/the-grassland.webp",
+      "evidence": "Named archive photo and matching ingredients.",
+      "bytes": 87446
+    },
+    {
+      "dish": "The Desert",
+      "source": "/images/wordpress-backup/2025/08/the-desert_02.jpeg",
+      "source_sha256": "6a4966bfad6b67b874fe83c8caa7621450656d07ff40c9620a67f9025449493d",
+      "public_path": "/images/dishes/the-desert.webp",
+      "evidence": "Named archive photo; ingredients checked against the A la carte description.",
+      "bytes": 73694
+    },
+    {
+      "dish": "Sushi Trio",
+      "source": "/images/food/vegan-sushi.png",
+      "source_sha256": "ede59fe5e30eb14bade5191b2bb16c4c9d5159215f0c99bceb791be77ef8d5a3",
+      "public_path": "/images/dishes/sushi-trio.webp",
+      "evidence": "Existing vegan-sushi asset; ingredients match the A la carte description.",
+      "bytes": 107644
+    },
+    {
+      "dish": "Black Pepper Vegetable Noodles",
+      "source": "/images/food/vegetable-noodles.png",
+      "source_sha256": "92d90e3d288b312b39c9ab2a8236fadd6905f6a8969d092d43a93856e2ed688e",
+      "public_path": "/images/dishes/black-pepper-vegetable-noodles.webp",
+      "evidence": "Existing lunch hero and alt text identify the dish.",
+      "bytes": 179892
+    }
+  ],
+  "limitations": [
+    "Unmatched dishes remain text-only. Generic dumpling photos are not assigned to individual fillings.",
+    "Ingredient-based visual matches are documented above; older photos may show an earlier presentation."
+  ],
+  "coverage": [
+    {
+      "surface": "Main menu",
+      "section": "59",
+      "variant": "courses",
+      "matched": [
+        "The Wizard of Oz",
+        "The Secret Garden",
+        "Alice in Wonderland",
+        "The Princess and the Pea",
+        "Jack and the Beanstalk"
+      ],
+      "unmatched": []
+    },
+    {
+      "surface": "Main menu",
+      "section": "99",
+      "variant": "courses",
+      "matched": [
+        "The Island",
+        "The Jade",
+        "The Veil",
+        "The Petal",
+        "The Dunes",
+        "The Orchard",
+        "The Rainforest"
+      ],
+      "unmatched": [
+        "The Lagoon"
+      ]
+    },
+    {
+      "surface": "Main menu",
+      "section": "99",
+      "variant": "vegetarian",
+      "matched": [
+        "Pearl Fresh",
+        "Mountains and Rivers",
+        "The Forest"
+      ],
+      "unmatched": [
+        "The Sunlit Grove",
+        "The Hillside",
+        "The Stone Garden",
+        "The Harvest",
+        "The Lotus Pond"
+      ]
+    },
+    {
+      "surface": "Main menu",
+      "section": "lunch",
+      "variant": "courses",
+      "matched": [
+        "Black Pepper Vegetable Noodles"
+      ],
+      "unmatched": [
+        "Pan-Seared Vegan Buns",
+        "Pan-Seared Mushroom Dumplings",
+        "Sesame Noodles",
+        "Sweet Chili Tofu",
+        "Miso Soup"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "a-la-carte",
+      "group": "Soup",
+      "matched": [
+        "Pearl Fresh",
+        "The Island (v, gf)"
+      ],
+      "unmatched": []
+    },
+    {
+      "surface": "Landing menus",
+      "section": "a-la-carte",
+      "group": "Appetizers",
+      "matched": [
+        "The Grassland (v, gf)",
+        "The Forest",
+        "The Desert (v, gf)"
+      ],
+      "unmatched": [
+        "The Hillside (v, gf)",
+        "Piggy's Ark",
+        "Highland Meadow (v)",
+        "The Snowy Pine (v, gf)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "a-la-carte",
+      "group": "Entree",
+      "matched": [
+        "Sushi Trio (v, gf)",
+        "The Rainforest (v, gf)"
+      ],
+      "unmatched": [
+        "Emerald Scroll (gf)",
+        "Life Bullion (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "dessert",
+      "group": "Desserts",
+      "matched": [],
+      "unmatched": [
+        "Gin & Tonic Sorbet (v, gf)",
+        "Lucky Arrival (v, gf)",
+        "Plant-Based Tiramisu (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "Appetizers & Vegetable Plates",
+      "matched": [],
+      "unmatched": [
+        "Almond Mist Broccoli (v)",
+        "Tideglass Sesame Seaweed (v)",
+        "Canyon Pepper Peanuts (v)",
+        "Matsutake Forest Edamame (v)",
+        "Violet Orchard Slaw (v)",
+        "Truffle-Grove King Oyster Mushrooms (v)",
+        "Five-Spice Peanuts (v)",
+        "Earthling Rye Lotus Rings (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "Soups",
+      "matched": [],
+      "unmatched": [
+        "Kombu Horizon Miso Soup (v)",
+        "Osmanthus Winter-Glow Sweet Soup (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "Pasta",
+      "matched": [],
+      "unmatched": [
+        "Silk-Sesame Garden Pasta (v)",
+        "Sunlight Tomato Pasta (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "House Buns",
+      "matched": [],
+      "unmatched": [
+        "Golden-Seared Matsutake Chive Tofu Buns (v)",
+        "Steamed Red Bean Cloud Buns (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "Treats",
+      "matched": [],
+      "unmatched": [
+        "House Buns",
+        "Emerald Breeze Spring Rolls (v)",
+        "Midnight Sesame Mochi (v)"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "takeout",
+      "group": "Set Lunch",
+      "matched": [],
+      "unmatched": [
+        "Earthling Balance Lunch",
+        "Chef’s Recommendation Lunch"
+      ]
+    },
+    {
+      "surface": "Landing menus",
+      "section": "lunch",
+      "group": "Lunch",
+      "matched": [
+        "Black Pepper Vegetable Noodles (V)"
+      ],
+      "unmatched": [
+        "Shiitake, Bok Choy & Dried Tofu Bao (V)",
+        "Zucchini, Plant-Based Egg & Carrot Bao (V)",
+        "Mustard Greens & Dried Tofu Bao (V)",
+        "Mapo Tofu Bao (V)",
+        "Chocolate & Glutinous Rice Bao",
+        "Pan-Seared Vegan Buns (V)",
+        "Pan-Seared Mushroom Dumplings (V)",
+        "Sesame Noodles (V)",
+        "Matsutake Edamame (V)",
+        "Sesame Seaweed Salad (V)",
+        "Apple & Pear Purple Cabbage Slaw (V)",
+        "Crispy Spring Rolls (V)",
+        "Truffle King Oyster Mushrooms (V)",
+        "Sichuan Mapo Tofu (V)",
+        "Sweet Chili Tofu (V)",
+        "Miso Soup (V)",
+        "Chef’s Selection Lunch Combo"
+      ]
+    }
+  ],
+  "rejected_matches": [
+    {
+      "dish": "The Lotus Pond",
+      "source": "/assets/lotus.webp",
+      "reason": "Close inspection shows radish petals and green purée, not the yam, lotus root and zucchini presentation described by the current menu."
+    }
+  ]
+}

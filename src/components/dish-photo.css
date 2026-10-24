@@ -1,0 +1,2 @@
+.theme-b .dish-photo { overflow: hidden; background: var(--soft); aspect-ratio: 4 / 3; }
+.theme-b .dish-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }

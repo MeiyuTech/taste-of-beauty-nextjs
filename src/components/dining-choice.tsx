@@ -31,7 +31,7 @@ export default function DiningChoice() {
       <h2 id="dining-choice-title">Choose your <em>menu</em></h2>
       <div className="dining-choice-options">
         <InternalLink href="/vegan-xiaolongbao"><img src="/assets/xlb-0.webp" alt="Handmade xiaolongbao in a bamboo steamer" /><div><h3>Xiaolongbao</h3><p>Handmade vegan dumplings</p><span>Explore Xiaolongbao</span></div></InternalLink>
-        <InternalLink href="/a-la-carte"><img src="/images/landing/dscf0743-scaled-1-rp0i8xah9rke4dbnj0p82fthunzhtmq8a7mlupn1c0.jpg" alt="Soup served in a porcelain bowl" /><div><h3>A la carte</h3><p>Soup, appetizers &amp; entrees</p><span>Explore A la carte</span></div></InternalLink>
+        <InternalLink href="/a-la-carte"><img src="/images/dishes/pearl-fresh.webp" alt="Pearl Fresh mushroom broth served with a pale green teapot" /><div><h3>A la carte</h3><p>Soup, appetizers &amp; entrees</p><span>Explore A la carte</span></div></InternalLink>
       </div>
     </dialog>
   </>;

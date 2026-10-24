@@ -3,13 +3,15 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import Image from "next/image";
 import menuSections from "@/lib/landing-menus.json";
+import DishGallery from "./dish-gallery";
+import { getDishImage } from "@/lib/dish-images";
 
 type Entry = { title: string; price: string; paragraphs: string[] };
 type MenuImage = { src: string; alt: string; caption?: string };
 
-function MenuEntries({ entries }: { entries: Entry[] }) {
+function MenuEntries({ entries, groupLabel }: { entries: Entry[]; groupLabel?: string }) {
   return <div className="campaign-dishes">{entries.map((entry, index) => (
-    <article className={!entry.price && entry.paragraphs.length === 0 ? "campaign-menu-label" : "campaign-dish"} key={index}>
+    <article className={(!entry.price && entry.paragraphs.length === 0) || entry.title.toLowerCase() === groupLabel?.toLowerCase() ? "campaign-menu-label" : "campaign-dish"} key={index}>
       {entry.title && <div className="campaign-dish-heading"><h3>{entry.title}</h3>{entry.price && <span>{entry.price}</span>}</div>}
       {entry.paragraphs.map((paragraph, i) => <p key={i} className={/^(contains:|\*|VEGAN|VEGETARIAN)/i.test(paragraph) ? "campaign-diet-note" : undefined}>{paragraph}</p>)}
     </article>
@@ -66,9 +68,11 @@ export default function LandingMenu({ bookingUrl }: { bookingUrl: string }) {
       {section.groups.map((group, index) => section.groups.length > 1 ? (
         <details className="campaign-menu-group" key={group.label} open={index === 0}>
           <summary>{group.label}<span aria-hidden="true">＋</span></summary>
-          <MenuPhotos images={group.images} /><MenuEntries entries={group.entries} />
+          <DishGallery names={group.entries.map((entry) => entry.title)} label={`${group.label} dish photos`} />
+          {!group.entries.some((entry) => getDishImage(entry.title)) && <MenuPhotos images={group.images} />}
+          <MenuEntries entries={group.entries} groupLabel={group.label} />
         </details>
-      ) : <div key={group.label} className={group.images.length ? "campaign-menu-single" : undefined}><MenuPhotos images={group.images} /><MenuEntries entries={group.entries} /></div>)}
+      ) : <div key={group.label}><DishGallery names={group.entries.map((entry) => entry.title)} label={`${group.label} dish photos`} /><div className={group.images.length ? "campaign-menu-single" : undefined}><MenuPhotos images={group.images} /><MenuEntries entries={group.entries} groupLabel={group.label} /></div></div>)}
       {section.id === "takeout" && <a className="inline-link" href="https://www.ubereats.com/store/taste-of-beauty-tob-west-hollywood-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA?surfaceName=" target="_blank" rel="noopener noreferrer">Uber Eats</a>}
       <a className="cta campaign-menu-book" href={bookingUrl} target="_blank" rel="noopener noreferrer">Book Now</a>
     </div>)}
