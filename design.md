@@ -21,12 +21,13 @@ These rules apply to every Taste of Beauty page, including shared navigation, me
 - Round the outer card and clip its image and overlays to the same outer contour. Images that touch a card edge inherit that edge's radius; inset images use a smaller radius with consistent padding.
 - Apply clipping to the media wrapper when clipping the entire card would hide keyboard focus outlines, menus, or popovers. Focus indicators must remain fully visible.
 - Text-only links do not need a filled container. Transparent buttons still use the control radius so hover, active, and focus treatments follow a rounded contour.
+- Our Story and Our Philosophy use background photography with a soft gradient fade into the reading area. Preserve this immersive treatment on desktop and mobile; do not convert these backgrounds into isolated rounded image cards. Buttons inside these sections still follow the shared rounded-control rules.
 - Page backgrounds, full-width section bands, dividers, and the header/footer shell are structural surfaces rather than cards. Keep their normal edge-to-edge geometry; round the cards and controls inside them.
 - Remove existing `border-radius: 0` rules from cards and controls during implementation. Do not apply a universal radius to every HTML element.
 
 ## Sitewide visual direction
 
-The proposed direction is warm, natural, and refined: cream backgrounds, terracotta actions, generous spacing, expressive serif headings, and real food photography. These are implementation targets; this document does not indicate that the UI changes have already shipped.
+The visual direction is warm, natural, and refined: cream backgrounds, terracotta actions, generous spacing, expressive serif headings, and real food photography. The shared implementation lives in `src/app/design-system.css`, imported by the root layout and scoped to `.theme-b.tob-design` on both the main site and campaign shells. This scope gives the shared design rules precedence over legacy page styles without relying on stylesheet load order. Local verification is recorded separately from production deployment.
 
 ### Color and surface hierarchy
 
@@ -51,20 +52,31 @@ The proposed direction is warm, natural, and refined: cream backgrounds, terraco
 - Provide comfortable touch targets, targeting at least `44px` for standalone controls. Keep long labels readable and allow layouts to wrap.
 - Retain the existing no-decorative-arrows rule, visible keyboard focus, touch feedback, and reduced-motion behavior.
 
-## Page-by-page design plan
+## Page and section design
 
-| Area | Proposed treatment |
+| Area | Design treatment |
 | --- | --- |
 | Shared header and footer | Consistent rounded reservation and navigation controls; clearer primary-action hierarchy; softly rounded floating navigation panels; preserve readable link groups and contact information. |
 | Homepage `/` | Refine the existing text-and-food opening composition; turn the four dining choices into cohesive rounded cards with aligned text areas, consistent image crops, and more breathing room. Preserve the media strip directly below the hero and the image-only dish wall. |
 | Menus `/menus` | Replace the rigid rectangular tab strip with spaced rounded selectors; keep menu names and prices easy to scan; soften the dish gallery and thumbnails while maintaining a clear menu-reading order. |
 | À la carte `/a-la-carte` and xiaolongbao `/vegan-xiaolongbao` | Apply the same button, card, image, and typography rules across both page themes. Let dish imagery and menu groups establish hierarchy. |
-| Story `/our-story` and gatherings `/gatherings` | Use spacious alternating image-and-text sections, large rounded inset photographs, and a focused action at the end of each relevant section. |
+| Homepage story `/#our-story` and philosophy `/#visit` | Preserve the background photographs and soft gradient transitions into the cream reading area. Use horizontal fades on desktop and vertical fades on mobile, without separate rounded photo cards. |
+| Homepage gatherings `/#gatherings` | Use spacious copy, rounded information cards, and a focused action for gathering enquiries. |
 | Gift cards `/gift-card` | Give the introduction and gift presentation a clear visual hierarchy; round first-party controls and the checkout container where supported without obscuring the purchase flow. |
 | Press `/press` | Use consistent rounded article cards, balanced logo areas, and readable titles; preserve original publisher logos and authentic coverage links. |
-| Visit `/visit` and reservations `/reservations` | Group practical information and booking controls into calm rounded panels; prioritize readable hours, directions, form labels, and validation feedback. |
+| Homepage visitor information `/#restaurant-info` and reservations `/#booking` | Use the shared footer for practical information and a rounded booking panel for form controls; prioritize readable hours, directions, form labels, and validation feedback. |
 | Hollywood campaign pages | Reuse the same visual tokens while preserving each campaign's content, menu selection, photo-wall behavior, query parameters, and attributed booking destinations. |
 | Dialogs, review galleries, and mobile navigation | Match the radius scale, spacing, focus treatment, and control sizes; check opened states as carefully as the default pages. |
+
+## Implementation notes
+
+- `src/app/design-system.css` owns the shared tokens, visual component rules, and responsive adjustments. Update this file for sitewide design changes instead of appending competing overrides to legacy page styles.
+- `SiteShell` and `HollywoodLanding` opt into the same `tob-design` scope. The nested xiaolongbao page maps its legacy palette variables to the shared palette.
+- Homepage story and philosophy retain the original `.image-story` background-photo layout and gradient overlays in `src/app/home.css`. On desktop the photograph fades horizontally into the text area; on mobile it fades vertically into the reading surface. Keep the original responsive image sizes and do not override these sections with the shared inset-image styling.
+- Long menu names use rounded rectangular tabs with a two-column mobile layout. Short dietary and category selectors use pill shapes. Keep selected, hover, focus, and active states distinct.
+- Review cards retain their compact density while adopting the shared radius and surface treatment.
+- `/our-story`, `/gatherings`, `/visit`, and `/reservations` are compatibility redirects into homepage sections. Preserve these redirects; the destination sections receive the updated design.
+- Third-party checkout, map, and media content is not restyled internally. Apply the shared radius only to the first-party frame or wrapper.
 
 ## Implementation and acceptance
 
@@ -104,3 +116,17 @@ The proposed direction is warm, natural, and refined: cream backgrounds, terraco
 - Keep desktop motion slow and pause it on hover or keyboard focus. Provide a motion control, disable automatic motion on mobile, and respect reduced-motion preferences.
 
 - Reuse the photo wall on all three Hollywood campaign landing pages, between the restaurant story and customer reviews. Campaign photo links must stay on the current landing page, select the matching menu tab, and expand the matching group. Preserve campaign query parameters and attributed booking links.
+
+## Local verification — October 24, 2026
+
+- The pre-redesign working tree was saved in local commit `380b484` before implementation began.
+- Visual inspection in the Codex in-app browser covered the homepage, menus, a la carte, xiaolongbao, gift cards, press, and all three Hollywood campaign pages, plus the homepage story, booking section, and dining-choice dialog.
+- Responsive inspection covered those nine pages at `1440`, `768`, `390`, and `320px` (36 page/viewport combinations). All returned HTTP 200, with no document-level horizontal overflow, no zero-radius controls or cards in the audited component sets, and no broken images reported by the loaded-image check.
+- Seventeen interaction checks passed: mobile navigation, dialog geometry and focus restoration, review-dialog shape, lunch-time selection, closed-day validation, dietary selection, menu attribution, gallery selection, keyboard tab navigation and focus visibility, mobile photo reveal/follow behavior, campaign parameter preservation, reduced-motion behavior, and desktop navigation.
+- TypeScript checking and all eight existing booking/navigation tests passed. Whitespace validation passed.
+- This is local development verification. Production deployment, payment completion, and reservation completion were not performed. `pnpm build` was not run.
+
+### Story and philosophy background restoration
+
+- Restored the original background-photo gradients for Our Story and Our Philosophy, while retaining the shared rounded CTA styling.
+- Verified both sections in the Codex in-app browser and at `1440`, `768`, `390`, and `320px` using supplemental browser checks. The desktop horizontal fades and mobile vertical fades render correctly; all eight section/viewport checks passed without horizontal overflow or clipped copy.

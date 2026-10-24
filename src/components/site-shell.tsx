@@ -17,7 +17,7 @@ export default function SiteShell({
 }) {
   const bookingHref = reservationHref ?? (active === "vegan-xiaolongbao" ? "/?booking=xlb#booking" : "/#booking");
   return (
-    <div className="theme-b site-layout">
+    <div className="theme-b tob-design site-layout">
       <a className="skip" href="#main">Skip to content</a>
       <SiteHeader active={active} bookingHref={bookingHref} />
       <main id="main" className={page ? "site-main page-content" : "site-main"}>{children}</main>

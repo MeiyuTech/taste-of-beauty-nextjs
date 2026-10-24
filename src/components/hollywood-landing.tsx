@@ -36,7 +36,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
     </div>
     <div><p className="eyebrow">{page.about[0]}</p><h2 id="campaign-about-title">Taste of <em>Beauty</em></h2>{page.about.slice(1).filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph.includes("just a reservation") ? <>{paragraph.split("just a reservation")[0]}<a href={page.bookingUrl} target="_blank" rel="noopener noreferrer">just a reservation</a>.</> : paragraph}</p>)}{book()}</div>
   </section>;
-  return <div className="theme-b campaign-shell">
+  return <div className="theme-b tob-design campaign-shell">
     <a className="skip" href="#main">Skip to content</a>
     <header className="campaign-header">
       <div className="campaign-brand">

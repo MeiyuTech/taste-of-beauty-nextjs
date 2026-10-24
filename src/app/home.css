@@ -519,7 +519,7 @@
   padding: 10px;
   background: var(--bg);
   color: var(--ink);
-  border-radius: 0;
+  border-radius: var(--radius-control, 12px);
   color-scheme: light;
   min-width: 0;
 }
