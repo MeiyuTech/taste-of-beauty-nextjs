@@ -164,7 +164,7 @@ export function MenuPanel() {
       >
         <div className="detail-visual">
           {photoNames.length ? <DishGallery key={`${key}-${diet}`} names={photoNames} label={`${menu.title} dish photos`} featured /> : <>
-            <img src={`/assets/${menu.image}`} alt={menu.alt} loading="lazy" />
+            <img src={menu.image} alt={menu.alt} loading="lazy" />
             <div className="photo-label">TASTE OF BEAUTY · {menu.title}</div>
           </>}
         </div>

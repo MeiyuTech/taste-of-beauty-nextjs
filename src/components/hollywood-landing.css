@@ -62,7 +62,7 @@
 .theme-b .campaign-header-actions .cta { white-space: nowrap; }
 .theme-b .campaign-call { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 50%; transition: background-color 180ms ease, color 180ms ease; }
 .theme-b .campaign-call:is(:hover, :focus-visible, :active) { color: var(--oncta); background: var(--cta); border-color: var(--cta); }
-.theme-b .campaign-visit { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 7%; padding: 72px 5%; color: var(--bg); background: linear-gradient(rgba(35, 31, 25, .9), rgba(35, 31, 25, .9)), url('/images/landing/weixin-image_2025-08-25_121538_358-scaled.jpg') center / cover; }
+.theme-b .campaign-visit { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 7%; padding: 72px 5%; color: var(--bg); background: linear-gradient(rgba(35, 31, 25, .9), rgba(35, 31, 25, .9)), url('/images/restaurant/dining-room-wall-art.jpg') center / cover; }
 .theme-b .campaign-visit .eyebrow, .theme-b .campaign-visit h2 em { color: #d5c2a3; }
 .theme-b .campaign-visit h2 { margin: 16px 0 32px; }
 .theme-b .campaign-visit address { font-style: normal; margin: 28px 0; }

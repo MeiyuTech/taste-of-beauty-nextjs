@@ -24,13 +24,13 @@ export default function SiteShell({
       <footer className="site-footer" id="restaurant-info">
         <div className="site-footer-brand">
           <InternalLink className="site-footer-home" href="/" aria-label="Taste of Beauty home">
-            <img src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width="1024" height="346" loading="lazy" />
+            <img src="/images/brand/taste-of-beauty-logo.png" alt="Taste of Beauty" width="1024" height="346" loading="lazy" />
           </InternalLink>
           <p>Vegan &amp; vegetarian dining.<br />West Hollywood.</p>
           <div className="site-socials" aria-label="Social media">
-            <a href="https://www.instagram.com/tasteofbeautyrestaurant/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="/images/press/instagram.svg" alt="" width="26" height="26" /></a>
-            <a href="https://www.facebook.com/TasteofBeautyRestaurant" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="/images/press/facebook.svg" alt="" width="26" height="26" /></a>
-            <a href="https://www.yelp.com/biz/tob-west-hollywood-2" target="_blank" rel="noopener noreferrer" aria-label="Yelp (opens in a new tab)"><img src="/images/press/yelp.svg" alt="" width="26" height="26" /></a>
+            <a href="https://www.instagram.com/tasteofbeautyrestaurant/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><img src="/images/icons/instagram.svg" alt="" width="26" height="26" /></a>
+            <a href="https://www.facebook.com/TasteofBeautyRestaurant" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><img src="/images/icons/facebook.svg" alt="" width="26" height="26" /></a>
+            <a href="https://www.yelp.com/biz/tob-west-hollywood-2" target="_blank" rel="noopener noreferrer" aria-label="Yelp (opens in a new tab)"><img src="/images/icons/yelp.svg" alt="" width="26" height="26" /></a>
           </div>
           <InternalLink className="footer-reservation" href={bookingHref}>Book a table</InternalLink>
         </div>

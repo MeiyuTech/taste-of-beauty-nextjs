@@ -1,0 +1,1854 @@
+{
+  "organized_on": "2026-10-24",
+  "scope": "Website assets only; WordPress archival files retain their original upload paths.",
+  "naming": "Lowercase English kebab-case; append dimensions for existing alternate crops or encodings.",
+  "previous_file_count": 157,
+  "current_file_count": 156,
+  "preservation": "All image bytes, dimensions and formats are unchanged. One exact duplicate of vegetable-noodles.png shares one destination.",
+  "files": [
+    {
+      "old_path": "/assets/alice.webp",
+      "public_path": "/images/dishes/alice-in-wonderland-900x1200.webp",
+      "category": "dishes",
+      "bytes": 93578,
+      "sha256": "6822fb51b8ef55e0ed7da9d4f607ccbec2fb9892a7e8b2318187b15c82e55c52",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/dessert.webp",
+      "public_path": "/images/desserts/cotton-candy-dessert.webp",
+      "category": "desserts",
+      "bytes": 79320,
+      "sha256": "743876d01cfbd80e3444c7d577b93fb158ae3ac634a0c98c236379c452b718c4",
+      "width": 1024,
+      "height": 683,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/drinks.webp",
+      "public_path": "/images/drinks/citrus-drinks-1024x683.webp",
+      "category": "drinks",
+      "bytes": 67198,
+      "sha256": "a0325d98f3b4c2c21d5053d2712f8eb2fe0e9ba2a3d8fc5f69ec20092ea0c9f9",
+      "width": 1024,
+      "height": 683,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/garden.webp",
+      "public_path": "/images/dishes/the-secret-garden-900x1200.webp",
+      "category": "dishes",
+      "bytes": 117044,
+      "sha256": "0b4e33c89e2813999e0e5c434b552a62be6924e1c1c0c8a56b8abb6633eb2afd",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/app/layout.tsx",
+        "src/components/home-content.tsx",
+        "src/lib/menus.ts"
+      ]
+    },
+    {
+      "old_path": "/assets/interior.webp",
+      "public_path": "/images/restaurant/piano-dining-room.webp",
+      "category": "restaurant",
+      "bytes": 108904,
+      "sha256": "5786c4e3451b047a695ad78570063fe74ab2a0d3f88a58784ae4da3e4af64590",
+      "width": 1440,
+      "height": 961,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/jack.webp",
+      "public_path": "/images/dishes/jack-and-the-beanstalk-900x1200.webp",
+      "category": "dishes",
+      "bytes": 110016,
+      "sha256": "3cd6f54b1536943ded09fadfd6cad843aab34a05b324d3dc02ddaa6b7957c66e",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/lotus.webp",
+      "public_path": "/images/dishes/lotus-plated-dish.webp",
+      "category": "dishes",
+      "bytes": 94226,
+      "sha256": "f0776981cfbf443cd371ab8b998250df8f668cb781f12d63f911c91ae1aafc1e",
+      "width": 1024,
+      "height": 683,
+      "referenced_by": [
+        "src/lib/menus.ts"
+      ]
+    },
+    {
+      "old_path": "/assets/oz.webp",
+      "public_path": "/images/dishes/the-wizard-of-oz-900x1200.webp",
+      "category": "dishes",
+      "bytes": 106996,
+      "sha256": "dd7db81a48f2f28260c207f2641eb6e7a34d60fe6d6feadd9f8c00a4087fef29",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/pea.webp",
+      "public_path": "/images/dishes/the-princess-and-the-pea-900x1200.webp",
+      "category": "dishes",
+      "bytes": 163686,
+      "sha256": "d7036ab22cd9194f6e3f71f7dec630d93bf4e969b797fb0532118d4b0c6beb4a",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/pot.webp",
+      "public_path": "/images/dishes/vegetable-hot-pot.webp",
+      "category": "dishes",
+      "bytes": 102908,
+      "sha256": "1c7434d022e1b7dbe9d299cc907e36d52653213073a50053f072e9d9955f2d6d",
+      "width": 1024,
+      "height": 683,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/tea.webp",
+      "public_path": "/images/experience/tea-service-1024x682.webp",
+      "category": "experience",
+      "bytes": 104358,
+      "sha256": "4a62deb870e135e446f87a74a9b5589ca43f81a80353d69ffb6deae6454c2f0a",
+      "width": 1024,
+      "height": 682,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/assets/tob_logo_stamp-1024x346.png",
+      "public_path": "/images/brand/taste-of-beauty-logo.png",
+      "category": "brand",
+      "bytes": 26431,
+      "sha256": "87564a2439fcd0979116e9a2d583677de5bb485344cb2a3bbc90ef10cc78a952",
+      "width": 1024,
+      "height": 346,
+      "referenced_by": [
+        "src/components/site-shell.tsx",
+        "src/components/site-header.tsx",
+        "src/components/hollywood-landing.tsx"
+      ]
+    },
+    {
+      "old_path": "/assets/vegetable-noodles.png",
+      "public_path": "/images/dishes/black-pepper-vegetable-noodles.png",
+      "category": "dishes",
+      "bytes": 2631460,
+      "sha256": "92d90e3d288b312b39c9ab2a8236fadd6905f6a8969d092d43a93856e2ed688e",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": [
+        "src/components/home-content.tsx",
+        "src/lib/menus.ts"
+      ]
+    },
+    {
+      "old_path": "/assets/xlb-0.webp",
+      "public_path": "/images/xiaolongbao/steamer-with-lid.webp",
+      "category": "xiaolongbao",
+      "bytes": 76440,
+      "sha256": "2618d392361d805a36813c02d827181085d64dc15324fac544e69d3e69e9f774",
+      "width": 768,
+      "height": 576,
+      "referenced_by": [
+        "src/components/dining-choice.tsx",
+        "src/components/dish-wall.tsx",
+        "src/lib/menus.ts",
+        "src/app/vegan-xiaolongbao/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/assets/xlb-1.webp",
+      "public_path": "/images/xiaolongbao/steamer-overhead.webp",
+      "category": "xiaolongbao",
+      "bytes": 85436,
+      "sha256": "f902b7529b426b5bdf70676c4f3d9de4c0cc0d97a40a56fbfabd852c0dadfca0",
+      "width": 768,
+      "height": 576,
+      "referenced_by": [
+        "src/app/vegan-xiaolongbao/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/assets/xlb-2.webp",
+      "public_path": "/images/xiaolongbao/hand-pleating.webp",
+      "category": "xiaolongbao",
+      "bytes": 34242,
+      "sha256": "ce8330483be86bc42d67d482035b54dd797b541ed21ac8cac26363a2562b2a0f",
+      "width": 1024,
+      "height": 1024,
+      "referenced_by": [
+        "src/app/vegan-xiaolongbao/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/brand/storefront-sign.png",
+      "public_path": "/images/brand/storefront-sign.png",
+      "category": "brand",
+      "bytes": 2268269,
+      "sha256": "748fac3d70e01a641fc4e8b484e276b9b207a3e06721590086e7a30f5010b2b6",
+      "width": 1448,
+      "height": 1086,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/dishes/alice-in-wonderland.webp",
+      "public_path": "/images/dishes/alice-in-wonderland.webp",
+      "category": "dishes",
+      "bytes": 79540,
+      "sha256": "a07bc4c85a2aaf2da292e79f00c75063e33e20291514ee8ea60fba7649cf8bfa",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/black-pepper-vegetable-noodles.webp",
+      "public_path": "/images/dishes/black-pepper-vegetable-noodles.webp",
+      "category": "dishes",
+      "bytes": 179892,
+      "sha256": "50e86180bc91ee49e0c9db3c8572c8928628e062dfd44bc6e966d3dd58ff758d",
+      "width": 960,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/jack-and-the-beanstalk.webp",
+      "public_path": "/images/dishes/jack-and-the-beanstalk.webp",
+      "category": "dishes",
+      "bytes": 95692,
+      "sha256": "d5bd163a4f1628b533414ec8bb8b6245d6a8e811f8a7d3b1ee0f7fc276c77c60",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/mountains-and-rivers.webp",
+      "public_path": "/images/dishes/mountains-and-rivers.webp",
+      "category": "dishes",
+      "bytes": 59658,
+      "sha256": "887c137ac95814b2a9ca21bf5b72a3aaaf28da408b52ef6cf6003dfef7c69d39",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/pearl-fresh.webp",
+      "public_path": "/images/dishes/pearl-fresh.webp",
+      "category": "dishes",
+      "bytes": 28634,
+      "sha256": "dd06596b814e1a68a1dde0cbd1c31b62c44e5d242216a63be924de32ba76b719",
+      "width": 800,
+      "height": 1200,
+      "referenced_by": [
+        "src/components/dining-choice.tsx",
+        "src/lib/dish-images.json",
+        "src/app/a-la-carte/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/sushi-trio.webp",
+      "public_path": "/images/dishes/sushi-trio.webp",
+      "category": "dishes",
+      "bytes": 107644,
+      "sha256": "65239e3ee1303b55fd2a9c2fbd8db2fa12dd4b67c254f6d31d19aa00dea9ea0b",
+      "width": 960,
+      "height": 679,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-desert.webp",
+      "public_path": "/images/dishes/the-desert.webp",
+      "category": "dishes",
+      "bytes": 73694,
+      "sha256": "e363a67ba8b03b482cc0879110f0c2bf2ac7dbef35122305f2f1e54ca7845a36",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-dunes.webp",
+      "public_path": "/images/dishes/the-dunes.webp",
+      "category": "dishes",
+      "bytes": 58112,
+      "sha256": "f2cd2dced658994bc3b5c7422ee85575ce1bb128215bdc0645023ec4d633b4b9",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-forest.webp",
+      "public_path": "/images/dishes/the-forest.webp",
+      "category": "dishes",
+      "bytes": 118888,
+      "sha256": "b3daf155bc9f89cf22b7d4e4b7ea36aad09bcb7070e2d865181d5064753fd84f",
+      "width": 800,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-grassland.webp",
+      "public_path": "/images/dishes/the-grassland.webp",
+      "category": "dishes",
+      "bytes": 87446,
+      "sha256": "347d4e73bb5bd249da337de003f99a0578edc5e2d3784bbff24d98b0cdb988b6",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-island.webp",
+      "public_path": "/images/dishes/the-island.webp",
+      "category": "dishes",
+      "bytes": 57012,
+      "sha256": "05de08fe2e7c42f53d3e33a25b4ac926d8da576db00fd98e28b257e6627a8ee5",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/components/home-content.tsx",
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-jade.webp",
+      "public_path": "/images/dishes/the-jade.webp",
+      "category": "dishes",
+      "bytes": 79670,
+      "sha256": "dad1670ea0e6d1f9a3599ef20dd28d794b38e299f32617364e1a59e4f7e55e22",
+      "width": 960,
+      "height": 679,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-orchard.webp",
+      "public_path": "/images/dishes/the-orchard.webp",
+      "category": "dishes",
+      "bytes": 43050,
+      "sha256": "cf1b76c1d41ce23a914af9160d6f7d59d0f8c2071ba0f4781d8fbe10045cbae2",
+      "width": 960,
+      "height": 540,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-petal.webp",
+      "public_path": "/images/dishes/the-petal.webp",
+      "category": "dishes",
+      "bytes": 122732,
+      "sha256": "5b5837695a40ec030ae89705aa5234e7232968481ac9287bc6a268a67bafc0d6",
+      "width": 960,
+      "height": 1148,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-princess-and-the-pea.webp",
+      "public_path": "/images/dishes/the-princess-and-the-pea.webp",
+      "category": "dishes",
+      "bytes": 151298,
+      "sha256": "4d17038578dfed6be30b112e864cf309c8ce90813f032e75e563f1d2d73a4e2a",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-rainforest.webp",
+      "public_path": "/images/dishes/the-rainforest.webp",
+      "category": "dishes",
+      "bytes": 37740,
+      "sha256": "fadd2867bcc64ee873d6d51475fff308915ceb547982a049ca5f162e2215d8e8",
+      "width": 960,
+      "height": 640,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-secret-garden.webp",
+      "public_path": "/images/dishes/the-secret-garden.webp",
+      "category": "dishes",
+      "bytes": 99874,
+      "sha256": "8774741e8aac1cdf2884f0294cd58075f324b9a738119fb66c3ecc1da2784754",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-veil.webp",
+      "public_path": "/images/dishes/the-veil.webp",
+      "category": "dishes",
+      "bytes": 184186,
+      "sha256": "5b6bf4ca38aac582fa98c77da73ddfe869f90b5765a7e5f7c811f623ab9f9576",
+      "width": 960,
+      "height": 1181,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/dishes/the-wizard-of-oz.webp",
+      "public_path": "/images/dishes/the-wizard-of-oz.webp",
+      "category": "dishes",
+      "bytes": 93868,
+      "sha256": "9a5aa96b440c8ee35d1d797b9465b2d82c7fba591e3d1b8c8428d8439e9f59ec",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/dish-images.json"
+      ]
+    },
+    {
+      "old_path": "/images/food/avocado-quinoa.png",
+      "public_path": "/images/dishes/the-jade-1448x1086.png",
+      "category": "dishes",
+      "bytes": 2587483,
+      "sha256": "d7ea06e7e3d16c2e3f8195f3c30fcd0685ada4e0351d8fd4b8869972181dc3d2",
+      "width": 1448,
+      "height": 1086,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/golden-pea-dish.png",
+      "public_path": "/images/dishes/jack-and-the-beanstalk-1122x1402.png",
+      "category": "dishes",
+      "bytes": 2110736,
+      "sha256": "39b45c8dd0dc74b1fbd1aac93dce2fb6b0652b6619aba0b65c631cb00149c2a9",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/green-soup.png",
+      "public_path": "/images/dishes/the-wizard-of-oz-1122x1402.png",
+      "category": "dishes",
+      "bytes": 2003160,
+      "sha256": "cc7a1863ba6bd853215e3cb055fdb4dcc2b312ebb7cb2a39511f2e456e423e98",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/green-vegetable-rolls.png",
+      "public_path": "/images/dishes/the-secret-garden-1122x1402.png",
+      "category": "dishes",
+      "bytes": 2129180,
+      "sha256": "79cbfe9be6d000fdc28143c82900f8e7747e9e756b655ff60f9e62b1be5a1416",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/grilled-mushroom.png",
+      "public_path": "/images/dishes/grilled-mushrooms-943x1668.png",
+      "category": "dishes",
+      "bytes": 2338234,
+      "sha256": "735597c72fc05ccbf0b0a0632fd22e4a9f3655a107635ba5da1d08d15756baa8",
+      "width": 943,
+      "height": 1668,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/herb-crusted-dish.png",
+      "public_path": "/images/dishes/the-princess-and-the-pea-1122x1402.png",
+      "category": "dishes",
+      "bytes": 2402838,
+      "sha256": "9f0cae5949b660ad8ef14e31ca6016a0d91acdb2661f10a1e327828e0d0e1449",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/lace-crisp-dish.png",
+      "public_path": "/images/dishes/alice-in-wonderland-1122x1402.png",
+      "category": "dishes",
+      "bytes": 1950359,
+      "sha256": "4ffa7ca092a221170775488676333d5dc7a7fd03afd2db1e2f8b993e00788322",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/pumpkin-soup-landscape.png",
+      "public_path": "/images/dishes/the-island-landscape.png",
+      "category": "dishes",
+      "bytes": 2347879,
+      "sha256": "502ba31d0d156f20cfe16da823eae761349959b55a0426a0b33040a09bb55bd7",
+      "width": 1531,
+      "height": 1027,
+      "referenced_by": [
+        "src/components/story-section.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/food/pumpkin-soup-overhead.png",
+      "public_path": "/images/dishes/the-island-overhead.png",
+      "category": "dishes",
+      "bytes": 2335968,
+      "sha256": "9d7c1fbbecd21a533018e1fe4afc25b30f9e7e65c6b27a8ad7ee3a1f517d12ba",
+      "width": 1117,
+      "height": 1409,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/quinoa-hero.png",
+      "public_path": "/images/dishes/the-orchard.png",
+      "category": "dishes",
+      "bytes": 1941093,
+      "sha256": "b661a8b5c243969f69e202560e9c50d3730c85dd13c88f89e919340c7ef75630",
+      "width": 1672,
+      "height": 941,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/vegan-sushi.png",
+      "public_path": "/images/dishes/sushi-trio.png",
+      "category": "dishes",
+      "bytes": 2420261,
+      "sha256": "ede59fe5e30eb14bade5191b2bb16c4c9d5159215f0c99bceb791be77ef8d5a3",
+      "width": 1491,
+      "height": 1055,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/food/vegetable-noodles.png",
+      "public_path": "/images/dishes/black-pepper-vegetable-noodles.png",
+      "category": "dishes",
+      "bytes": 2631460,
+      "sha256": "92d90e3d288b312b39c9ab2a8236fadd6905f6a8969d092d43a93856e2ed688e",
+      "width": 1122,
+      "height": 1402,
+      "referenced_by": [
+        "src/components/home-content.tsx",
+        "src/lib/menus.ts"
+      ]
+    },
+    {
+      "old_path": "/images/gift-card/drinks.jpg",
+      "public_path": "/images/drinks/citrus-drinks-2560x1707.jpg",
+      "category": "drinks",
+      "bytes": 385801,
+      "sha256": "c470dd0061007068c802d73a8478ff2d3378270e1d48d6a1450a4f5884a0be31",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/app/gift-card/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/landing/5376f9aa51f620af6ceb8152afcbb096-rp0i8nw3df591wc5plx492uudfh0l3s6iz4ey3x2w0.jpeg",
+      "public_path": "/images/dishes/the-veil-900x1200.jpeg",
+      "category": "dishes",
+      "bytes": 200168,
+      "sha256": "c791b758a7abea14852bdc6d5c8a71e88a7ca605e3bea623316190d25eb8de81",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/995c7b420a47cc220b8ceab3467ebd71-rp0i8nw3df591wc5plx492uudfh0l3s6iz4ey3x2w0.jpeg",
+      "public_path": "/images/dishes/the-petal-900x1200.jpeg",
+      "category": "dishes",
+      "bytes": 147712,
+      "sha256": "b0472c7234a43a600cce7b9b3e6183f22533b8e31dbd618938d844c14b599871",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/DSCF0799-scaled-rp0i8nw3df591wc5plx492uudfh0l3s6iz4ey3x2w0.jpg",
+      "public_path": "/images/dishes/emerald-tide-900x1200.jpg",
+      "category": "dishes",
+      "bytes": 133320,
+      "sha256": "c217008c74c87417f5b8b5ef092a6230cc93efefabd0e655571d263bca697c10",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/DSCF0799-scaled.jpg",
+      "public_path": "/images/dishes/emerald-tide-2560x1707.jpg",
+      "category": "dishes",
+      "bytes": 527028,
+      "sha256": "c9d5c20df64517afaa02e58099c07bb44dfb24aa44264d8942132be80c53c43b",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/components/hollywood-landing.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/landing/MG_4074-Large.jpeg",
+      "public_path": "/images/experience/plating-with-tweezers.jpeg",
+      "category": "experience",
+      "bytes": 127706,
+      "sha256": "5f247549f9d9405895a54b26687e841dbb99a9ab4db63e32ba93511f0c384b75",
+      "width": 853,
+      "height": 1280,
+      "referenced_by": [
+        "src/components/hollywood-landing.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/landing/TOB_NaturesRomance_1-rp0i8xah9rke4dbnj0p82fthunzhtmq8a7mlupn1c0.webp",
+      "public_path": "/images/desserts/natures-romance-900x1600.webp",
+      "category": "desserts",
+      "bytes": 152874,
+      "sha256": "a3cc8329890a613ee398b18300bee98741d0dec15389395c73ecf72aa64b9d6f",
+      "width": 900,
+      "height": 1600,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/The-Rainforest-rp0i8slablbony5by5y93jo5cctunlau7mduchq40w.webp",
+      "public_path": "/images/dishes/the-rainforest-900x1200.webp",
+      "category": "dishes",
+      "bytes": 49558,
+      "sha256": "5f84d5b881456c7a08a0d72ebd6669f5f9ecebf3a2bc358733d095ac1cd7da19",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/aa_0505-scaled-2-rp0i8tj4ifcyzk3ysocvo1flxqp7vaekjr1btropuo.jpg",
+      "public_path": "/images/dishes/the-island-900x1200.jpg",
+      "category": "dishes",
+      "bytes": 114252,
+      "sha256": "0b2e58e3bb35fd085b26f3cdac58d2855356a4464c367b3bac966adc69946d37",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/alice-in-wonderland-rphr6au5irl8zqfk63ar67t0158m2a6977hvvvyhgg.png",
+      "public_path": "/images/dishes/alice-in-wonderland-900x1200.png",
+      "category": "dishes",
+      "bytes": 1029714,
+      "sha256": "38b0181658a2f2686f4c30e0f9fde6ec7349bd311cf6c5e8398fc09192548c33",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/alice-in-wonderland.png",
+      "public_path": "/images/dishes/alice-in-wonderland-1086x1448.png",
+      "category": "dishes",
+      "bytes": 1633228,
+      "sha256": "ff0056682ce04850b37e81c75d211c84cc58c0bf19ea98e5d684cce9741d57d7",
+      "width": 1086,
+      "height": 1448,
+      "referenced_by": [
+        "src/components/hollywood-landing.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/landing/dscf0743-scaled-1-rp0i8xah9rke4dbnj0p82fthunzhtmq8a7mlupn1c0.jpg",
+      "public_path": "/images/dishes/soup-service-900x1600.jpg",
+      "category": "dishes",
+      "bytes": 161557,
+      "sha256": "cce7f91784c077fbd66727ddf1e2233258bb3df716275f5d6852fa1eb3270d01",
+      "width": 900,
+      "height": 1600,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/jack-and-the-beanstalk-rphr5vsqhf0ntz1elwsq2blmizaqn4ijt5247gks80.png",
+      "public_path": "/images/dishes/jack-and-the-beanstalk-900x1200.png",
+      "category": "dishes",
+      "bytes": 1053811,
+      "sha256": "148a8a22421ffa8566d89d169f2872dad1f332cb198e9586b9474435c1b0e97a",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/jack-and-the-beanstalk.png",
+      "public_path": "/images/dishes/jack-and-the-beanstalk-1086x1448.png",
+      "category": "dishes",
+      "bytes": 1655547,
+      "sha256": "426f7822d94e8c7372cde8be388215ef33164ad6330b4da876cc8148cc2c5183",
+      "width": 1086,
+      "height": 1448,
+      "referenced_by": [
+        "src/components/hollywood-landing.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/landing/pearl-fresh-v2-rp0i8nw3df591wc5plx492uudfh0l3s6iz4ey3x2w0.jpeg",
+      "public_path": "/images/dishes/pearl-fresh-900x1200.jpeg",
+      "category": "dishes",
+      "bytes": 64238,
+      "sha256": "6d4eea9eb89c4b93983fa759e57c7042a9df1a7c75a6cd04e3d3ed479732bbba",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/the-desert_02.jpeg",
+      "public_path": "/images/dishes/the-desert-2500x1667.jpeg",
+      "category": "dishes",
+      "bytes": 975857,
+      "sha256": "59f5faf00c72c8963d9b813169b69e107c56edd1ec2bb2065fb8cc9161dd4a51",
+      "width": 2500,
+      "height": 1667,
+      "referenced_by": [
+        "src/lib/landing-pages.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/the-forest-v1-rp0i8otxk96jdiask4bqtkmaytcdssvwv3rwfdvops.jpeg",
+      "public_path": "/images/dishes/the-forest-900x1200.jpeg",
+      "category": "dishes",
+      "bytes": 171769,
+      "sha256": "b6dada97d1a1d44301172c165811c38d066f5ebba69dd07deb70b27ddc4d1dfd",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/the-princess-and-the-pea-rphr5zk38r5t4evxzyf8cangwis7hwxh5no24kf7j4.png",
+      "public_path": "/images/dishes/the-princess-and-the-pea-900x1200.png",
+      "category": "dishes",
+      "bytes": 1281491,
+      "sha256": "4942398ee4505784e75d8c0e941950194a9bc7c0736f32e658f67d1cbcbe38a1",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/the-secret-garden-rphr63bg03ayeuqhe01qm9pba29ocpcei6a01o9mu8.png",
+      "public_path": "/images/dishes/the-secret-garden-900x1200.png",
+      "category": "dishes",
+      "bytes": 1130273,
+      "sha256": "064b3109705fd3721b1c62456d5e49fd8ca71c6631e00857df12a8674587aeb8",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/the-wizard-of-oz-rphr672srfg3pal0s1o8w8r5nlr57hrbuovxys425c.png",
+      "public_path": "/images/dishes/the-wizard-of-oz-900x1200.png",
+      "category": "dishes",
+      "bytes": 1104052,
+      "sha256": "7924137fb4c3c7eb8d01d5cc617996a4d1411dfb40327fd1d858303ff3d71c45",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/tob_cocktails_02-683x1024.jpeg",
+      "public_path": "/images/drinks/cocktail-flight.jpeg",
+      "category": "drinks",
+      "bytes": 118191,
+      "sha256": "9ab7b9a6a6b8092ff4dc6b282e870370fdc20564be173a8172b4c50e1a26d7e8",
+      "width": 683,
+      "height": 1024,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/tob_dunes_1-rp0i8vesw3fjms18hp64t0yj4ifyaom180casblxi8.webp",
+      "public_path": "/images/dishes/the-dunes-900x1200.webp",
+      "category": "dishes",
+      "bytes": 96192,
+      "sha256": "8268ca99bd84e4bf60b2614d80c5fdf7c19ae56bb1a99d47ee242011bb22bf15",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/veil-rp0i8nw3df591wc5plx492uudfh0l3s6iz4ey3x2w0.jpeg",
+      "public_path": "/images/dishes/the-jade-900x1200.jpeg",
+      "category": "dishes",
+      "bytes": 144669,
+      "sha256": "9b635c17854fc8ce0026154c87b8d0c9ee8d18191ebdccd066fbd97739f6ae19",
+      "width": 900,
+      "height": 1200,
+      "referenced_by": [
+        "src/lib/landing-menus.json"
+      ]
+    },
+    {
+      "old_path": "/images/landing/weixin-image_2025-08-25_121538_358-scaled.jpg",
+      "public_path": "/images/restaurant/dining-room-wall-art.jpg",
+      "category": "restaurant",
+      "bytes": 599598,
+      "sha256": "55a066e2847ce1a1fd5253e18c193879e2d5783f5300289917f0a46238956d0b",
+      "width": 2031,
+      "height": 2560,
+      "referenced_by": [
+        "src/components/hollywood-landing.css",
+        "src/lib/landing-pages.json"
+      ]
+    },
+    {
+      "old_path": "/images/press/AA_0872-scaled.jpg",
+      "public_path": "/images/press/photos/gayot-feature.jpg",
+      "category": "press",
+      "bytes": 338991,
+      "sha256": "b82fa24fe35231e4aba2a68424c6824b4573bd26ebe2d6caa7d0183730fa691f",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/GeorgeGuo-1024x768-1.jpg",
+      "public_path": "/images/people/george-guo.jpg",
+      "category": "people",
+      "bytes": 75035,
+      "sha256": "f85c346ba4b20fe257f9882bef45e34b5fd685224e61babca6ab6f80cd82a8cf",
+      "width": 1024,
+      "height": 768,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/press/Screenshot-2024-03-14-at-12.15.53-PM.webp",
+      "public_path": "/images/press/photos/socalpulse-feature.webp",
+      "category": "press",
+      "bytes": 134244,
+      "sha256": "f5e3e2dd9adc1939d86f1b080219207961b8c34c5051506cf0b85339222e76f1",
+      "width": 1640,
+      "height": 1640,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/TasteOfBeauty_RestaurantInterior_6.jpeg",
+      "public_path": "/images/experience/tea-pouring.jpeg",
+      "category": "experience",
+      "bytes": 92650,
+      "sha256": "345948bfeef59c66a880e12f335af0bcf200c4da27565d57dc2addec22399b74",
+      "width": 1440,
+      "height": 960,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/TastingCourse_table_h1_TasteofBeauty.jpeg",
+      "public_path": "/images/experience/tasting-table.jpeg",
+      "category": "experience",
+      "bytes": 179225,
+      "sha256": "1f9eb858df19dd3324837f48cfbea5bcf89ddbdf2fbbc5f0575ab34af299e4a3",
+      "width": 1211,
+      "height": 1440,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/aa_0242-scaled-1.jpg",
+      "public_path": "/images/press/photos/modern-luxury-feature.jpg",
+      "category": "press",
+      "bytes": 185038,
+      "sha256": "754245a5a04a9b2382d83838f893119d2fbeed5a754f21b76851e221aa993250",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/aa_0505-scaled-1.jpg",
+      "public_path": "/images/dishes/the-island-2560x1707.jpg",
+      "category": "dishes",
+      "bytes": 452902,
+      "sha256": "880454988dcb06f76603a763ae94b3ff4a5dd89b89112e0da0707265717ae3e5",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts",
+        "src/app/press/page.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/press/aa_0654-scaled-1.jpg",
+      "public_path": "/images/press/photos/patch-feature.jpg",
+      "category": "press",
+      "bytes": 401071,
+      "sha256": "49a9bedf2be2385838a8abfe83997ec49b99df07c6574b8c24ced300b9f1a8a9",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/aa_0890-scaled-1.jpg",
+      "public_path": "/images/press/photos/orange-county-register-feature.jpg",
+      "category": "press",
+      "bytes": 286264,
+      "sha256": "340c02dd3f0941f3852d6d15ba9717f86907f460602cbcca76602b16ace0d324",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/ae-logo-vector-1024x281-1-300x82.png",
+      "public_path": "/images/press/logos/allevents.png",
+      "category": "press",
+      "bytes": 3763,
+      "sha256": "9b9c6a151cdf71b2eb6129fa928b7726034e0c356eed4fefc9ff0a00f6e566a2",
+      "width": 300,
+      "height": 82,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/beige-paper-texture-1-1.jpg",
+      "public_path": "/images/textures/beige-paper.jpg",
+      "category": "textures",
+      "bytes": 341993,
+      "sha256": "c170a77d6ec3b2d8e8ff1c5c3b03aaeb1294355bcb99b13d35a25c206a913237",
+      "width": 1920,
+      "height": 1080,
+      "referenced_by": [
+        "src/app/press/press.css"
+      ]
+    },
+    {
+      "old_path": "/images/press/copy-beat_musso_final1-300x63.jpg",
+      "public_path": "/images/press/logos/los-angeles-beat.jpg",
+      "category": "press",
+      "bytes": 6330,
+      "sha256": "e750ebee13d4cc6be8a041f5db8df8e55b99ceb9a6a65f6898a5de7630eaf7ee",
+      "width": 300,
+      "height": 63,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/daily-pilot-times-oc-logo-300x48.webp",
+      "public_path": "/images/press/logos/daily-pilot.webp",
+      "category": "press",
+      "bytes": 13640,
+      "sha256": "826c7a3c7b6f66d2f682d557a319afd65f49639d39f7be05346b65f2b0cebfc4",
+      "width": 300,
+      "height": 48,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/download-300x62.png",
+      "public_path": "/images/press/logos/orange-county-register.png",
+      "category": "press",
+      "bytes": 7509,
+      "sha256": "10fc29651c83b6525bd3752ddbfb8def9961b8e727a8fd2c7adb619aef6fa230",
+      "width": 300,
+      "height": 62,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/facebook.svg",
+      "public_path": "/images/icons/facebook.svg",
+      "category": "icons",
+      "bytes": 273,
+      "sha256": "c21591ca095c7a135a013b20a91d394bf14f20afbb3d98e22d11bf5e37a2fe7a",
+      "width": null,
+      "height": null,
+      "referenced_by": [
+        "src/components/site-shell.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/press/gayot-logo.webp",
+      "public_path": "/images/press/logos/gayot.webp",
+      "category": "press",
+      "bytes": 6248,
+      "sha256": "50bb923e99f36b3fc80a27a194a7dc236bcb4c6bc15218362305d3a823ac10d2",
+      "width": 194,
+      "height": 142,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/images-2-300x122.webp",
+      "public_path": "/images/press/logos/fox-11.webp",
+      "category": "press",
+      "bytes": 4604,
+      "sha256": "6248995ccc41d1a2eaaa3d3cdf1795e659690725d8cc51bc47d08702034a5786",
+      "width": 300,
+      "height": 122,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/instagram.svg",
+      "public_path": "/images/icons/instagram.svg",
+      "category": "icons",
+      "bytes": 2645,
+      "sha256": "04e2e29b8865ed7bfe4584bef8472ab593c138af9cfe1739b97db690aee208dd",
+      "width": null,
+      "height": null,
+      "referenced_by": [
+        "src/components/site-shell.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/press/localelogo_maghub_178x48_300di-300x81.webp",
+      "public_path": "/images/press/logos/locale-magazine.webp",
+      "category": "press",
+      "bytes": 2862,
+      "sha256": "6eef531f5fb6157b0cc45943405f07e3af6e8a612a30911fc44b6bbfdf3415ac",
+      "width": 300,
+      "height": 81,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/logo-300x57.webp",
+      "public_path": "/images/press/logos/modern-luxury-riviera.webp",
+      "category": "press",
+      "bytes": 4412,
+      "sha256": "f2aeb4270c87237d2e745236a8dbd1afedeec14df33f3211daa10a2ffa701564",
+      "width": 300,
+      "height": 57,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/logo-goc-large.webp",
+      "public_path": "/images/press/logos/greers-oc.webp",
+      "category": "press",
+      "bytes": 12962,
+      "sha256": "ddb0161452bdbf9e882cacfeb1ce898c3e8de1befbed339e93757a56e5e634ec",
+      "width": 256,
+      "height": 65,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/logo-header-small.jpg-300x137.webp",
+      "public_path": "/images/press/logos/cuisine-and-travel.webp",
+      "category": "press",
+      "bytes": 5582,
+      "sha256": "b0780fbd39a7a2d2600ce54c0c1023c1ead85a50680424f8d43fdb7f7672aacf",
+      "width": 300,
+      "height": 137,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/logo-ktla-las-very-own-horiz-300x113.webp",
+      "public_path": "/images/press/logos/ktla-5.webp",
+      "category": "press",
+      "bytes": 5196,
+      "sha256": "1d0f5a9cde6cc1f83742da21ee76301b85b3c4135d16099bab21d99313a1d794",
+      "width": 300,
+      "height": 113,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/logo-patch-800x600-1-300x113.webp",
+      "public_path": "/images/press/logos/patch.webp",
+      "category": "press",
+      "bytes": 6062,
+      "sha256": "596351288b78f7be84ab0ab73a47795b391b939368b045c71c661d3ac8b674c2",
+      "width": 300,
+      "height": 113,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/socalpulse_OC-2048x261-1-300x38.webp",
+      "public_path": "/images/press/logos/socalpulse.webp",
+      "category": "press",
+      "bytes": 6824,
+      "sha256": "614358f5622d727808d779af664b1d7e33cfc80d18e5258d3711372dc2bbe5ce",
+      "width": 300,
+      "height": 38,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/tastingcourse_soup_h1_tasteofbeauty-scaled-1.jpeg",
+      "public_path": "/images/press/photos/cuisine-and-travel-feature.jpeg",
+      "category": "press",
+      "bytes": 808736,
+      "sha256": "96e2bae7b973f55b55863f59ecc466a9490e687c21a39ac947d2f8db01751ee2",
+      "width": 2560,
+      "height": 1707,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/tea_h1_tasteofbeauty.webp",
+      "public_path": "/images/experience/tea-service-1440x960.webp",
+      "category": "experience",
+      "bytes": 144202,
+      "sha256": "fc6e17a2930082c2806a476937bd4fa0855e1ea93246996a29de8ddd9ead7563",
+      "width": 1440,
+      "height": 960,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/tob_garden_1.webp",
+      "public_path": "/images/press/photos/daily-pilot-feature.webp",
+      "category": "press",
+      "bytes": 280240,
+      "sha256": "8239f4558cbe169bdd06b0f72ab21956abb2c440421e365ed4beb17bdb8b6e69",
+      "width": 1440,
+      "height": 960,
+      "referenced_by": [
+        "src/lib/press.ts"
+      ]
+    },
+    {
+      "old_path": "/images/press/yelp.svg",
+      "public_path": "/images/icons/yelp.svg",
+      "category": "icons",
+      "bytes": 858,
+      "sha256": "131eaee53ee4bcd4d6f46c166624abce1c9d17d19f9710f17a93add9bd91ca86",
+      "width": null,
+      "height": null,
+      "referenced_by": [
+        "src/components/site-shell.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/restaurant/dining-room.png",
+      "public_path": "/images/restaurant/dining-room.png",
+      "category": "restaurant",
+      "bytes": 2478384,
+      "sha256": "83ce6d9e1bba5e61059603389b6eebfabe5240c798c98cc15399a48cd93cb250",
+      "width": 1672,
+      "height": 941,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/screen-dining.png",
+      "public_path": "/images/restaurant/screen-dining.png",
+      "category": "restaurant",
+      "bytes": 2514158,
+      "sha256": "3394c437568530fa1a9677034952fa99f65067725959f7317a04b801d8033d9e",
+      "width": 1672,
+      "height": 941,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/signature-wall-art.png",
+      "public_path": "/images/restaurant/signature-wall-art.png",
+      "category": "restaurant",
+      "bytes": 2806270,
+      "sha256": "fad856037212519d277c610682610b1584e23581c5bff5563c3240a7b1c037a2",
+      "width": 1117,
+      "height": 1408,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/warm-interior.png",
+      "public_path": "/images/restaurant/warm-interior.png",
+      "category": "restaurant",
+      "bytes": 2384585,
+      "sha256": "27488be53012b0e887ee91f99d4704141a1e9182cd23b16239930dbac850a7ce",
+      "width": 1086,
+      "height": 1448,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/window-atmosphere.png",
+      "public_path": "/images/restaurant/window-atmosphere.png",
+      "category": "restaurant",
+      "bytes": 2504820,
+      "sha256": "beff2f54bd3d9d79649e2aab169aafe25fa97de307e037811ec33f60269955e0",
+      "width": 1086,
+      "height": 1448,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/window-garden.png",
+      "public_path": "/images/restaurant/window-garden.png",
+      "category": "restaurant",
+      "bytes": 2878778,
+      "sha256": "de7c7316c0815237395425cd11df42df0a6ebcb937672ba3d72833c197238939",
+      "width": 1909,
+      "height": 824,
+      "referenced_by": []
+    },
+    {
+      "old_path": "/images/restaurant/window-side-room.png",
+      "public_path": "/images/restaurant/window-side-room.png",
+      "category": "restaurant",
+      "bytes": 2571761,
+      "sha256": "707a54e705469f14a2ec4f7f5643906f6b93e85c1c89a90512e27e9e187b8fe4",
+      "width": 1672,
+      "height": 941,
+      "referenced_by": [
+        "src/components/visit-section.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/alex-charak-1.jpg",
+      "public_path": "/images/reviews/alex-charak/photo-01.jpg",
+      "category": "reviews",
+      "bytes": 90936,
+      "sha256": "c82d963ce802675130e9d032f6b13e048a2600d13e9d38a85773d627ca8bd448",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/alex-charak-2.jpg",
+      "public_path": "/images/reviews/alex-charak/photo-02.jpg",
+      "category": "reviews",
+      "bytes": 55647,
+      "sha256": "f43f2aaeb716c89a70ab7aea821d7dbfcc0c394b341e0c46f9d06b42100cf8a5",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/alex-charak-3.jpg",
+      "public_path": "/images/reviews/alex-charak/photo-03.jpg",
+      "category": "reviews",
+      "bytes": 47696,
+      "sha256": "07662fbdf0ccc9d706f5dc5ecd846483bd41aaf4fae2f104ead5e7cd2b0d42a8",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/alex-charak-4.jpg",
+      "public_path": "/images/reviews/alex-charak/photo-04.jpg",
+      "category": "reviews",
+      "bytes": 65962,
+      "sha256": "64a1c3148e7508dda7f562834a0065a74703bbf17504d2901eae40733a61714a",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/alex-charak-avatar.jpg",
+      "public_path": "/images/reviews/alex-charak/avatar.jpg",
+      "category": "reviews",
+      "bytes": 4398,
+      "sha256": "e2b1bc77cc784c14c9d620a07948743515f488812c669104a5830fb3ac9e1fe3",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-1.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-01.jpg",
+      "category": "reviews",
+      "bytes": 30017,
+      "sha256": "7bca06fdf0b490f04be5365d781d7b94f1eb97e94c2b79e2ca2a01da38e75303",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-10.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-10.jpg",
+      "category": "reviews",
+      "bytes": 73184,
+      "sha256": "94c19ee6d1551bfe122311149c02fd3d35b5c765efe1be19257b4629b144fa95",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-11.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-11.jpg",
+      "category": "reviews",
+      "bytes": 56822,
+      "sha256": "0e6141c626ebb8e76615e722fd55c0631c1ca754639f4cc913d011d40178a468",
+      "width": 512,
+      "height": 384,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-12.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-12.jpg",
+      "category": "reviews",
+      "bytes": 42868,
+      "sha256": "4bd2c49a4101fa82a509fd2662466239e984caa62a2f28097739062dcf86ada3",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-13.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-13.jpg",
+      "category": "reviews",
+      "bytes": 76244,
+      "sha256": "ee724cb9628395eaf6108b77fe621540d732a57e0bd97ba38eae43fe5bb47a9e",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-14.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-14.jpg",
+      "category": "reviews",
+      "bytes": 46511,
+      "sha256": "f34ca8941cf2c3dab59ab747a11c5e3462fa22eebd4683686a53a7c7b15feb13",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-15.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-15.jpg",
+      "category": "reviews",
+      "bytes": 83064,
+      "sha256": "96a72d0b0c5913111e91a18084a51da30cadecd7028593e1df85b65dcbc63f26",
+      "width": 512,
+      "height": 384,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-16.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-16.jpg",
+      "category": "reviews",
+      "bytes": 28890,
+      "sha256": "c711c7fb10e557945a6d1c3287883916becb4fa913aa1387bd6b8ee1947ade72",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-17.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-17.jpg",
+      "category": "reviews",
+      "bytes": 72453,
+      "sha256": "b9c6df44670c1075e4a89f798a42aa7b03a8d4e2205bdb54725160ea1ec5625b",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-18.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-18.jpg",
+      "category": "reviews",
+      "bytes": 83326,
+      "sha256": "df1c569a299c0a06030102c41ee396fcaf8cfeabfe29ddcc4f7dcbd86907c974",
+      "width": 512,
+      "height": 384,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-19.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-19.jpg",
+      "category": "reviews",
+      "bytes": 59681,
+      "sha256": "c586fa8233b369461b9a038a46183b4360220c61b10c603a0d7283eaa2bb3f8d",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-2.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-02.jpg",
+      "category": "reviews",
+      "bytes": 62296,
+      "sha256": "a036781cb471911b42c8db58c918518c089b7c7aa96e2aa6fa545150b8e0e9f1",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-3.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-03.jpg",
+      "category": "reviews",
+      "bytes": 89419,
+      "sha256": "62c81e59ab7434c498a15c757566662f4e12fec7560ffde1f5f122eb8f48ff3c",
+      "width": 512,
+      "height": 384,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-4.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-04.jpg",
+      "category": "reviews",
+      "bytes": 46520,
+      "sha256": "cb501175c36d66ae971e77f9afc89f370224df94aefcb21f8f0ffaaee9ebaa86",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-5.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-05.jpg",
+      "category": "reviews",
+      "bytes": 37169,
+      "sha256": "661626ce7828c28c6c86d498e6ae120e4a184546350735e3b986397cb5286292",
+      "width": 512,
+      "height": 384,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-6.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-06.jpg",
+      "category": "reviews",
+      "bytes": 96091,
+      "sha256": "6dc4e4bcae5afed37c7dee29030eab8e116d0ef1201f1e5e259439d3e2ef534d",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-7.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-07.jpg",
+      "category": "reviews",
+      "bytes": 64761,
+      "sha256": "270954adf7c2fd44b02be827576743b7112219969176bb6bf740e561c400b63b",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-8.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-08.jpg",
+      "category": "reviews",
+      "bytes": 46537,
+      "sha256": "c0a26a78139485da5f3d2ff68ddc6c74acea6f60f1d96a4e248df8ea480260dd",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-9.jpg",
+      "public_path": "/images/reviews/daniel-martinez/photo-09.jpg",
+      "category": "reviews",
+      "bytes": 50057,
+      "sha256": "254ce06351c3deffbbc36283984f8893f480c49030a6530c9f66add4048e1d7c",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/daniel-martinez-avatar.jpg",
+      "public_path": "/images/reviews/daniel-martinez/avatar.jpg",
+      "category": "reviews",
+      "bytes": 3504,
+      "sha256": "3327c5167dbf1d0fae5a30d11f327b06ad130379f354ab1632392025c716d494",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/eddie-carrillo-avatar.jpg",
+      "public_path": "/images/reviews/eddie-carrillo/avatar.jpg",
+      "category": "reviews",
+      "bytes": 1129,
+      "sha256": "e770bc3deb26e708f4a92970b1578a0c849f99fea365e4b21bfd4a00bfb965a5",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/ellie-lehman-avatar.jpg",
+      "public_path": "/images/reviews/ellie-lehman/avatar.jpg",
+      "category": "reviews",
+      "bytes": 4343,
+      "sha256": "c45ffd973847e7aae6342a3d46f48edaff7a3acf402a06a75a2bd16cb9bd1954",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/evelyn-lorena-avatar.jpg",
+      "public_path": "/images/reviews/evelyn-lorena/avatar.jpg",
+      "category": "reviews",
+      "bytes": 4090,
+      "sha256": "3f6bd6411470c89d48f538fcaccdd358856c98d4ba27c378c93d907e3bf4b83e",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/google.svg",
+      "public_path": "/images/icons/google.svg",
+      "category": "icons",
+      "bytes": 51351,
+      "sha256": "a667374e65ef94797b042e29afa75edcc2a54e8bf02015c60776d2b3688d7a27",
+      "width": null,
+      "height": null,
+      "referenced_by": [
+        "src/components/google-reviews.tsx"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jamie-flores-avatar.jpg",
+      "public_path": "/images/reviews/jamie-flores/avatar.jpg",
+      "category": "reviews",
+      "bytes": 4015,
+      "sha256": "56b9951ce997e45a8a27ff61549502184563a8e514f9960ff0fda1e15d9e592b",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-1.jpg",
+      "public_path": "/images/reviews/jay-goyani/photo-01.jpg",
+      "category": "reviews",
+      "bytes": 48146,
+      "sha256": "3ab47e71c16132dbc51477f6cff17aa1fc60a8023cb8ea05f1cad97c78b8341e",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-2.jpg",
+      "public_path": "/images/reviews/jay-goyani/photo-02.jpg",
+      "category": "reviews",
+      "bytes": 60844,
+      "sha256": "4c6cdf2050d7172175d44ea079f9fc1ce8641fa746f561a7b2ca258c714d6a4f",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-3.jpg",
+      "public_path": "/images/reviews/jay-goyani/photo-03.jpg",
+      "category": "reviews",
+      "bytes": 50233,
+      "sha256": "2e283e46e7542ab2b79dd3f05c96dbae1ecb4beeeecdb28e3d3991aeb248896d",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-4.jpg",
+      "public_path": "/images/reviews/jay-goyani/photo-04.jpg",
+      "category": "reviews",
+      "bytes": 43386,
+      "sha256": "aacc528a4ee82dc1b9064498fa8d12088a5be13b9bcb045ccd1e7e94dd371d99",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-5.jpg",
+      "public_path": "/images/reviews/jay-goyani/photo-05.jpg",
+      "category": "reviews",
+      "bytes": 84143,
+      "sha256": "9c8f631a40e24e7893ffbf92f7b2197221fb9d91cb8cb78b0ad10c3a53110f2d",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/jay-goyani-avatar.jpg",
+      "public_path": "/images/reviews/jay-goyani/avatar.jpg",
+      "category": "reviews",
+      "bytes": 3781,
+      "sha256": "081f1913dfcda9b037ff7ce5ff3aee2daaa87a04f308de976d1bca107e9aa2de",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/keith-loritz-1.jpg",
+      "public_path": "/images/reviews/keith-loritz/photo-01.jpg",
+      "category": "reviews",
+      "bytes": 55541,
+      "sha256": "21225f62bb430ecb58d10f085f064480a15a86748bab4822c20c7041d4942dfd",
+      "width": 512,
+      "height": 231,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/keith-loritz-2.jpg",
+      "public_path": "/images/reviews/keith-loritz/photo-02.jpg",
+      "category": "reviews",
+      "bytes": 52021,
+      "sha256": "c5e7ce2ae4a9fc2f8cbc5039893b8f3e66726e856e85289f326e5f14bb5e0a36",
+      "width": 512,
+      "height": 231,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/keith-loritz-avatar.jpg",
+      "public_path": "/images/reviews/keith-loritz/avatar.jpg",
+      "category": "reviews",
+      "bytes": 3946,
+      "sha256": "408cc31f4873fbb89a40621c66765023cb99d77be3dc53463516634b9d18c97a",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/lisa-m-avatar.jpg",
+      "public_path": "/images/reviews/lisa-m/avatar.jpg",
+      "category": "reviews",
+      "bytes": 3479,
+      "sha256": "c5b34e481dc2e94256773db2a3bfd6bd298840b7da4ead4ec1432bb0f0bbbca1",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-1.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-01.jpg",
+      "category": "reviews",
+      "bytes": 80265,
+      "sha256": "2676f7ccd01d56b4c42e0ddf16b56ab254b91170ed7e70946c787ad115482770",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-2.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-02.jpg",
+      "category": "reviews",
+      "bytes": 91011,
+      "sha256": "bf9ed6a87d7c4ffb31be6c5582c1a89ecfee2f31533fdde2f0dbf4da9eadfbab",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-3.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-03.jpg",
+      "category": "reviews",
+      "bytes": 83905,
+      "sha256": "adaf3b43125abf2d39921065588e7746e6e6f028c9f8a51636a947f2c4305d6a",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-4.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-04.jpg",
+      "category": "reviews",
+      "bytes": 75365,
+      "sha256": "c1b3a8ef197ea731f441a16a0f39c03dbebdb5c588bcd54f67767581c723364b",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-5.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-05.jpg",
+      "category": "reviews",
+      "bytes": 61282,
+      "sha256": "14c4d79871930b6ce71c4ac0a96b5e13d5037b3b41d42a1a854c646da6e7a2d3",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-6.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-06.jpg",
+      "category": "reviews",
+      "bytes": 89563,
+      "sha256": "be9f3fe25e942aefbde579712acfe622c260a816c3e941679b9b10ba3d51096b",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-7.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-07.jpg",
+      "category": "reviews",
+      "bytes": 89784,
+      "sha256": "03e54ba926720712ef4c186aebf72c0ffc03b0b8415cd8ff9adf48612795ecf4",
+      "width": 384,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-8.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/photo-08.jpg",
+      "category": "reviews",
+      "bytes": 82850,
+      "sha256": "a8222a0992b40dd7286b665c7a922359edfa813e926e544647e036e76e0e1cd2",
+      "width": 288,
+      "height": 512,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    },
+    {
+      "old_path": "/images/reviews/vanessa-schneider-avatar.jpg",
+      "public_path": "/images/reviews/vanessa-schneider/avatar.jpg",
+      "category": "reviews",
+      "bytes": 4156,
+      "sha256": "23c5cde6a054fc057e4ead155157b4b09512ad50341dfa8f32ccad4546c0797c",
+      "width": 40,
+      "height": 40,
+      "referenced_by": [
+        "src/lib/google-reviews.json"
+      ]
+    }
+  ]
+}

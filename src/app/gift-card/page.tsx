@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Gift Cards | Taste of Beauty",
     description: "A thoughtful gift. A beautiful meal. Share Taste of Beauty with someone special.",
     url: "/gift-card",
-    images: [{ url: "/images/gift-card/drinks.jpg", alt: "Three colorful drinks at Taste of Beauty" }],
+    images: [{ url: "/images/drinks/citrus-drinks-2560x1707.jpg", alt: "Three colorful drinks at Taste of Beauty" }],
   },
 };
 
@@ -33,7 +33,7 @@ export default function GiftCardPage() {
             <p className="gift-hero-note">A LITTLE KINDNESS. A REASON TO GATHER.</p>
           </div>
           <figure className="gift-hero-photo">
-            <img src="/images/gift-card/drinks.jpg" alt="Three colorful drinks garnished with citrus and herbs at Taste of Beauty" width="2560" height="1707" fetchPriority="high" />
+            <img src="/images/drinks/citrus-drinks-2560x1707.jpg" alt="Three colorful drinks garnished with citrus and herbs at Taste of Beauty" width="2560" height="1707" fetchPriority="high" />
             <figcaption><span>Something lovely to look forward to.</span><span>TOB / GIFT CARDS</span></figcaption>
           </figure>
         </section>

@@ -39,7 +39,7 @@ export default function XiaolongbaoPage() {
           </div>
           <div className="hero-photo">
             <img
-              src="/assets/xlb-0.webp"
+              src="/images/xiaolongbao/steamer-with-lid.webp"
               alt="Taste of Beauty xiaolongbao in a yellow bamboo steamer on a gray stone background"
               fetchPriority="high"
             />
@@ -60,7 +60,7 @@ export default function XiaolongbaoPage() {
         <section className="story section xlb-story" id="craft">
           <div className="story-photo">
             <img
-              src="/assets/xlb-2.webp"
+              src="/images/xiaolongbao/hand-pleating.webp"
               loading="lazy"
               alt="Hands folding a xiaolongbao wrapper"
             />
@@ -105,7 +105,7 @@ export default function XiaolongbaoPage() {
           </div>
           <div className="xlb-selection-grid">
             <img
-              src="/assets/xlb-1.webp"
+              src="/images/xiaolongbao/steamer-overhead.webp"
               alt="An overhead view of Taste of Beauty xiaolongbao arranged in a steamer"
               loading="lazy"
             />

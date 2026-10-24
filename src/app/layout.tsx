@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       ? {
           images: [
             {
-              url: "/assets/garden.webp",
+              url: "/images/dishes/the-secret-garden-900x1200.webp",
               alt: "The Secret Garden at Taste of Beauty",
             },
           ],

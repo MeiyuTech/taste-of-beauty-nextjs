@@ -53,7 +53,7 @@ export default function SiteHeader({ active, bookingHref }: { active?: string; b
   }, [open]);
 
   function close() { dialog.current?.close(); }
-  const logo = <img src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width="1024" height="346" />;
+  const logo = <img src="/images/brand/taste-of-beauty-logo.png" alt="Taste of Beauty" width="1024" height="346" />;
 
   return <>
     <header className="site-header">

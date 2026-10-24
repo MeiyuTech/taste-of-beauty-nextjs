@@ -6,7 +6,7 @@ export default function StorySection() {
     <section className="image-story image-story--food" id="our-story" aria-labelledby="story-title">
       <div className="image-story-media">
         <Image
-          src="/images/food/pumpkin-soup-landscape.png"
+          src="/images/dishes/the-island-landscape.png"
           alt="Golden pumpkin soup with delicate crisp garnish in a turquoise bowl"
           fill
           sizes="(max-width: 900px) 92vw, (min-width: 1800px) 1204px, 65vw"

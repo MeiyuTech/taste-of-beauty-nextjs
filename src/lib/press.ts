@@ -6,8 +6,8 @@ export const pressArticles = [
     "publication": "Modern Luxury",
     "title": "Veg Out: Check out these plant-based eateries in Orange County, which serve flavorful sites for vegans, vegetarians and omnivores alike.",
     "href": "https://digital.modernluxury.com/1/#038;i=821864&p=40&ver=html5",
-    "logo": "/images/press/logo-300x57.webp",
-    "image": "/images/press/aa_0242-scaled-1.jpg",
+    "logo": "/images/press/logos/modern-luxury-riviera.webp",
+    "image": "/images/press/photos/modern-luxury-feature.jpg",
     "imageAlt": "Taste of Beauty featured in Modern Luxury"
   },
   {
@@ -16,8 +16,8 @@ export const pressArticles = [
     "publication": "Greer’s OC",
     "title": "Taste of Beauty: Cross-Cultural, Plant-Based Fine Dining in Fountain Valley",
     "href": "https://greersoc.com/index.php/goc/post-single/taste_of_beauty_cross_cultural_plant_based_fine_dining_in_fountain_valley",
-    "logo": "/images/press/logo-goc-large.webp",
-    "image": "/images/press/aa_0505-scaled-1.jpg",
+    "logo": "/images/press/logos/greers-oc.webp",
+    "image": "/images/dishes/the-island-2560x1707.jpg",
     "imageAlt": "Taste of Beauty featured in Greer’s OC"
   },
   {
@@ -26,8 +26,8 @@ export const pressArticles = [
     "publication": "Daily Pilot",
     "title": "Tasting Menu looks to Earth’s regions",
     "href": "https://ca-times.brightspotcdn.com/92/1c/d391d6e940ceb96c5f74cd99ce7f/daily-pilot-e-newspaper-for-may-12-2024.pdf",
-    "logo": "/images/press/daily-pilot-times-oc-logo-300x48.webp",
-    "image": "/images/press/tob_garden_1.webp",
+    "logo": "/images/press/logos/daily-pilot.webp",
+    "image": "/images/press/photos/daily-pilot-feature.webp",
     "imageAlt": "Taste of Beauty featured in Daily Pilot"
   },
   {
@@ -36,8 +36,8 @@ export const pressArticles = [
     "publication": "The Los Angeles Beat",
     "title": "Where To Take Mom for Mother’s Day Brunch or Dinner",
     "href": "https://thelosangelesbeat.com/2024/05/mothers-day-brunch-dinner-2024/",
-    "logo": "/images/press/copy-beat_musso_final1-300x63.jpg",
-    "image": "/images/press/TastingCourse_table_h1_TasteofBeauty.jpeg",
+    "logo": "/images/press/logos/los-angeles-beat.jpg",
+    "image": "/images/experience/tasting-table.jpeg",
     "imageAlt": "Taste of Beauty featured in The Los Angeles Beat"
   },
   {
@@ -46,8 +46,8 @@ export const pressArticles = [
     "publication": "AllEvents",
     "title": "Immersive Asian Tea Experience",
     "href": "https://allevents.in/fountain-valley/immersive-asian-tea-experience/80002857900598",
-    "logo": "/images/press/ae-logo-vector-1024x281-1-300x82.png",
-    "image": "/images/press/tea_h1_tasteofbeauty.webp",
+    "logo": "/images/press/logos/allevents.png",
+    "image": "/images/experience/tea-service-1440x960.webp",
     "imageAlt": "Taste of Beauty featured in AllEvents"
   },
   {
@@ -56,8 +56,8 @@ export const pressArticles = [
     "publication": "Patch",
     "title": "Immersive Asian Tea Experience",
     "href": "https://patch.com/california/fountainvalley/calendar#expired_event",
-    "logo": "/images/press/logo-patch-800x600-1-300x113.webp",
-    "image": "/images/press/aa_0654-scaled-1.jpg",
+    "logo": "/images/press/logos/patch.webp",
+    "image": "/images/press/photos/patch-feature.jpg",
     "imageAlt": "Taste of Beauty featured in Patch"
   },
   {
@@ -66,8 +66,8 @@ export const pressArticles = [
     "publication": "LOCALE Magazine",
     "title": "Immersive Asian Tea Experience at Taste of Beauty",
     "href": "https://localemagazine.com/localendar/immersive-asian-tea-experience-at-taste-of-beauty/",
-    "logo": "/images/press/localelogo_maghub_178x48_300di-300x81.webp",
-    "image": "/images/press/TasteOfBeauty_RestaurantInterior_6.jpeg",
+    "logo": "/images/press/logos/locale-magazine.webp",
+    "image": "/images/experience/tea-pouring.jpeg",
     "imageAlt": "Taste of Beauty featured in LOCALE Magazine"
   },
   {
@@ -76,8 +76,8 @@ export const pressArticles = [
     "publication": "GAYOT",
     "title": "Taste of Beauty Restaurant Review",
     "href": "https://www.gayot.com/restaurants/taste-beauty-fountain-valley-ca-92708_6oc240401.html",
-    "logo": "/images/press/gayot-logo.webp",
-    "image": "/images/press/AA_0872-scaled.jpg",
+    "logo": "/images/press/logos/gayot.webp",
+    "image": "/images/press/photos/gayot-feature.jpg",
     "imageAlt": "Taste of Beauty featured in GAYOT"
   },
   {
@@ -86,8 +86,8 @@ export const pressArticles = [
     "publication": "SoCalPulse",
     "title": "Taste of Beauty Adds a Planet-Forward Flair",
     "href": "https://socalpulse.com/oc_weekend_roundup/march-14-17/#food",
-    "logo": "/images/press/socalpulse_OC-2048x261-1-300x38.webp",
-    "image": "/images/press/Screenshot-2024-03-14-at-12.15.53-PM.webp",
+    "logo": "/images/press/logos/socalpulse.webp",
+    "image": "/images/press/photos/socalpulse-feature.webp",
     "imageAlt": "Taste of Beauty featured in SoCalPulse"
   },
   {
@@ -96,8 +96,8 @@ export const pressArticles = [
     "publication": "Cuisine & Travel",
     "title": "Unveiling Taste of Beauty: The Hidden Orange County Vegan Restaurant We Need!",
     "href": "https://www.cuisineandtravel.com/orange-county-vegan-restaurant/",
-    "logo": "/images/press/logo-header-small.jpg-300x137.webp",
-    "image": "/images/press/tastingcourse_soup_h1_tasteofbeauty-scaled-1.jpeg",
+    "logo": "/images/press/logos/cuisine-and-travel.webp",
+    "image": "/images/press/photos/cuisine-and-travel-feature.jpeg",
     "imageAlt": "Taste of Beauty featured in Cuisine & Travel"
   },
   {
@@ -106,8 +106,8 @@ export const pressArticles = [
     "publication": "Orange County Register",
     "title": "OC Restaurant Week 2024 Lineup Announced",
     "href": "https://www.ocregister.com/2024/01/17/oc-restaurant-week-2024-lineup-announced/",
-    "logo": "/images/press/download-300x62.png",
-    "image": "/images/press/aa_0890-scaled-1.jpg",
+    "logo": "/images/press/logos/orange-county-register.png",
+    "image": "/images/press/photos/orange-county-register-feature.jpg",
     "imageAlt": "Taste of Beauty featured in Orange County Register"
   }
 ];
@@ -118,14 +118,14 @@ export const pressVideos = [
     "title": "Tasty Tuesday with Taste of Beauty",
     "href": "https://www.foxla.com/video/1479324",
     "embedUrl": "https://iframely.net/3j7lKQ7",
-    "logo": "/images/press/images-2-300x122.webp"
+    "logo": "/images/press/logos/fox-11.webp"
   },
   {
     "publication": "KTLA 5",
     "title": "165+ restaurants participating in OC Restaurant Week",
     "href": "https://ktla.com/video/165-restaurants-participating-in-oc-restaurant-week/9468080/",
     "embedUrl": "https://iframely.net/5DgDNiK",
-    "logo": "/images/press/logo-ktla-las-very-own-horiz-300x113.webp"
+    "logo": "/images/press/logos/ktla-5.webp"
   }
 ];
 

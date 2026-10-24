@@ -17,7 +17,7 @@ function ReviewHeader({ review, titleId }: { review: Review; titleId?: string })
           <h3 id={titleId}>{review.name}</h3>
           <time dateTime={review.date}>{review.dateLabel}</time>
         </div>
-        <img className="review-google-logo" src="/images/reviews/google.svg" alt="Google" width="20" height="20" loading="lazy" />
+        <img className="review-google-logo" src="/images/icons/google.svg" alt="Google" width="20" height="20" loading="lazy" />
       </div>
       <div className="review-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>
         <span aria-hidden="true">★★★★★</span>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Press & Media Highlights | Taste of Beauty",
     description: "Television features, dining stories and media enquiries at Taste of Beauty.",
     url: "/press",
-    images: [{ url: "/images/press/aa_0505-scaled-1.jpg", alt: "A plated dish at Taste of Beauty" }],
+    images: [{ url: "/images/dishes/the-island-2560x1707.jpg", alt: "A plated dish at Taste of Beauty" }],
   },
 };
 
@@ -22,7 +22,7 @@ export default function PressPage() {
     <SiteShell active="press" page>
       <div className="press-page">
         <section className="press-hero" aria-labelledby="press-title">
-          <img src="/images/press/aa_0505-scaled-1.jpg" alt="A tasting-menu dish on a turquoise plate at Taste of Beauty" fetchPriority="high" />
+          <img src="/images/dishes/the-island-2560x1707.jpg" alt="A tasting-menu dish on a turquoise plate at Taste of Beauty" fetchPriority="high" />
           <h1 id="press-title">Press</h1>
         </section>
         <section className="press-intro" aria-labelledby="location-note">

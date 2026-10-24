@@ -1,6 +1,6 @@
 {
   "hero": {
-    "src": "/images/landing/weixin-image_2025-08-25_121538_358-scaled.jpg",
+    "src": "/images/restaurant/dining-room-wall-art.jpg",
     "alt": "Taste of Beauty dining room in West Hollywood"
   },
   "pages": {
@@ -29,7 +29,7 @@
         "Taste of Beauty is Los Angeles’s destination for plant-based fine dining, where every dish is crafted as a story and every meal is a multi-sensory journey. Our restaurant blends global flavors, artistic presentation, and Southern California’s cultural richness to show that vegan and vegetarian cuisine can be as indulgent as it is responsible."
       ],
       "storyImage": {
-        "src": "/images/landing/the-desert_02.jpeg",
+        "src": "/images/dishes/the-desert-2500x1667.jpeg",
         "alt": "The Desert"
       }
     },
@@ -58,7 +58,7 @@
         "Taste of Beauty is Los Angeles’s destination for plant-based fine dining, where every dish is crafted as a story and every meal is a multi-sensory journey. Our restaurant blends global flavors, artistic presentation, and Southern California’s cultural richness to show that vegan and vegetarian cuisine can be as indulgent as it is responsible."
       ],
       "storyImage": {
-        "src": "/images/landing/the-desert_02.jpeg",
+        "src": "/images/dishes/the-desert-2500x1667.jpeg",
         "alt": "The Desert"
       }
     },
@@ -90,7 +90,7 @@
         "Our guests, coming from all across LA, arrive for date nights and anniversaries, for birthdays and first impressions, for the kind of dinner that needs no explanation — just a reservation."
       ],
       "storyImage": {
-        "src": "/images/landing/the-desert_02.jpeg",
+        "src": "/images/dishes/the-desert-2500x1667.jpeg",
         "alt": "The Desert"
       }
     }

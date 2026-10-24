@@ -3,7 +3,7 @@
 .theme-b .press-hero img { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center 53%; z-index: -2; }
 .theme-b .press-hero::before { content: ""; position: absolute; inset: 0; background: #12261bb3; z-index: -1; }
 .theme-b .press-hero h1 { color: #fff; font: 400 clamp(56px, 6vw, 84px)/1 var(--serif); letter-spacing: -1px; margin: 0; }
-.theme-b .press-intro { padding: 48px 5% 56px; background: #f4f3ed url('/images/press/beige-paper-texture-1-1.jpg') center / 700px; }
+.theme-b .press-intro { padding: 48px 5% 56px; background: #f4f3ed url('/images/textures/beige-paper.jpg') center / 700px; }
 .theme-b .press-location { max-width: 1000px; margin: 0 auto 44px; text-align: center; }
 .theme-b .press-location h2 { font: 400 clamp(30px, 3vw, 42px)/1.2 var(--serif); letter-spacing: -.5px; margin: 0 0 20px; }
 .theme-b .press-location p { margin: 0; font-size: 17px; line-height: 1.9; }

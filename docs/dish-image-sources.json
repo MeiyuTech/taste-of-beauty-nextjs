@@ -84,7 +84,7 @@
     },
     {
       "dish": "The Orchard",
-      "source": "/images/food/quinoa-hero.png",
+      "source": "/images/dishes/the-orchard.png",
       "source_sha256": "b661a8b5c243969f69e202560e9c50d3730c85dd13c88f89e919340c7ef75630",
       "public_path": "/images/dishes/the-orchard.webp",
       "evidence": "Distinctive two-sphere presentation matches the current menu description.",
@@ -140,7 +140,7 @@
     },
     {
       "dish": "Sushi Trio",
-      "source": "/images/food/vegan-sushi.png",
+      "source": "/images/dishes/sushi-trio.png",
       "source_sha256": "ede59fe5e30eb14bade5191b2bb16c4c9d5159215f0c99bceb791be77ef8d5a3",
       "public_path": "/images/dishes/sushi-trio.webp",
       "evidence": "Existing vegan-sushi asset; ingredients match the A la carte description.",
@@ -148,7 +148,7 @@
     },
     {
       "dish": "Black Pepper Vegetable Noodles",
-      "source": "/images/food/vegetable-noodles.png",
+      "source": "/images/dishes/black-pepper-vegetable-noodles.png",
       "source_sha256": "92d90e3d288b312b39c9ab2a8236fadd6905f6a8969d092d43a93856e2ed688e",
       "public_path": "/images/dishes/black-pepper-vegetable-noodles.webp",
       "evidence": "Existing lunch hero and alt text identify the dish.",
@@ -370,7 +370,7 @@
   "rejected_matches": [
     {
       "dish": "The Lotus Pond",
-      "source": "/assets/lotus.webp",
+      "source": "/images/dishes/lotus-plated-dish.webp",
       "reason": "Close inspection shows radish petals and green purée, not the yam, lotus root and zucchini presentation described by the current menu."
     }
   ]

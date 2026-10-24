@@ -191,7 +191,7 @@ export default function DishWall({ campaignMenu = false }: { campaignMenu?: bool
     >
       {dishes.map((dish) => {
         const photo = dish.menu === "xlb" ? {
-          src: "/assets/xlb-0.webp", alt: "Handmade xiaolongbao in a yellow bamboo steamer", position: "50% 50%",
+          src: "/images/xiaolongbao/steamer-with-lid.webp", alt: "Handmade xiaolongbao in a yellow bamboo steamer", position: "50% 50%",
         } : getDishImage(dish.name);
         if (!photo) return null;
         const href = menuLink(dish, campaignMenu);

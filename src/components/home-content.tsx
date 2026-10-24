@@ -46,7 +46,7 @@ export default function HomeContent() {
           <h2 className="menu-picker-heading">Your next vegan dinner, tasting menu or lunch</h2>
           <div className="choice-grid">
             <InternalLink href="/menus?menu=59">
-              <img src="/assets/garden.webp" alt="Five-course vegan dinner" />
+              <img src="/images/dishes/the-secret-garden-900x1200.webp" alt="Five-course vegan dinner" />
               <div>
                 <strong>$59</strong>
                 <span>5-Course Special Tasting</span>
@@ -60,7 +60,7 @@ export default function HomeContent() {
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=lunch">
-              <img src="/assets/vegetable-noodles.png" alt="Vegetable noodles with mushrooms and fresh basil at Taste of Beauty" />
+              <img src="/images/dishes/black-pepper-vegetable-noodles.png" alt="Vegetable noodles with mushrooms and fresh basil at Taste of Beauty" />
               <div>
                 <strong>Lunch</strong>
                 <span>A little everyday pleasure</span>

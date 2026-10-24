@@ -3,7 +3,7 @@
 The homepage displays a manually maintained snapshot of ten five-star reviews selected by the owner on October 20, 2026. Text, reviewer names, original ratings, publication dates, avatars and 38 review photographs were copied from the owner-provided widget. Source URLs and the capture date are recorded in `google-reviews-sources.json` for editorial reference only.
 
 - Content: `src/lib/google-reviews.json`.
-- Assets: `public/images/reviews/` (49 local files, including avatars and the Google source mark).
+- Assets: `public/images/reviews/<reviewer>/` (48 local avatars and photos) and `public/images/icons/google.svg` (the Google source mark).
 - UI: `src/components/google-reviews.tsx` and `google-reviews.css`.
 
 The module uses no third-party script, API key, subscription or automatic review synchronization. It does not display the former provider's verification badge or claim an overall restaurant score. Google links lead to the source restaurant listing. The original review text is preserved, including qualifications within five-star reviews.

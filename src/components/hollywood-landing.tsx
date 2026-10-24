@@ -30,9 +30,9 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
   const book = (label = "Book Now") => <a className="cta" href={page.bookingUrl} target="_blank" rel="noopener noreferrer">{label}</a>;
   const about = <section className="campaign-section campaign-about" aria-labelledby="campaign-about-title">
     <div className="campaign-about-gallery">
-      <Image src="/images/landing/jack-and-the-beanstalk.png" alt="Jack and the Beanstalk" width={700} height={900} sizes="(max-width: 700px) 60vw, 30vw" />
-      <Image src="/images/landing/MG_4074-Large.jpeg" alt="Dining at Taste of Beauty" width={700} height={500} sizes="(max-width: 700px) 40vw, 20vw" />
-      <Image src="/images/landing/alice-in-wonderland.png" alt="Alice in Wonderland" width={700} height={500} sizes="(max-width: 700px) 40vw, 20vw" />
+      <Image src="/images/dishes/jack-and-the-beanstalk-1086x1448.png" alt="Jack and the Beanstalk" width={700} height={900} sizes="(max-width: 700px) 60vw, 30vw" />
+      <Image src="/images/experience/plating-with-tweezers.jpeg" alt="Dining at Taste of Beauty" width={700} height={500} sizes="(max-width: 700px) 40vw, 20vw" />
+      <Image src="/images/dishes/alice-in-wonderland-1086x1448.png" alt="Alice in Wonderland" width={700} height={500} sizes="(max-width: 700px) 40vw, 20vw" />
     </div>
     <div><p className="eyebrow">{page.about[0]}</p><h2 id="campaign-about-title">Taste of <em>Beauty</em></h2>{page.about.slice(1).filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph.includes("just a reservation") ? <>{paragraph.split("just a reservation")[0]}<a href={page.bookingUrl} target="_blank" rel="noopener noreferrer">just a reservation</a>.</> : paragraph}</p>)}{book()}</div>
   </section>;
@@ -40,7 +40,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
     <a className="skip" href="#main">Skip to content</a>
     <header className="campaign-header">
       <div className="campaign-brand">
-        <Image src="/assets/tob_logo_stamp-1024x346.png" alt="Taste of Beauty" width={1024} height={346} priority />
+        <Image src="/images/brand/taste-of-beauty-logo.png" alt="Taste of Beauty" width={1024} height={346} priority />
       </div>
       <div className="campaign-header-actions">
         {book("Reserve Now")}
@@ -62,7 +62,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
       <section className="campaign-section campaign-story">
         <div className="campaign-story-photos">
           <Image src={page.storyImage.src} alt={page.storyImage.alt} width={800} height={1000} sizes="(max-width: 900px) 90vw, 42vw" />
-          <Image className="campaign-story-inset" src={romantic ? "/images/landing/DSCF0799-scaled.jpg" : "/images/landing/jack-and-the-beanstalk.png"} alt={romantic ? "Emerald Tide" : "Jack and the Beanstalk"} width={400} height={400} sizes="(max-width: 900px) 35vw, 20vw" />
+          <Image className="campaign-story-inset" src={romantic ? "/images/dishes/emerald-tide-2560x1707.jpg" : "/images/dishes/jack-and-the-beanstalk-1086x1448.png"} alt={romantic ? "Emerald Tide" : "Jack and the Beanstalk"} width={400} height={400} sizes="(max-width: 900px) 35vw, 20vw" />
         </div>
         <div className="campaign-story-copy">
           <p className="eyebrow">{page.story[0]}</p><h2>LA’s Best Plant-Based <em>Fine Dining</em></h2>

@@ -15,7 +15,7 @@ A Next.js App Router website based on the approved `TOB_B_Designer_Package` (Oct
 - `/index.html`, `/version-b.html` and `/xiaolongbao.html`: permanent redirects from the handoff's legacy URLs; query parameters are retained.
 - `/robots.txt` and `/sitemap.xml`: generated metadata routes.
 
-Edit menu data in `src/lib/menus.ts`, external booking/ordering destinations in `src/lib/booking.ts`, and homepage content in `src/components/home-content.tsx`. Approved CSS is scoped separately to each page to prevent cross-page style leakage. Images are served locally from `public/assets` and `public/images`; the story panels use responsive Next.js images from the supplied media library, cream gradients and dark typography; no remote image dependency or font request is needed.
+Edit menu data in `src/lib/menus.ts`, external booking/ordering destinations in `src/lib/booking.ts`, and homepage content in `src/components/home-content.tsx`. Approved CSS is scoped separately to each page to prevent cross-page style leakage. Images are served locally from `public/images`; the story panels use responsive Next.js images from the supplied media library, cream gradients and dark typography; no remote image dependency or font request is needed.
 
 ## Reservations
 
@@ -70,6 +70,10 @@ Visual interaction rules are documented in [design.md](design.md). Follow these 
 
 ## Gift cards
 
-`/gift-card` uses the shared warm stone theme, navigation and footer. It preserves the original [WordPress gift card page](https://tob260615.wpenginepowered.com/gift-card/)'s drinks photograph and Square merchant destination (`MLW8KJMXKTTVM`). The photograph is stored in `public/images/gift-card/drinks.jpg` and was sourced from `/wp-content/uploads/2025/08/DSCF3120-Edit-scaled.jpg` on the old site.
+`/gift-card` uses the shared warm stone theme, navigation and footer. It preserves the original [WordPress gift card page](https://tob260615.wpenginepowered.com/gift-card/)'s drinks photograph and Square merchant destination (`MLW8KJMXKTTVM`). The photograph is stored in `public/images/drinks/citrus-drinks-2560x1707.jpg` and was sourced from `/wp-content/uploads/2025/08/DSCF3120-Edit-scaled.jpg` on the old site.
 
 Square hosts the embedded purchase form, available amounts, delivery options and checkout. Direct checkout, reload and balance links remain available outside the embed. No payment data is collected by this Next.js site. The page is linked in the shared header and footer and included in the sitemap.
+
+## Image library
+
+Website images are organized by subject under `public/images/`. See [Image library](docs/image-library.md) for folder conventions and page assignments, and [Path map](docs/image-path-map.json) for every previous path, current path, dimensions and SHA-256. Original WordPress backups retain their original upload paths for provenance.
