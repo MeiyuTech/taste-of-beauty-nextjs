@@ -12,3 +12,6 @@ output/
 
 # Local task checklists, source notes and verification reports.
 .local/
+
+# Local design guidelines.
+/design.md
