@@ -1,6 +1,6 @@
 import type { MenuCatalog } from "./menu-types";
 
-// Menu content preserves the existing website; confirmed PDF tasting prices are applied.
+// Current food-menu content and prices, with unrelated existing menu sections preserved.
 // Edit prices here only. Missing price means unpriced, never zero or a fallback.
 // Presentations preserve existing differences between tasting, lunch, takeout and
 // the standalone xiaolongbao page. Do not merge similarly named dishes by guesswork.

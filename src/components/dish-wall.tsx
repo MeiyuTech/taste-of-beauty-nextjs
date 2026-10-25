@@ -16,7 +16,7 @@ function menuLink(dish: WallDish, campaignMenu: boolean) {
   if (campaignMenu) {
     const lunch = dish.menu === "lunch" || dish.menu === "xlb";
     const group = lunch || dish.menu === "59" ? 0 : dish.diet === "vegetarian" ? 2 : 1;
-    return `#${landingDishId(lunch ? "lunch" : "tasting-courses", group, dish.menu === "xlb" ? "XIAO LONG BAO" : dish.name)}`;
+    return `#${landingDishId(lunch ? "lunch" : "tasting-courses", group, dish.menu === "xlb" ? menus.xlb.title : dish.name)}`;
   }
   const diet = dish.diet ?? "vegan";
   const anchor = dish.menu === "xlb" ? "menu-detail-xlb" : menuDishId(dish.menu, diet, dish.name);
