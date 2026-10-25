@@ -9,3 +9,6 @@ output/
 
 # Local WordPress source archive; website assets are tracked separately.
 /public/images/wordpress-backup/
+
+# Local task checklists, source notes and verification reports.
+.local/
