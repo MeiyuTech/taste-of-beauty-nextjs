@@ -68,9 +68,9 @@ export function buildMenuViews(catalog: MenuCatalog) {
     return { ...selection, name };
   }));
   const copy = {
-    homeIntro: `Five courses for ${fairytalePrice}. An eight-course tasting menu, vegan or vegetarian, for ${tastingPrice}.`,
-    homeDescription: `Vegan and vegetarian fine dining in West Hollywood, Los Angeles. Five courses for ${fairytalePrice}, eight for ${tastingPrice}. Book your table.`,
-    menusDescription: `See every course: a ${fairytalePrice} five-course vegan dinner, a ${tastingPrice} tasting menu, lunch and xiaolongbao in West Hollywood.`,
+    homeIntro: `Six courses for ${fairytalePrice}. An eight-course tasting menu, vegan or vegetarian, for ${tastingPrice}.`,
+    homeDescription: `Vegan and vegetarian fine dining in West Hollywood, Los Angeles. Six courses for ${fairytalePrice}, eight for ${tastingPrice}. Book your table.`,
+    menusDescription: `See every course: a ${fairytalePrice} six-course vegan dinner, a ${tastingPrice} tasting menu, lunch and xiaolongbao in West Hollywood.`,
   };
   return { menus, sections, xiaolongbaoFillings, dishWallRows, copy };
 }

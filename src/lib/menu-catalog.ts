@@ -10,10 +10,10 @@ export const MENU_CATALOG: MenuCatalog = {
     "fairytale": {
       "title": "The Fairytale Collection",
       "unit": "per person",
-      "eyebrow": "FIVE COURSES · VEGAN · DINNER",
+      "eyebrow": "SIX COURSES · VEGAN · DINNER",
       "image": "/images/dishes/the-secret-garden-900x1200.webp",
-      "alt": "The Secret Garden avocado dish from the five-course menu",
-      "intro": "Five imaginative dishes. One lovely evening.",
+      "alt": "The Secret Garden avocado dish from the six-course menu",
+      "intro": "Six imaginative dishes. One lovely evening.",
       "cta": "Reserve the {{price}} menu",
       "dinner": true,
       "price": 79,
@@ -22,7 +22,8 @@ export const MENU_CATALOG: MenuCatalog = {
         "the-secret-garden",
         "alice-in-wonderland",
         "the-princess-and-the-pea",
-        "jack-and-the-beanstalk"
+        "jack-and-the-beanstalk",
+        "the-enchanted-forest"
       ],
       "tabLabel": "{{price}} Special Tasting"
     },
@@ -106,66 +107,55 @@ export const MENU_CATALOG: MenuCatalog = {
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A velvety emerald soup crafted from cauliflower, green peas, chickpeas, spinach, cashews, almonds, and coconut cream, finished with daylily petals, seaweed, and floral tea powder. Inspired by the road to the Emerald City, it opens the meal with a fresh, luminous sense of wonder.",
-            "Contains: Cashew, Almond"
-          ],
-          "titleSuffix": " (v)"
+            "An emerald soup of cauliflower, green peas, chickpeas, spinach, cashew, almond and coconut cream, with daylily petals, seaweed and floral tea powder.",
+            "VEGAN | CONTAINS: CASHEW, ALMOND"
+          ]
         }
-      },
-      "summary": "Green vegetable soup with nuts and coconut cream."
+      }
     },
     "the-secret-garden": {
       "name": "The Secret Garden",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Avocado gently wraps black garlic and taro purée, resting above purple cabbage and finished with a silky sauce made from chickpeas, coconut, and cashews, topped with baby greens. Fresh greenery meets a quiet earthy depth, like opening the gate to a hidden garden and finding abundance within.",
-            "Contains: Cashew, Coconut"
-          ],
-          "titleSuffix": " (v)"
+            "Avocado, black garlic and taro purée over purple cabbage, with chickpea, coconut and cashew sauce, finished with baby greens.",
+            "VEGAN | CONTAINS: CASHEW, COCONUT"
+          ]
         }
-      },
-      "summary": "Avocado, black garlic and taro."
+      }
     },
     "alice-in-wonderland": {
       "name": "Alice in Wonderland",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Crispy lily bulb tempura is paired with Korean chili sauce and a delicate lattice crisp. Light, layered, and quietly unexpected, it feels like a small wonder discovered after falling through the rabbit hole.",
-            "Contains: Wheat"
-          ],
-          "titleSuffix": " (v)"
+            "Crispy lily bulb tempura with Korean chili sauce and a delicate ice-flower crisp. Light, layered and quietly unexpected.",
+            "VEGAN | CONTAINS: WHEAT"
+          ]
         }
-      },
-      "summary": "Lily bulb tempura with Korean chili sauce."
+      }
     },
     "the-princess-and-the-pea": {
       "name": "The Princess and the Pea",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Golden cakes of jicama, fennel greens, and glutinous rice flour are served with vegan yogurt cream, delicate konjac strands, and house white sauce. Gentle aromas unfold through soft layers, inspired by the tiny pea that remains impossible to forget.",
-            "Contains: Cashew, Coconut"
-          ],
-          "titleSuffix": " (v)"
+            "Golden cakes of jicama, fennel greens and glutinous rice flour, with vegan yogurt cream, delicate konjac strands and house white sauce.",
+            "VEGAN | CONTAINS: CASHEW, COCONUT"
+          ]
         }
-      },
-      "summary": "Jicama cakes with vegan yogurt cream."
+      }
     },
     "jack-and-the-beanstalk": {
       "name": "Jack and the Beanstalk",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A tofu fortune pouch filled with king oyster mushrooms, shiitake mushrooms, bamboo shoots, tofu, and seasonal vegetables, served with green peas. Inspired by Jack’s magical beans and the Asian tradition of fortune pouches, it celebrates the belief that the greatest treasures often arrive hidden inside the humblest gifts.",
-            "Contains: Soy",
-            "*Gluten Free options available upon request"
-          ],
-          "titleSuffix": " (v)"
+            "A tofu fortune pouch of king oyster and shiitake mushrooms, bamboo shoots, tofu and seasonal vegetables, served with green peas.",
+            "VEGAN | CONTAINS: SOY"
+          ]
         }
-      },
-      "summary": "A tofu pouch filled with mushrooms and vegetables."
+      }
     },
     "the-island": {
       "name": "The Island",
@@ -1409,6 +1399,17 @@ export const MENU_CATALOG: MenuCatalog = {
           ]
         }
       }
+    },
+    "the-enchanted-forest": {
+      "name": "The Enchanted Forest",
+      "presentations": {
+        "tasting-courses": {
+          "paragraphs": [
+            "Baby bella mushrooms with black pepper, red wine, onion and garlic, rounded with plant-based cream and butter.",
+            "VEGAN"
+          ]
+        }
+      }
     }
   },
   "sections": [
@@ -1419,20 +1420,18 @@ export const MENU_CATALOG: MenuCatalog = {
         {
           "title": "Tasting Courses",
           "paragraphs": [
-            "Eight courses, each one named for somewhere on this planet. Vegan or vegetarian. {{tastingPrice}} per person."
+            "Six courses for {{fairytalePrice}}, or eight courses, vegan or vegetarian, for {{tastingPrice}} per person."
           ]
         }
       ],
       "groups": [
         {
-          "label": "THE FAIRYTALE COLLECTION",
+          "label": "The Fairytale Collection",
           "entries": [
             {
-              "title": "THE FAIRYTALE COLLECTION",
+              "title": "The Fairytale Collection",
               "paragraphs": [
-                "Five courses · {{fairytalePrice}} per person · vegan A fairytale for the Earthling.",
-                "Five stories you already know, told in vegetables. Available at dinner.",
-                "AVAILABLE NOW"
+                "6-COURSE VEGAN TASTING MENU · {{fairytalePrice}} per person"
               ]
             },
             {
@@ -1453,6 +1452,10 @@ export const MENU_CATALOG: MenuCatalog = {
             },
             {
               "itemId": "jack-and-the-beanstalk",
+              "presentation": "tasting-courses"
+            },
+            {
+              "itemId": "the-enchanted-forest",
               "presentation": "tasting-courses"
             }
           ],

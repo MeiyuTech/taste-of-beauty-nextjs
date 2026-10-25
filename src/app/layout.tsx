@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Taste of Beauty",
   },
   description:
-    "Discover five-course dinners, eight-course tasting menus, lunch and handmade xiaolongbao at Taste of Beauty, West Hollywood.",
+    "Discover six-course dinners, eight-course tasting menus, lunch and handmade xiaolongbao at Taste of Beauty, West Hollywood.",
   openGraph: {
     type: "website",
     locale: "en_US",

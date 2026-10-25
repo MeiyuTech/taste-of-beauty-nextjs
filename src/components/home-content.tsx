@@ -47,10 +47,10 @@ export default function HomeContent() {
           <h2 className="menu-picker-heading">Your next vegan dinner, tasting menu or lunch</h2>
           <div className="choice-grid">
             <InternalLink href="/menus?menu=59">
-              <img src="/images/dishes/the-secret-garden-900x1200.webp" alt="Five-course vegan dinner" />
+              <img src="/images/dishes/the-secret-garden-900x1200.webp" alt="Six-course vegan dinner" />
               <div>
                 <strong>{menus["59"].displayPrice}</strong>
-                <span>5-Course Special Tasting</span>
+                <span>6-Course Special Tasting</span>
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=99">
