@@ -1,6 +1,6 @@
 import type { MenuCatalog } from "./menu-types";
 
-// The current website menu is the authority for this refactor; no PDF changes applied.
+// Menu content preserves the existing website; confirmed PDF tasting prices are applied.
 // Edit prices here only. Missing price means unpriced, never zero or a fallback.
 // Presentations preserve existing differences between tasting, lunch, takeout and
 // the standalone xiaolongbao page. Do not merge similarly named dishes by guesswork.
@@ -16,7 +16,7 @@ export const MENU_CATALOG: MenuCatalog = {
       "intro": "Five imaginative dishes. One lovely evening.",
       "cta": "Reserve the {{price}} menu",
       "dinner": true,
-      "price": 59,
+      "price": 79,
       "courses": [
         "the-wizard-of-oz",
         "the-secret-garden",
@@ -35,7 +35,7 @@ export const MENU_CATALOG: MenuCatalog = {
       "intro": "Take a longer journey through our culinary world.",
       "cta": "Reserve the {{price}} menu",
       "dinner": true,
-      "price": 99,
+      "price": 109,
       "courses": [
         "the-island",
         "the-jade",
