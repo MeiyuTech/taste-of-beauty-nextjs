@@ -1410,6 +1410,76 @@ export const MENU_CATALOG: MenuCatalog = {
           ]
         }
       }
+    },
+    "truffle-grove": {
+      "name": "Truffle Grove",
+      "presentations": {
+        "earth-appetizer": {
+          "paragraphs": [
+            "Tender king oyster mushrooms with fragrant truffle oil.",
+            "VEGAN"
+          ],
+          "price": {
+            "amount": 17
+          }
+        }
+      }
+    },
+    "field-silk": {
+      "name": "Field & Silk",
+      "presentations": {
+        "earth-appetizer": {
+          "paragraphs": [
+            "Malan greens and pressed tofu ribbons, with sesame oil, sea salt and a touch of sugar.",
+            "VEGAN | CONTAINS: SOY, SESAME"
+          ],
+          "price": {
+            "amount": 17
+          }
+        }
+      }
+    },
+    "jade-ribbons": {
+      "name": "Jade Ribbons",
+      "presentations": {
+        "earth-appetizer": {
+          "paragraphs": [
+            "Crisp celtuce ribbons with rice vinegar, sesame oil, sea salt and a trace of sugar.",
+            "VEGAN / GF | CONTAINS: SESAME"
+          ],
+          "price": {
+            "amount": 14
+          }
+        }
+      }
+    },
+    "violet-orchard": {
+      "name": "Violet Orchard",
+      "presentations": {
+        "earth-appetizer": {
+          "paragraphs": [
+            "Purple cabbage, apple and Asian pear, with white sesame, organic olive oil and cilantro.",
+            "VEGAN / GF | CONTAINS: SESAME"
+          ],
+          "price": {
+            "amount": 14
+          }
+        }
+      }
+    },
+    "garden-cucumber": {
+      "name": "Garden Cucumber",
+      "presentations": {
+        "earth-appetizer": {
+          "paragraphs": [
+            "Crisp cucumber with soy sauce, rice vinegar, sesame oil, garlic and a touch of sugar.",
+            "VEGAN | CONTAINS: SOY, SESAME"
+          ],
+          "price": {
+            "amount": 14
+          }
+        }
+      }
     }
   },
   "sections": [
@@ -1709,6 +1779,32 @@ export const MENU_CATALOG: MenuCatalog = {
         }
       ],
       "groups": [
+        {
+          "label": "Earth Appetizer",
+          "entries": [
+            {
+              "itemId": "truffle-grove",
+              "presentation": "earth-appetizer"
+            },
+            {
+              "itemId": "field-silk",
+              "presentation": "earth-appetizer"
+            },
+            {
+              "itemId": "jade-ribbons",
+              "presentation": "earth-appetizer"
+            },
+            {
+              "itemId": "violet-orchard",
+              "presentation": "earth-appetizer"
+            },
+            {
+              "itemId": "garden-cucumber",
+              "presentation": "earth-appetizer"
+            }
+          ],
+          "images": []
+        },
         {
           "label": "Soup",
           "entries": [

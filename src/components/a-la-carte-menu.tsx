@@ -20,7 +20,7 @@ export default function ALaCarteMenu({ groups }: { groups: MenuGroup<MenuEntry>[
       <DishGallery names={group.entries.map((dish) => dish.title)} label={`${group.label} dish photos`} />
       <div className="alc-dishes">{group.entries.map((dish) => <article key={dish.title}>
         <div className="alc-dish-title"><h2>{dish.title}</h2>{dish.price && <span>{dish.price}</span>}</div>
-        {dish.paragraphs.map((text) => <p key={text} className={text.startsWith("Contains:") ? "alc-allergens" : undefined}>{text}</p>)}
+        {dish.paragraphs.map((text) => <p key={text} className={/^(Contains:|VEGAN|VEGETARIAN)/i.test(text) ? "alc-allergens" : undefined}>{text}</p>)}
       </article>)}</div>
     </div>)}
   </section>;
