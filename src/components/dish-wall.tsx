@@ -3,32 +3,14 @@
 import Image from "next/image";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { getDishImage } from "@/lib/dish-images";
-import { menuDishId, type MenuKey } from "@/lib/menus";
+import { dishWallRows } from "@/lib/menu-views";
+import { menus, menuDishId, type MenuKey } from "@/lib/menus";
 import { landingDishId } from "@/lib/landing-menu-links";
 import { internalUrl } from "@/lib/navigation";
 import "./dish-wall.css";
 
 type WallDish = { name: string; menu: MenuKey; diet?: "vegetarian" };
-const rows: WallDish[][] = [
-  [
-    { name: "The Secret Garden", menu: "59" },
-    { name: "The Island", menu: "99" },
-    { name: "The Petal", menu: "99" },
-    { name: "Alice in Wonderland", menu: "59" },
-    { name: "The Rainforest", menu: "99" },
-    { name: "Pearl Fresh", menu: "99", diet: "vegetarian" },
-    { name: "Black Pepper Vegetable Noodles", menu: "lunch" },
-  ],
-  [
-    { name: "The Veil", menu: "99" },
-    { name: "The Jade", menu: "99" },
-    { name: "Jack and the Beanstalk", menu: "59" },
-    { name: "The Forest", menu: "99", diet: "vegetarian" },
-    { name: "The Orchard", menu: "99" },
-    { name: "The Dunes", menu: "99" },
-    { name: "Handmade Xiaolongbao", menu: "xlb" },
-  ],
-];
+const rows: WallDish[][] = dishWallRows;
 
 function menuLink(dish: WallDish, campaignMenu: boolean) {
   if (campaignMenu) {
@@ -42,8 +24,8 @@ function menuLink(dish: WallDish, campaignMenu: boolean) {
 }
 
 function menuLabel(dish: WallDish) {
-  if (dish.menu === "59") return "View the $59 menu";
-  if (dish.menu === "99") return `View the $99 ${dish.diet ?? "vegan"} menu`;
+  if (dish.menu === "59") return `View the ${menus["59"].displayPrice} menu`;
+  if (dish.menu === "99") return `View the ${menus["99"].displayPrice} ${dish.diet ?? "vegan"} menu`;
   return dish.menu === "lunch" ? "View the lunch menu" : "Explore xiaolongbao";
 }
 

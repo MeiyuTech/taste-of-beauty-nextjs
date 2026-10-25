@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import Image from "next/image";
-import menuSections from "@/lib/landing-menus.json";
+import menuSections from "@/lib/landing-menus";
 import DishGallery from "./dish-gallery";
 import { getDishImage } from "@/lib/dish-images";
 import { landingDishId } from "@/lib/landing-menu-links";
 
-type Entry = { title: string; price: string; paragraphs: string[] };
+import type { MenuEntry as Entry } from "@/lib/menu-types";
 type MenuImage = { src: string; alt: string; caption?: string };
 
 function MenuEntries({ entries, groupLabel, sectionId, groupIndex }: { entries: Entry[]; groupLabel?: string; sectionId?: string; groupIndex?: number }) {

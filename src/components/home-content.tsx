@@ -1,3 +1,4 @@
+import { menus, menuCopy } from "@/lib/menus";
 import DiningChoice from "./dining-choice";
 import DishWall from "./dish-wall";
 import GoogleReviews from "./google-reviews";
@@ -23,7 +24,7 @@ export default function HomeContent() {
             <em>Beautiful plans.</em>
           </p>
           <p className="intro">
-            Five courses for $59. An eight-course tasting menu, vegan or vegetarian, for $99.
+            {menuCopy.homeIntro}
             <br />
             Or make lunch your favorite part of the day.
           </p>
@@ -48,14 +49,14 @@ export default function HomeContent() {
             <InternalLink href="/menus?menu=59">
               <img src="/images/dishes/the-secret-garden-900x1200.webp" alt="Five-course vegan dinner" />
               <div>
-                <strong>$59</strong>
+                <strong>{menus["59"].displayPrice}</strong>
                 <span>5-Course Special Tasting</span>
               </div>
             </InternalLink>
             <InternalLink href="/menus?menu=99">
               <img src="/images/dishes/the-island.webp" alt="The Island pumpkin soup from the eight-course tasting menu" />
               <div>
-                <strong>$99</strong>
+                <strong>{menus["99"].displayPrice}</strong>
                 <span>8-Course Tasting Menu</span>
               </div>
             </InternalLink>

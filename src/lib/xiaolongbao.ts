@@ -16,11 +16,5 @@ export const xiaolongbaoFaqs = [
   { question: "Do you serve vegan dim sum?", answer: "Our lunch menu pairs xiaolongbao with pan-seared vegan buns and mushroom dumplings — small, shareable plates in the dim sum spirit.", href: "/menus?menu=lunch", label: "See the lunch menu" },
 ];
 
-// Source: the restaurant's Uber Eats menu, checked 2026-10-19.
-// https://www.ubereats.com/store/tob-vegan-kitchen-616-n-robertson-blvd/ZX301TfMQO2EqEOCgYbAUA
-export const xiaolongbaoFillings = [
-  { name: "Shiitake & Bok Choy", description: "Bok choy with shiitake mushrooms and sesame.", diet: "Vegan", label: "V" },
-  { name: "Shepherd’s Purse & Tofu", description: "Shepherd’s purse greens with dried tofu.", diet: "Vegan", label: "V" },
-  { name: "Mapo Tofu", description: "Tofu seasoned with Sichuan spices and a little heat.", diet: "Vegan", label: "V" },
-  { name: "Zucchini, Egg & Carrot", description: "A vegetable and egg filling with zucchini and carrot.", diet: "Vegetarian", label: "VG" },
-];
+// Unpriced standalone-page fillings live in the shared catalog.
+export { xiaolongbaoFillings } from "./menu-views";

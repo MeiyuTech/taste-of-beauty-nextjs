@@ -73,12 +73,6 @@ export function DiningProvider({
     </DiningContext.Provider>
   );
 }
-const tabLabels = {
-  "59": "$59 Special Tasting",
-  "99": "$99 Tasting Menu",
-  lunch: "Lunch",
-  xlb: "Xiaolongbao",
-};
 export function MenuPanel() {
   const { active, select } = useContext(DiningContext);
   const [diet, setDiet] = useState<"vegan" | "vegetarian">("vegan");
@@ -145,7 +139,7 @@ export function MenuPanel() {
             onClick={() => choose(key)}
             onKeyDown={(e) => keyboard(e, index)}
           >
-            {tabLabels[key]}
+            {menus[key].tabLabel}
           </button>
         ))}
       </div>
@@ -175,7 +169,7 @@ export function MenuPanel() {
               {menu.title}
             </h2>
             <div className="price">
-              {menu.price}
+              {menu.displayPrice}
               <small>{menu.unit}</small>
             </div>
           </div>
@@ -301,7 +295,7 @@ export function BookingForm() {
         >
           {menuKeys.map((key) => (
             <option key={key} value={key}>
-              {tabLabels[key]}
+              {menus[key].tabLabel}
             </option>
           ))}
         </select>

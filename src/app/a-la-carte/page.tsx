@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/site-shell";
 import InternalLink from "@/components/internal-link";
 import ALaCarteMenu from "@/components/a-la-carte-menu";
-import menus from "@/lib/landing-menus.json";
+import menus from "@/lib/landing-menus";
 import "./a-la-carte.css";
 
 export const metadata: Metadata = {

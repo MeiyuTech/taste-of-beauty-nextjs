@@ -15,7 +15,7 @@ A Next.js App Router website based on the approved `TOB_B_Designer_Package` (Oct
 - `/index.html`, `/version-b.html` and `/xiaolongbao.html`: permanent redirects from the handoff's legacy URLs; query parameters are retained.
 - `/robots.txt` and `/sitemap.xml`: generated metadata routes.
 
-Edit menu data in `src/lib/menus.ts`, external booking/ordering destinations in `src/lib/booking.ts`, and homepage content in `src/components/home-content.tsx`. Approved CSS is scoped separately to each page to prevent cross-page style leakage. Images are served locally from `public/images`; the story panels use responsive Next.js images from the supplied media library, cream gradients and dark typography; no remote image dependency or font request is needed.
+Edit menu data in `src/lib/menu-catalog.ts`, external booking/ordering destinations in `src/lib/booking.ts`, and homepage content in `src/components/home-content.tsx`. Approved CSS is scoped separately to each page to prevent cross-page style leakage. Images are served locally from `public/images`; the story panels use responsive Next.js images from the supplied media library, cream gradients and dark typography; no remote image dependency or font request is needed.
 
 ## Reservations
 
@@ -77,3 +77,15 @@ Square hosts the embedded purchase form, available amounts, delivery options and
 ## Image library
 
 Website images are organized by subject under `public/images/`. See [Image library](docs/image-library.md) for folder conventions and page assignments, and [Path map](docs/image-path-map.json) for every previous path, current path, dimensions and SHA-256. Original WordPress backups retain their original upload paths for provenance.
+
+## Shared menu catalog
+
+`MENU_CATALOG` in `src/lib/menu-catalog.ts` is the single source for the current website menu. The October 25 refactor preserves all existing prices, descriptions, courses, dietary labels and unpriced displays; it does not apply the PDF menu.
+
+- `dining.fairytale.price` and `dining.tasting.price` hold the two existing tasting prices as USD numbers. Homepage copy, cards, photo links, menu tabs, reservation choices, campaign introductions, metadata and Menu JSON-LD derive their prices from these fields.
+- `items` uses stable dish IDs. Each item has one name, an optional short summary, and named presentations for tasting, a la carte, lunch, takeout or the standalone xiaolongbao page. Presentations retain their existing descriptions and dietary suffixes; ambiguous or differently named offerings remain separate.
+- A presentation's optional `price` contains an `amount` and optional display `suffix` (for example, a portion label). Omit `price` when the existing presentation is unpriced. Do not infer a price from another presentation. Lunch summaries and standalone xiaolongbao fillings stay unpriced even when the full lunch menu has prices.
+- `sections` holds menu order, group headings, photos and item references. `dining.*.courses` and `vegetarian` reference the same item IDs; `dishWall` selects featured dishes by ID.
+- `menu-views.ts` adapts the catalog for rendering. `menus.ts` and `landing-menus.ts` are compatibility entry points, not independent menu sources. Existing `menu=59`, `menu=99` and dish anchors remain compatible; numeric URL keys are identifiers, not price values.
+
+Run `npm run typecheck` and `npm test` after catalog changes. The catalog tests check price propagation, unpriced presentations, shared names, portions and structured data. Review the local homepage, menu tabs, a la carte categories and campaign menus before release.

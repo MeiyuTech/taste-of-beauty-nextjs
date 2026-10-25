@@ -3,8 +3,8 @@
 import { useRef, useState, type KeyboardEvent } from "react";
 import DishGallery from "./dish-gallery";
 
-type MenuGroup = { label: string; entries: { title: string; price: string; paragraphs: string[] }[] };
-export default function ALaCarteMenu({ groups }: { groups: MenuGroup[] }) {
+import type { MenuEntry, MenuGroup } from "@/lib/menu-types";
+export default function ALaCarteMenu({ groups }: { groups: MenuGroup<MenuEntry>[] }) {
   const [active, setActive] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   function keyboard(event: KeyboardEvent<HTMLButtonElement>, index: number) {
@@ -19,7 +19,7 @@ export default function ALaCarteMenu({ groups }: { groups: MenuGroup[] }) {
     {groups.map((group, index) => <div key={group.label} id={`alc-panel-${index}`} role="tabpanel" aria-labelledby={`alc-tab-${index}`} tabIndex={0} hidden={active !== index}>
       <DishGallery names={group.entries.map((dish) => dish.title)} label={`${group.label} dish photos`} />
       <div className="alc-dishes">{group.entries.map((dish) => <article key={dish.title}>
-        <div className="alc-dish-title"><h2>{dish.title}</h2><span>{dish.price}</span></div>
+        <div className="alc-dish-title"><h2>{dish.title}</h2>{dish.price && <span>{dish.price}</span>}</div>
         {dish.paragraphs.map((text) => <p key={text} className={text.startsWith("Contains:") ? "alc-allergens" : undefined}>{text}</p>)}
       </article>)}</div>
     </div>)}

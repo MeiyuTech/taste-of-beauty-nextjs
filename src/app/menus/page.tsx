@@ -1,3 +1,4 @@
+import { menuCopy } from "@/lib/menus";
 import type { Metadata } from "next";
 import SiteShell from "@/components/site-shell";
 import { DiningProvider, MenuPanel } from "@/components/dining";
@@ -8,7 +9,7 @@ import { menuSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Vegan Tasting Menu in West Hollywood",
   description:
-    "See every course: a $59 five-course vegan dinner, a $99 tasting menu, lunch and xiaolongbao in West Hollywood.",
+    menuCopy.menusDescription,
   ...(siteUrl ? { alternates: { canonical: "/menus" } } : {}),
 };
 export default function Page() {
