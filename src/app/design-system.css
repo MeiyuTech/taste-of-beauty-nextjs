@@ -413,3 +413,6 @@
 
 /* Dietary labels stay readable alongside the exact menu descriptions. */
 .theme-b.tob-design .course-copy .course-diet { font-size: 14px; line-height: 1.5; margin-top: 8px; }
+
+.theme-b.tob-design .xlb-fillings .filling-title { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.theme-b.tob-design .xlb-fillings .filling-price { flex: none; font-size: 18px; }

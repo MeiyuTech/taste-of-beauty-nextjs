@@ -34,7 +34,6 @@ test("a la carte pricing never leaks into an unpriced tasting presentation", () 
   assert.equal(entries(views, "a-la-carte").find((entry) => entry.title === "The Island (v, gf)")!.price, "$21");
   assert.equal(entries(views, "tasting-courses").find((entry) => entry.title === "The Island")!.price, undefined);
   assert.ok(entries(views, "drink").every((entry) => entry.price === undefined));
-  assert.ok(views.xiaolongbaoFillings.every((entry) => !("price" in entry)));
   assert.equal(views.menus.lunch.price, undefined);
   assert.equal(views.menus.xlb.price, undefined);
   assert.equal(views.menus.lunch.displayPrice, "A la carte");
@@ -60,4 +59,17 @@ test("portion labels and zero prices are explicit, and schema offers use catalog
   assert.deepEqual(menuSchema.hasMenuSection.map((section) => section.offers?.price), [
     String(MENU_CATALOG.dining.fairytale.price), String(MENU_CATALOG.dining.tasting.price), String(MENU_CATALOG.dining.tasting.price), undefined,
   ]);
+});
+
+test("Bao prices and dietary labels stay consistent across standalone and full menus", () => {
+  const catalog = structuredClone(MENU_CATALOG);
+  const id = catalog.xiaolongbaoFillings[0];
+  catalog.items[id].presentations["handcrafted-bao"].price = { amount: 22 };
+  const views = buildMenuViews(catalog);
+  assert.equal(views.xiaolongbaoFillings[0].price, "$22");
+  for (const section of ["lunch", "a-la-carte"]) {
+    const bao = entries(views, section).find((entry) => entry.title === views.xiaolongbaoFillings[0].name)!;
+    assert.equal(bao.price, "$22");
+    assert.equal(bao.paragraphs[0], views.xiaolongbaoFillings[0].dietaryLabel);
+  }
 });

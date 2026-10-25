@@ -58,9 +58,9 @@ export function buildMenuViews(catalog: MenuCatalog) {
     groups: section.groups.map((group) => ({ ...group, entries: group.entries.map(entry) })),
   }));
   const xiaolongbaoFillings = catalog.xiaolongbaoFillings.map((id) => {
-    const value = catalog.items[id]?.presentations.xiaolongbao;
+    const value = catalog.items[id]?.presentations["handcrafted-bao"];
     if (!value) throw new Error(`Missing xiaolongbao filling: ${id}`);
-    return { name: catalog.items[id].name, description: value.paragraphs[0], diet: value.diet!, label: value.label! };
+    return { name: catalog.items[id].name, dietaryLabel: value.paragraphs[0], diet: value.diet!, price: formatMenuPrice(value.price?.amount) };
   });
   const dishWallRows = catalog.dishWall.map((row) => row.map(({ itemId, label, ...selection }) => {
     const name = itemId ? catalog.items[itemId]?.name : label;

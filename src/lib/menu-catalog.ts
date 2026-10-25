@@ -84,7 +84,7 @@ export const MENU_CATALOG: MenuCatalog = {
       "tabLabel": "Lunch"
     },
     "xiaolongbao": {
-      "title": "Handmade Vegan Xiaolongbao",
+      "title": "Handcrafted Bao",
       "unit": "Daily selection",
       "eyebrow": "DINE IN · PICKUP · DELIVERY",
       "image": "/images/xiaolongbao/steamer-with-lid.webp",
@@ -1056,7 +1056,7 @@ export const MENU_CATALOG: MenuCatalog = {
       }
     },
     "shiitake-bok-choy-dried-tofu-bao": {
-      "name": "Shiitake, Bok Choy & Dried Tofu Bao",
+      "name": "Shiitake, Bok Choy & Dried Tofu",
       "presentations": {
         "lunch": {
           "paragraphs": [
@@ -1066,11 +1066,20 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 15
           },
           "titleSuffix": " (V)"
+        },
+        "handcrafted-bao": {
+          "paragraphs": [
+            "VEGAN | SOY, WHEAT"
+          ],
+          "price": {
+            "amount": 15
+          },
+          "diet": "Vegan"
         }
       }
     },
     "zucchini-plant-based-egg-carrot-bao": {
-      "name": "Zucchini, Plant-Based Egg & Carrot Bao",
+      "name": "Zucchini, Egg & Carrot",
       "presentations": {
         "lunch": {
           "paragraphs": [
@@ -1080,11 +1089,20 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 16
           },
           "titleSuffix": " (V)"
+        },
+        "handcrafted-bao": {
+          "paragraphs": [
+            "VEGETARIAN | EGG, WHEAT"
+          ],
+          "price": {
+            "amount": 16
+          },
+          "diet": "Vegetarian"
         }
       }
     },
     "mustard-greens-dried-tofu-bao": {
-      "name": "Mustard Greens & Dried Tofu Bao",
+      "name": "Greens and Dry Tofu",
       "presentations": {
         "lunch": {
           "paragraphs": [
@@ -1094,11 +1112,20 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 16
           },
           "titleSuffix": " (V)"
+        },
+        "handcrafted-bao": {
+          "paragraphs": [
+            "VEGAN | SOY, WHEAT"
+          ],
+          "price": {
+            "amount": 16
+          },
+          "diet": "Vegan"
         }
       }
     },
     "mapo-tofu-bao": {
-      "name": "Mapo Tofu Bao",
+      "name": "Mapo Tofu",
       "presentations": {
         "lunch": {
           "paragraphs": [
@@ -1108,11 +1135,20 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 17
           },
           "titleSuffix": " (V)"
+        },
+        "handcrafted-bao": {
+          "paragraphs": [
+            "VEGAN | SOY, WHEAT"
+          ],
+          "price": {
+            "amount": 17
+          },
+          "diet": "Vegan"
         }
       }
     },
     "chocolate-glutinous-rice-bao": {
-      "name": "Chocolate & Glutinous Rice Bao",
+      "name": "Chocolate & Glutinous Rice",
       "presentations": {
         "lunch": {
           "paragraphs": [
@@ -1122,6 +1158,15 @@ export const MENU_CATALOG: MenuCatalog = {
           "price": {
             "amount": 17
           }
+        },
+        "handcrafted-bao": {
+          "paragraphs": [
+            "VEGETARIAN | WHEAT"
+          ],
+          "price": {
+            "amount": 17
+          },
+          "diet": "Vegetarian"
         }
       }
     },
@@ -1874,6 +1919,38 @@ export const MENU_CATALOG: MenuCatalog = {
             }
           ],
           "images": []
+        },
+        {
+          "label": "Handcrafted Bao",
+          "entries": [
+            {
+              "title": "Handcrafted Bao",
+              "paragraphs": [
+                "Eight pieces per basket"
+              ]
+            },
+            {
+              "itemId": "shiitake-bok-choy-dried-tofu-bao",
+              "presentation": "handcrafted-bao"
+            },
+            {
+              "itemId": "zucchini-plant-based-egg-carrot-bao",
+              "presentation": "handcrafted-bao"
+            },
+            {
+              "itemId": "mustard-greens-dried-tofu-bao",
+              "presentation": "handcrafted-bao"
+            },
+            {
+              "itemId": "mapo-tofu-bao",
+              "presentation": "handcrafted-bao"
+            },
+            {
+              "itemId": "chocolate-glutinous-rice-bao",
+              "presentation": "handcrafted-bao"
+            }
+          ],
+          "images": []
         }
       ],
       "images": [
@@ -2237,28 +2314,30 @@ export const MENU_CATALOG: MenuCatalog = {
               ]
             },
             {
-              "title": "XIAO LONG BAO",
-              "paragraphs": []
+              "title": "Handcrafted Bao",
+              "paragraphs": [
+                "Eight pieces per basket"
+              ]
             },
             {
               "itemId": "shiitake-bok-choy-dried-tofu-bao",
-              "presentation": "lunch"
+              "presentation": "handcrafted-bao"
             },
             {
               "itemId": "zucchini-plant-based-egg-carrot-bao",
-              "presentation": "lunch"
+              "presentation": "handcrafted-bao"
             },
             {
               "itemId": "mustard-greens-dried-tofu-bao",
-              "presentation": "lunch"
+              "presentation": "handcrafted-bao"
             },
             {
               "itemId": "mapo-tofu-bao",
-              "presentation": "lunch"
+              "presentation": "handcrafted-bao"
             },
             {
               "itemId": "chocolate-glutinous-rice-bao",
-              "presentation": "lunch"
+              "presentation": "handcrafted-bao"
             },
             {
               "title": "BAO & DUMPLINGS",
@@ -2344,10 +2423,11 @@ export const MENU_CATALOG: MenuCatalog = {
     }
   ],
   "xiaolongbaoFillings": [
-    "shiitake-bok-choy",
-    "shepherds-purse-tofu",
-    "mapo-tofu",
-    "zucchini-egg-carrot"
+    "shiitake-bok-choy-dried-tofu-bao",
+    "zucchini-plant-based-egg-carrot-bao",
+    "mustard-greens-dried-tofu-bao",
+    "mapo-tofu-bao",
+    "chocolate-glutinous-rice-bao"
   ],
   "dishWall": [
     [

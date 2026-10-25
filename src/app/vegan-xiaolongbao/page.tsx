@@ -111,19 +111,16 @@ export default function XiaolongbaoPage() {
             />
             <div className="xlb-selection-copy">
               <h3>
-                Xiaolongbao
+                Handcrafted Bao
               </h3>
               <p>
-                Browse the current ordering menu for available fillings,
-                portions and prices. Offerings may vary between dine-in and
-                delivery.
+                Eight pieces per basket
               </p>
               <ul className="xlb-fillings">
-                {xiaolongbaoFillings.map(({ name, description, diet, label }) => (
-                  <li key={name}><h3>{name} <span className="filling-diet">{label} · {diet}</span></h3><p>{description}</p></li>
+                {xiaolongbaoFillings.map(({ name, dietaryLabel, price }) => (
+                  <li key={name}><h3 className="filling-title"><span>{name}</span><span className="filling-price">{price}</span></h3><p>{dietaryLabel}</p></li>
                 ))}
               </ul>
-              <p className="filling-key">V = Vegan · VG = Vegetarian. Check today’s menu for availability.</p>
               <div className="diet-note">
                 <b>
                   A note on dietary preferences
