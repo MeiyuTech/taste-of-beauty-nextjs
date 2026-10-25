@@ -27,7 +27,7 @@ export const MENU_CATALOG: MenuCatalog = {
       "tabLabel": "{{price}} Special Tasting"
     },
     "tasting": {
-      "title": "The Tasting Experience",
+      "title": "8-Course Tasting Menus",
       "unit": "per person",
       "eyebrow": "EIGHT COURSES · VEGAN OR VEGETARIAN",
       "image": "/images/dishes/lotus-plated-dish.webp",
@@ -42,21 +42,25 @@ export const MENU_CATALOG: MenuCatalog = {
         "the-veil",
         "the-petal",
         "the-dunes",
-        "the-orchard",
+        "silken-earth",
         "the-lagoon",
         "the-rainforest"
       ],
       "vegetarian": [
         "pearl-fresh",
         "the-sunlit-grove",
-        "the-lotus-pond",
+        "golden-garden",
         "mountains-and-rivers",
         "the-hillside",
         "the-stone-garden",
         "the-forest",
         "the-harvest"
       ],
-      "tabLabel": "{{price}} Tasting Menu"
+      "tabLabel": "{{price}} Tasting Menu",
+      "variantTitles": {
+        "vegan": "The Plant Journey",
+        "vegetarian": "The Garden Journey"
+      }
     },
     "lunch": {
       "title": "A Better Lunch Break",
@@ -168,9 +172,9 @@ export const MENU_CATALOG: MenuCatalog = {
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A gentle shore of golden pumpkin and celery, where rice paper sails drift beside the earthy whisper of golden ear mushroom."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Golden pumpkin and celery, with delicate rice paper sails and the earthy whisper of golden ear mushroom.",
+            "VEGAN / GF"
+          ]
         },
         "a-la-carte": {
           "paragraphs": [
@@ -181,60 +185,51 @@ export const MENU_CATALOG: MenuCatalog = {
           },
           "titleSuffix": " (v, gf)"
         }
-      },
-      "summary": "Pumpkin, celery and golden ear mushroom."
+      }
     },
     "the-jade": {
       "name": "The Jade",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "NEW!",
-            "A calm green field of quinoa, tofu, and avocado, layered with cucumber, lettuce, cherry tomato, and nori sesame crumble, dressed with mirin, mustard, sesame, and a gentle touch of chili."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Quinoa, tofu, avocado, cucumber, lettuce and cherry tomato; nori sesame crumble, with mirin, mustard, sesame and a touch of chili.",
+            "VEGAN / GF"
+          ]
         }
-      },
-      "summary": "Quinoa, tofu and avocado."
+      }
     },
     "the-veil": {
       "name": "The Veil",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "NEW!",
-            "Perilla leaves wrap oyster mushrooms and vegan cheese, touched with tea and lifted in a delicate tempura crisp, with cucumber, cherry tomato, lettuce, and a scatter of nori sesame, brightened by a parsley–almond dressing."
-          ],
-          "titleSuffix": " (v)"
+            "Perilla, oyster mushrooms and vegan cheese in a tea-touched tempura crisp, with cucumber, cherry tomato, lettuce, nori sesame and parsley-almond dressing.",
+            "VEGAN / GF"
+          ]
         }
-      },
-      "summary": "Perilla, oyster mushroom and vegan cheese tempura."
+      }
     },
     "the-petal": {
       "name": "The Petal",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "NEW!",
-            "Pear, apple, and dragon fruit open in a soft pink brightness, resting over purple sweet potato and crisp chips, with a cool breath of mint and a gentle finish of vegan mayo."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Pear, apple and dragon fruit over purple sweet potato and crisp chips, with fresh mint and vegan mayo.",
+            "VEGAN / GF"
+          ]
         }
-      },
-      "summary": "Fresh fruit with purple sweet potato."
+      }
     },
     "the-dunes": {
       "name": "The Dunes",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Cactus paddle and aloe meet sun-sweet mango, bright yuzu, and fresh wasabi, finished with a glint of edible gold.",
-            "Contains: Sesame."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Cactus paddle and aloe, sun-sweet mango, bright yuzu and fresh wasabi, finished with a glint of edible gold.",
+            "VEGAN / GF | CONTAINS: SESAME"
+          ]
         }
-      },
-      "summary": "Cactus, aloe and mango with yuzu."
+      }
     },
     "the-orchard": {
       "name": "The Orchard",
@@ -253,21 +248,20 @@ export const MENU_CATALOG: MenuCatalog = {
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A pumpkin blossom drifts across a golden curry pool, accompanied by fine cactus strands and the gentle warmth of Korean chili. Bright and aromatic, like a flower floating beneath the afternoon sun.",
+            "A pumpkin blossom over golden curry, with fine cactus strands and the gentle warmth of Korean chili.",
             "VEGAN"
           ]
         }
-      },
-      "summary": "Pumpkin blossom in golden curry."
+      }
     },
     "the-rainforest": {
       "name": "The Rainforest",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Creamy risotto with enoki, asparagus, and garden peas wrapped in banana leaf, topped with vegan parmesan."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Creamy risotto with enoki mushrooms, edamame and asparagus, wrapped in banana leaf and finished with vegan parmesan.",
+            "VEGAN / GF"
+          ]
         },
         "a-la-carte": {
           "paragraphs": [
@@ -278,18 +272,16 @@ export const MENU_CATALOG: MenuCatalog = {
           },
           "titleSuffix": " (v, gf)"
         }
-      },
-      "summary": "Risotto with enoki, asparagus and peas."
+      }
     },
     "pearl-fresh": {
       "name": "Pearl Fresh",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A delicate harmony of assorted mushrooms and bamboo fungus, centered by the gentle richness of quail egg.",
-            "Contains: Egg."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Assorted mushrooms and bamboo fungus, centered by the delicate richness of quail egg.",
+            "VEGETARIAN / GF | CONTAINS: EGG"
+          ]
         },
         "a-la-carte": {
           "paragraphs": [
@@ -299,20 +291,18 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 18
           }
         }
-      },
-      "summary": "Mushroom broth, bamboo fungus and quail egg."
+      }
     },
     "the-sunlit-grove": {
       "name": "The Sunlit Grove",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Avocado, golden kiwi, yellow watermelon, and pineapple gather in a bright tropical composition, finished with a light scatter of red quinoa. Fresh and luminous, like sunlight filtering through a fruit-filled grove.",
+            "Avocado, golden kiwi, yellow watermelon and pineapple, beneath a light scatter of red quinoa.",
             "VEGETARIAN / GF"
           ]
         }
-      },
-      "summary": "Avocado, kiwi, watermelon and pineapple."
+      }
     },
     "the-lotus-pond": {
       "name": "The Lotus Pond",
@@ -331,19 +321,18 @@ export const MENU_CATALOG: MenuCatalog = {
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Morel mushrooms with silken tofu, tender mushroom, and creamy mashed potato, dustedwith barley leaf powder."
-          ],
-          "titleSuffix": " (v, gf)"
+            "Morel mushrooms with silken tofu, tender mushroom and creamy mashed potato, dusted with barley leaf powder.",
+            "VEGAN / GF"
+          ]
         }
-      },
-      "summary": "Morel mushrooms, silken tofu and potato."
+      }
     },
     "the-hillside": {
       "name": "The Hillside",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Charred eggplant embraced by bright aji verde, mellow vegan cheese, and the aromatic lift of shiso leaves.",
+            "Charred eggplant with bright aji verde, mellow vegan cheese and the aromatic lift of shiso leaves.",
             "VEGAN / GF"
           ]
         },
@@ -356,21 +345,18 @@ export const MENU_CATALOG: MenuCatalog = {
           },
           "titleSuffix": " (v, gf)"
         }
-      },
-      "summary": "Eggplant, aji verde and vegan cheese."
+      }
     },
     "the-stone-garden": {
       "name": "The Stone Garden",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "Two dark blocks of black bean and black sesame tofu rest in a composed arrangement, enriched with egg and peanut. Earthy and quietly striking, like polished stones set within a garden.",
-            "VEGETARIAN",
-            "CONTAINS: EGG, PEANUT, SESAME"
+            "Black bean and black sesame tofu, enriched with egg and peanut. Earthy and quietly striking.",
+            "VEGETARIAN | CONTAINS: EGG, PEANUT, SESAME"
           ]
         }
-      },
-      "summary": "Black bean and sesame tofu with egg and peanut."
+      }
     },
     "the-forest": {
       "name": "The Forest",
@@ -378,7 +364,7 @@ export const MENU_CATALOG: MenuCatalog = {
         "tasting-courses": {
           "paragraphs": [
             "Oyster mushrooms seared over charcoal with rosemary shoyu butter, rich and aromatic.",
-            "Contains: Dairy."
+            "VEGETARIAN | CONTAINS: DAIRY"
           ]
         },
         "a-la-carte": {
@@ -389,22 +375,18 @@ export const MENU_CATALOG: MenuCatalog = {
             "amount": 16
           }
         }
-      },
-      "summary": "Charcoal-seared oyster mushrooms with shoyu butter."
+      }
     },
     "the-harvest": {
       "name": "The Harvest",
       "presentations": {
         "tasting-courses": {
           "paragraphs": [
-            "A golden Basque-style cake crafted from pumpkin and cashew, with a softly caramelized crown and a rich, tender center. Warm and comforting, like an autumn hillside touched by the last light of day.",
-            "VEGAN",
-            "CONTAINS: CASHEW",
-            "*Gluten Free options available upon request"
+            "Basque-style pumpkin and cashew cake, with a softly caramelized crown and a tender center.",
+            "VEGAN | CONTAINS: CASHEW"
           ]
         }
-      },
-      "summary": "Pumpkin and cashew Basque-style cake."
+      }
     },
     "the-grassland": {
       "name": "The Grassland",
@@ -1405,6 +1387,28 @@ export const MENU_CATALOG: MenuCatalog = {
           "label": "VG"
         }
       }
+    },
+    "silken-earth": {
+      "name": "Silken Earth",
+      "presentations": {
+        "tasting-courses": {
+          "paragraphs": [
+            "French-inspired vegan foie gras of eggplant and cashew, delicate and silken, with a gentle trace of sweetness.",
+            "VEGAN | CONTAINS: CASHEW"
+          ]
+        }
+      }
+    },
+    "golden-garden": {
+      "name": "Golden Garden",
+      "presentations": {
+        "tasting-courses": {
+          "paragraphs": [
+            "Tender vegetables, chickpeas and edamame in golden vegetarian curry, with gentle spice and garden sweetness.",
+            "VEGAN | CONTAINS: SOY"
+          ]
+        }
+      }
     }
   },
   "sections": [
@@ -1481,11 +1485,13 @@ export const MENU_CATALOG: MenuCatalog = {
           ]
         },
         {
-          "label": "8-Course Vegan Menu",
+          "label": "The Plant Journey",
           "entries": [
             {
-              "title": "8-Course Vegan",
-              "paragraphs": []
+              "title": "The Plant Journey",
+              "paragraphs": [
+                "8-COURSE VEGAN TASTING MENU"
+              ]
             },
             {
               "itemId": "the-island",
@@ -1508,7 +1514,7 @@ export const MENU_CATALOG: MenuCatalog = {
               "presentation": "tasting-courses"
             },
             {
-              "itemId": "the-orchard",
+              "itemId": "silken-earth",
               "presentation": "tasting-courses"
             },
             {
@@ -1554,11 +1560,13 @@ export const MENU_CATALOG: MenuCatalog = {
           ]
         },
         {
-          "label": "8-Course Vegetarian Menu",
+          "label": "The Garden Journey",
           "entries": [
             {
-              "title": "8-Course Vegetarian",
-              "paragraphs": []
+              "title": "The Garden Journey",
+              "paragraphs": [
+                "8-COURSE VEGETARIAN TASTING MENU"
+              ]
             },
             {
               "itemId": "pearl-fresh",
@@ -1569,7 +1577,7 @@ export const MENU_CATALOG: MenuCatalog = {
               "presentation": "tasting-courses"
             },
             {
-              "itemId": "the-lotus-pond",
+              "itemId": "golden-garden",
               "presentation": "tasting-courses"
             },
             {
@@ -2291,10 +2299,6 @@ export const MENU_CATALOG: MenuCatalog = {
         "itemId": "the-forest",
         "menu": "99",
         "diet": "vegetarian"
-      },
-      {
-        "itemId": "the-orchard",
-        "menu": "99"
       },
       {
         "itemId": "the-dunes",

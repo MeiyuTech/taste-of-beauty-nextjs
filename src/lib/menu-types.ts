@@ -1,6 +1,6 @@
 export type MenuKey = "59" | "99" | "lunch" | "xlb";
 export type DiningId = "fairytale" | "tasting" | "lunch" | "xiaolongbao";
-export type Course = [name: string, description: string];
+export type Course = [name: string, description: string, dietaryLabel?: string];
 export interface MenuPrice { amount: number; suffix?: string }
 export interface CatalogEntry {
   title: string;
@@ -26,6 +26,7 @@ export interface MenuSection<T> {
 }
 export interface DiningDefinition {
   title: string;
+  variantTitles?: { vegan: string; vegetarian: string };
   price?: number;
   priceLabel?: string;
   unit: string;

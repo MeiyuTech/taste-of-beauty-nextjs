@@ -146,6 +146,7 @@ export function MenuPanel() {
       {menuKeys.map((key) => {
         const menu = menus[key];
         const courses = key === "99" && diet === "vegetarian" ? menu.vegetarian! : menu.courses;
+        const title = menu.variantTitles?.[diet] ?? menu.title;
         const photoNames = courses.map(([name]) => name).filter((name) => getDishImage(name));
         return <div
         key={key}
@@ -157,7 +158,7 @@ export function MenuPanel() {
         tabIndex={0}
       >
         <div className="detail-visual">
-          {photoNames.length ? <DishGallery key={`${key}-${diet}`} names={photoNames} label={`${menu.title} dish photos`} featured /> : <>
+          {photoNames.length ? <DishGallery key={`${key}-${diet}`} names={photoNames} label={`${title} dish photos`} featured /> : <>
             <img src={menu.image} alt={menu.alt} loading="lazy" />
             <div className="photo-label">TASTE OF BEAUTY · {menu.title}</div>
           </>}
@@ -166,7 +167,7 @@ export function MenuPanel() {
           <div className="eyebrow">{menu.eyebrow}</div>
           <div className="detail-heading">
             <h2>
-              {menu.title}
+              {title}
             </h2>
             <div className="price">
               {menu.displayPrice}
@@ -201,12 +202,12 @@ export function MenuPanel() {
           )}
           {(key === "99" ? ["vegan", "vegetarian"] as const : ["vegan"] as const).map((variant) => (
             <section key={variant} hidden={key === "99" && diet !== variant} aria-label={key === "99" ? `${variant} tasting menu` : undefined}>
-              {key === "99" && <h2 className="diet-heading">The Tasting Experience – {variant === "vegan" ? "Vegan" : "Vegetarian"}</h2>}
+
               <ol className="dish-list">
                 {(variant === "vegetarian" ? menu.vegetarian! : menu.courses).map((course, index) => (
                   <li key={course[0]} id={menuDishId(key, variant, course[0])} tabIndex={-1}>
                     <span className="course-n">{String(index + 1).padStart(2, "0")}</span>
-                    <div className="course-copy"><h3>{course[0]}</h3><p>{course[1]}</p></div>
+                    <div className="course-copy"><h3>{course[0]}</h3><p>{course[1]}</p>{course[2] && <p className="course-diet">{course[2]}</p>}</div>
                   </li>
                 ))}
               </ol>

@@ -13,7 +13,10 @@ export function formatMenuPrice(amount?: number) {
 export function buildMenuViews(catalog: MenuCatalog) {
   const courses = (ids: string[]): Course[] => ids.map((id) => {
     const item = catalog.items[id];
-    if (!item || item.summary === undefined) throw new Error(`Missing menu course: ${id}`);
+    if (!item) throw new Error(`Missing menu course: ${id}`);
+    const tasting = item.presentations["tasting-courses"];
+    if (tasting && item.summary === undefined) return [item.name, tasting.paragraphs[0], tasting.paragraphs[1]];
+    if (item.summary === undefined) throw new Error(`Missing menu summary: ${id}`);
     return [item.name, item.summary];
   });
   const menus = Object.fromEntries(menuKeys.map((key) => {

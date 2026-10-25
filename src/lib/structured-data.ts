@@ -14,7 +14,7 @@ export const restaurantSchema = {
 function section(name: string, courses: Course[], diet: string, price?: number) {
   return {
     "@type": "MenuSection", name,
-    hasMenuItem: courses.map(([name, description]) => ({ "@type": "MenuItem", name, description, suitableForDiet: `https://schema.org/${diet}` })),
+    hasMenuItem: courses.map(([name, description, dietaryLabel]) => ({ "@type": "MenuItem", name, description, suitableForDiet: `https://schema.org/${dietaryLabel?.startsWith("VEGETARIAN") ? "VegetarianDiet" : dietaryLabel?.startsWith("VEGAN") ? "VeganDiet" : diet}` })),
     ...(price !== undefined ? { offers: { "@type": "Offer", price: String(price), priceCurrency: "USD", description: "Set menu per guest; tax, gratuity and beverages additional." } } : {}),
   };
 }
@@ -22,8 +22,8 @@ export const menuSchema = {
   "@context": "https://schema.org", "@type": "Menu", "@id": `${origin}/menus#menu`, name: "Taste of Beauty Menus", url: `${origin}/menus`,
   hasMenuSection: [
     section(menus["59"].title, menus["59"].courses, "VeganDiet", menus["59"].price),
-    section("The Tasting Experience – Vegan", menus["99"].courses, "VeganDiet", menus["99"].price),
-    section("The Tasting Experience – Vegetarian", menus["99"].vegetarian!, "VegetarianDiet", menus["99"].price),
+    section(menus["99"].variantTitles!.vegan, menus["99"].courses, "VeganDiet", menus["99"].price),
+    section(menus["99"].variantTitles!.vegetarian, menus["99"].vegetarian!, "VegetarianDiet", menus["99"].price),
     section("Lunch", menus.lunch.courses, "VeganDiet"),
   ],
 };

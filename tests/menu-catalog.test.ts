@@ -32,7 +32,7 @@ test("a la carte pricing never leaks into an unpriced tasting presentation", () 
   catalog.items["the-island"].presentations["a-la-carte"].price = { amount: 21 };
   const views = buildMenuViews(catalog);
   assert.equal(entries(views, "a-la-carte").find((entry) => entry.title === "The Island (v, gf)")!.price, "$21");
-  assert.equal(entries(views, "tasting-courses").find((entry) => entry.title === "The Island (v, gf)")!.price, undefined);
+  assert.equal(entries(views, "tasting-courses").find((entry) => entry.title === "The Island")!.price, undefined);
   assert.ok(entries(views, "drink").every((entry) => entry.price === undefined));
   assert.ok(views.xiaolongbaoFillings.every((entry) => !("price" in entry)));
   assert.equal(views.menus.lunch.price, undefined);
@@ -46,7 +46,7 @@ test("shared dish names update menu summaries, full menus and photo-wall caption
   catalog.items["the-island"].name = "Example Island";
   const views = buildMenuViews(catalog);
   assert.equal(views.menus["99"].courses[0][0], "Example Island");
-  assert.ok(entries(views, "tasting-courses").some((entry) => entry.title === "Example Island (v, gf)"));
+  assert.ok(entries(views, "tasting-courses").some((entry) => entry.title === "Example Island"));
   assert.ok(entries(views, "a-la-carte").some((entry) => entry.title === "Example Island (v, gf)"));
   assert.ok(views.dishWallRows.flat().some((dish) => dish.name === "Example Island"));
 });
