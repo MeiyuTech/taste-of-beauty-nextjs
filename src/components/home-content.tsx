@@ -17,12 +17,8 @@ export default function HomeContent() {
       <LegacyEntry />
       <section className="bright-hero">
         <div className="bright-title">
-          <h1 className="eyebrow">Vegan Fine Dining in West Hollywood</h1>
-          <p className="display-title">
-            Good vegan food.
-            <br />
-            <em>Beautiful plans.</em>
-          </p>
+          <p className="eyebrow">Vegan Fine Dining in West Hollywood</p>
+          <h1 className="display-title">Last Service: Sunday, November 1</h1>
           <p className="intro">
             {menuCopy.homeIntro}
             <br />

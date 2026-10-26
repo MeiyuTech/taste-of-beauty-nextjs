@@ -53,7 +53,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
       <section className="campaign-hero">
         <div className="campaign-hero-copy">
           <p className="eyebrow">{page.eyebrow}</p>
-          <h1 className="display-title">West <em>Hollywood</em></h1>
+          <h1 className="display-title">{page.headline}</h1>
           <p className="intro">{page.intro}</p>
           <div className="hero-actions">{book("Reserve Now")}{romantic ? <a className="inline-link" href="#menu">View Our Menus</a> : <a className="inline-link" href="tel:6575063567">Call Us</a>}</div>
         </div>
