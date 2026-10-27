@@ -56,6 +56,7 @@ export default function HollywoodLanding({ slug }: { slug: LandingSlug }) {
           <h1 className="display-title">{page.headline}</h1>
           <p className="intro">{page.intro}</p>
           <div className="hero-actions">{book("Reserve Now")}{romantic ? <a className="inline-link" href="#menu">View Our Menus</a> : <a className="inline-link" href="tel:6575063567">Call Us</a>}</div>
+          <p className="hero-sale-note">Furniture and artwork for sale after November 1</p>
         </div>
         <div className="campaign-hero-photo"><Image src={source.hero.src} alt={source.hero.alt} fill sizes="(max-width: 900px) 100vw, 52vw" priority /></div>
       </section>

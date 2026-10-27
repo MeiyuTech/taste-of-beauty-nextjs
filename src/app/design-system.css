@@ -168,6 +168,13 @@
 .theme-b.tob-design .bright-hero .display-title { font-size: clamp(48px, 5.1vw, 76px); line-height: 1.04; letter-spacing: -2px; }
 .theme-b.tob-design .bright-hero .intro { font-size: 18px; line-height: 1.7; max-width: 43ch; }
 .theme-b.tob-design .hero-actions { gap: 12px; }
+.theme-b.tob-design .hero-sale-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
 .theme-b.tob-design .bright-choices .menu-picker-heading { font-size: clamp(25px, 2.1vw, 31px); line-height: 1.2; margin-bottom: 24px; }
 .theme-b.tob-design .choice-grid { gap: 20px; align-items: stretch; }
 .theme-b.tob-design .choice-grid > :is(a, .choice-trigger) {

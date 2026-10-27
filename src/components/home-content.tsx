@@ -35,6 +35,7 @@ export default function HomeContent() {
           <div className="tiny-location">
             616 N Robertson Blvd · West Hollywood, CA
           </div>
+          <p className="hero-sale-note">Furniture and artwork for sale after November 1</p>
         </div>
         <div className="bright-choices">
           <div className="eyebrow">
